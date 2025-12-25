@@ -8,9 +8,12 @@ This guide explains how to configure custom workspace layouts using the DevStack
 > The Workspace Layout Engine, a sophisticated orchestrator that allows you to define and switch between entire development environments with a single click. It doesn't just change a theme; it reconfigures the entire VS Code UI, opens your project files in specific grid positions, and prepares your terminal environment.
 >
 > At this time the issues have been resolved but the new item type still needs to tested thoroughly, but initial tests are perfect so far as I don't see a single item wrong even with the ridiculously long config I'm testing with. As my UI just loaded perfectly, with a config item of 516 lines long.
+>
+> During testing there is one crucial... fuck up on vscodes part. There is no way to view vscodes context progmatically. Which is a pain because items like, zen mode, full screen mode / toggle and other toggles like those, all are either true... or false. For example, if you are already currently in zen mode, and you select a new layout that also has zenmode set to true, the end result will be that you will be taken out of zenmode when selecting the new layout config. I have seen a lot of strategies to create a workaround with this, but none of them are reliable enough to even bother coding them. Currently, the best way I have been able to work around this is by creating my configs around the default start of vscodes ui. For example, in my configs I have panel set to hidden when vscode opens, it always has it open for me anyways. So before I click on a new layout, I just make sure its open. Annoying... yes, but theres no current workaround for this. I have even looked into... progmatically triggering `workbench.action.inspectContextKeys`, then progmatically triggering a mouse click inside vscodes instance because there is an api for that, then grabbing the output. The issue here is, everything is sandboxed so there is no way for the extension to acquire that output. Shame because it has everything that you would need in order to properly create a truly independant layout engine where the user, literlly did nothing to help it. So... unless I find something that allows me to get those values this is probably the best iteration that I will be able to make. I've even coded it so, when you have a config with zen mode, I make sure that after it has been toggled, that your sidebars ALSO get `re-toggled` so that they display since zen mode toggles their display values to false. I am going to download a bunch of other extensions that do any type of ui work, only issue here is as far as I have read anyways, none of them go as deep as far as configurating the ui as I have gone.
+
+Before moving on, your more then welcome to check the demo to view exactly what it can do. In the demo it starts by closing all terminals, editors and editor groups. Then proceeds to handle a number of files to open, pin and layout with a set configuration. Having my todo doc set at a specfic smaller value then the other two editor groups, which split the remainder in half. Visually anyways, you will see that it activates zen mode, and because of the mode toggles the sidebars and activity bar to false. Due to my config, they get re-activated to ensure they display in zen mode. Finishing off by creating a editor terminal and panel terminal to execute 2 commands. Meanwhile it sets a ton of behind the scenes settings that do not have any visual representation, [Workspace Layout Engine Demo](https://youtu.be/m6-h4imuCeA)
 
 Despite being the most configurable workspace context layout engines, it was made with new and experienced devs in mind. If your new to dev and still want to use it, don't be intimated by it as it is extremely easy to set up a `simple` but still power layout. As for the more experienced devs, obviously if my config is 516 lines long without even trying, it can get a lot longer which grants you access to a lot more granular level of control of your vscode instance.
-
 ## Configuration Approachs
 
 #### The quick and dirty method
@@ -55,491 +58,412 @@ Not only allowing for a much cleaner looking config but also an easier time in t
   
 ## args
 
+The `args` array contains the main configuration object(s) for your layout. Each object in this array can include:
+
+- **`default`** - Boolean - marks this as the default layout configuration
+- **`appearance`** - Object - controls all UI element visibility, positioning, and styling
+- **`editorGrid`** - Object - defines editor group layout and which files to open
+- **`performance`** - Object - toggles for resource-intensive features
+- **`terminals`** - Array - terminal instances and commands to run
+- **`settings`** - Object - workspace settings, extension settings, and theme customizations
+
 ## Appearance Settings
 
 ### Quick Input
 - **`quickInputPosition`**
   - Controls the position of quick input dialogs (command palette, etc.)
-  - **Values**: `true` (shows in default position) | `false` (hides)
+  - **Values**: `"centered"` | `"top"`
 
-### Menu Bar
-- **`view`**
-  - Controls the menu bar visibility style
-  - **Values**: `"classic"` (always visible) | `"toggle"` (hide, show on Alt) | `"hidden"` (always hidden) | `"compact"` (compact form)
+### Window
+- **`window`** - Object containing window-level settings:
+  - **`menuBarVisibility`** - Menu bar display style
+    - **Values**: `"classic"` (always visible) | `"toggle"` (hide, show on Alt) | `"hidden"` (always hidden) | `"compact"` (compact form)
+  - **`commandCenter`** - Shows/hides the command center
+    - **Values**: `true` | `false`
+  - **`zoomLevel`** - Window zoom level
+    - **Values**: Number (e.g., `-1` = zoom out, `0` = normal, `1` = zoom in)
+  - **`titleBarStyle`** - Title bar style
+    - **Values**: `"custom"` | `"native"`
 
-- **`commandCenter`**
-  - Shows/hides the command center
-  - **Values**: `true` | `false`
-
-- **`navigationControls`**
-  - Controls navigation buttons (back/forward)
-  - **Values**: `true` | `false`
-
-- **`share`**
-  - Controls the share button visibility
-  - **Values**: `true` | `false`
-
-- **`layoutControls`**
-  - Shows/hides layout controls
-  - **Values**: `true` | `false`
-
-- **`customizeLayout`**
-  - Enables layout customization options
-  - **Values**: `true` | `false`
-
-- **`togglePrimarySidebar`**
-  - Shows/hides the primary sidebar toggle button
-  - **Values**: `true` | `false`
-
-- **`toggleSecondarySidebar`**
-  - Shows/hides the secondary sidebar toggle button
-  - **Values**: `true` | `false`
-
-- **`togglePanel`**
-  - Shows/hides the panel toggle button
-  - **Values**: `true` | `false`
-
-### Activity Bar
-- **`display`**
-  - Shows/hides the activity bar
-  - **Values**: `true` | `false`
-
-- **`position`**
-  - Controls activity bar position
-  - **Values**: `"default"` (left side) | `"right"` | `"hidden"`
-
-### Primary Sidebar
-- **`display`**
-  - Shows/hides the primary sidebar
-  - **Values**: `true` | `false`
-
-- **`position`**
-  - Controls primary sidebar position
-  - **Values**: `"left"` | `"right"`
-
-- **`view`**
-  - Sets the default view shown in primary sidebar
-  - **Values**: `"Explorer"` | `"Search"` | `"Source Control"` | `"Run and Debug"` | `"Extensions"`
-
-- **`showLabels`**
-  - Shows/hides labels in sidebar
-  - **Values**: `true` | `false`
-
-### Secondary Sidebar
-- **`display`**
-  - Shows/hides the secondary sidebar
-  - **Values**: `true` | `false`
-
-- **`view`**
-  - Sets the view shown in secondary sidebar
-  - **Values**: Extension view ID (e.g., `"skyler.ocrmnav"` for your custom navigator)
-
-- **`showLabels`**
-  - Shows/hides labels in secondary sidebar
-  - **Values**: `true` | `false`
-
-### Panel
-- **`display`**
-  - Shows/hides the panel
-  - **Values**: `true` | `false`
-
-- **`position`**
-  - Controls panel position
-  - **Values**: `"bottom"` | `"right"` | `"left"`
-
-- **`alignment`**
-  - Controls panel alignment when split
-  - **Values**: `"center"` | `"left"` | `"right"`
-
-- **`view`**
-  - Sets the default view shown in panel
-  - **Values**: `"output"` | `"terminal"` | `"problems"` | `"debug console"`
-
-- **`maximized`**
-  - Opens panel maximized
-  - **Values**: `true` | `false`
-
-### Modes
-- **`fullScreen`**
-  - Enables full screen mode
-  - **Values**: `true` | `false`
-
-- **`zenMode`**
-  - Enables Zen mode (distraction-free)
-  - **Values**: `true` | `false`
-
-- **`centered`**
-  - Enables centered layout mode
-  - **Values**: `true` | `false`
-
-### Status Bar
-- **`visible`**
-  - Shows/hides the status bar
-  - **Values**: `true` | `false`
-
-- **`hoverDebug`**
-  - Shows debug info on hover in status bar
-  - **Values**: `true` | `false`
-
-### Minimap
-- **`minimap`**
-  - Enable/disable minimap
-  - **Values**: `true` | `false`
-
-- **`autohide`**
-  - Controls when minimap auto-hides
-  - **Values**: `"mouseover"` | `"never"` | `"always"`
-
-- **`showMarkSectionHeaders`**
-  - Show mark section headers in minimap
-  - **Values**: `true` | `false`
-
-- **`showRegionSectionHeaders`**
-  - Show region section headers in minimap
-  - **Values**: `true` | `false`
-
-- **`showSlider`**
-  - Show minimap slider
-  - **Values**: `"mouseover"` | `"always"` | `"never"`
-
-- **`side`**
-  - Controls minimap side
-  - **Values**: `"left"` | `"right"`
-
-- **`size`**
-  - Controls minimap size
-  - **Values**: `"fill"` | `"proportional"` | `"fit"`
-
-- **`renderCharacters`**
-  - Render characters in minimap (vs blocks)
-  - **Values**: `true` | `false`
-
-- **`maxColumn`**
-  - Maximum column width for minimap
-  - **Values**: Number (e.g., `"50"`) | `"auto"`
-
-### Terminal
-- **`location`**
-  - Default terminal location
-  - **Values**: `"editor"` (opens in editor area) | `"panel"` (opens in panel)
-
-- **`fontSize`**
-  - Terminal font size
-  - **Values**: Number (e.g., `12`)
+### Workbench
+- **`workbench`** - Object containing workbench-level settings:
+  - **`settings`** - General settings configuration
+    - **`editor`** - Editor settings mode
+      - **Values**: `"ui"` | `"json"`
+  
+  - **`activityBar`** - Object controlling activity bar
+    - **`location`** - Position of activity bar
+      - **Values**: `"default"` (left side) | `"right"` | `"hidden"`
+    - **`visible`** - Shows/hides the activity bar
+      - **Values**: `true` | `false`
+  
+  - **`editor`** - Object controlling workbench editor behavior
+    - **`showTabs`** - Tab display mode
+      - **Values**: `"multiple"` | `"single"` | `"none"`
+    - **`wrapTabs`** - Wrap tabs when they overflow
+      - **Values**: `true` | `false`
+    - **`pinnedTabsOnSeparateRow`** - Display pinned tabs on separate row
+      - **Values**: `true` | `false`
+    - **`enablePreviewFromQuickOpen`** - Enable preview mode from quick open
+      - **Values**: `true` | `false`
+    - **`focusRecentEditorAfterClose`** - Focus most recent editor after closing current
+      - **Values**: `true` | `false`
+    - **`restoreViewState`** - Restore editor scroll/cursor position on reopen
+      - **Values**: `true` | `false`
+    - **`limit`** - Object controlling editor width limits
+      - **`enabled`** - Enable editor width limit
+        - **Values**: `true` | `false`
+  
+  - **`layoutControl`** - Object controlling layout controls
+    - **`enabled`** - Enable layout control buttons in UI
+      - **Values**: `true` | `false`
 
 ### Editor
-- **`zoomLevel`**
-  - Controls editor zoom level
-  - **Values**: Number (e.g., `-1` = zoom out, `0` = normal, `1` = zoom in)
+- **`editor`** - Object containing editor-specific settings:
+  - **`fontSize`** - Editor font size in pixels
+    - **Values**: Number (e.g., `11`, `14`, `16`)
+  - **`fontFamily`** - Editor font family
+    - **Values**: Font name string (e.g., `"JetBrains Mono"`, `"Fira Code"`, `"Consolas"`)
+  - **`fontLigatures`** - Enable font ligatures
+    - **Values**: `true` | `false`
+  - **`lineNumbers`** - Line number display style
+    - **Values**: `"on"` | `"off"` | `"relative"` | `"interval"`
+  - **`wordWrap`** - Word wrapping behavior
+    - **Values**: `"on"` | `"off"` | `"wordWrapColumn"` | `"bounded"`
+  - **`glyphMargin`** - Show glyph margin (for breakpoints, debugging icons, etc.)
+    - **Values**: `true` | `false`
+  - **`folding`** - Enable code folding
+    - **Values**: `true` | `false`
+  - **`foldingImportsByDefault`** - Automatically fold import statements on file open
+    - **Values**: `true` | `false`
+  - **`showFoldingControls`** - When to show folding controls
+    - **Values**: `"always"` | `"mouseover"`
+  - **`renderWhitespace`** - How to render whitespace characters
+    - **Values**: `"none"` | `"boundary"` | `"selection"` | `"all"`
+  - **`renderControlCharacters`** - Render control characters (null, bell, etc.)
+    - **Values**: `true` | `false`
+  - **`scrollBeyondLastLine`** - Allow scrolling past the last line
+    - **Values**: `true` | `false`
+  - **`accessibilitySupport`** - Accessibility support level
+    - **Values**: `"off"` | `"on"` | `"auto"`
+  
+  - **`scrollbar`** - Object controlling scrollbar behavior
+    - **`vertical`** - Vertical scrollbar visibility
+      - **Values**: `"auto"` | `"visible"` | `"hidden"`
+  
+  - **`stickyScroll`** - Object controlling sticky scroll feature
+    - **`enabled`** - Enable sticky scroll (keeps current scope visible at top)
+      - **Values**: `true` | `false`
+    - **`maxLineCount`** - Maximum lines to show in sticky scroll area
+      - **Values**: Number (e.g., `3`, `5`, `10`)
+  
+  - **`minimap`** - Object controlling minimap
+    - **`enabled`** - Enable/disable minimap
+      - **Values**: `true` | `false`
+    - **`autohide`** - Auto-hide minimap when not in use
+      - **Values**: `true` | `false`
+    - **`showMarkSectionHeaders`** - Show mark section headers in minimap
+      - **Values**: `true` | `false`
+    - **`showRegionSectionHeaders`** - Show region section headers in minimap
+      - **Values**: `true` | `false`
+    - **`showSlider`** - Minimap slider visibility
+      - **Values**: `"always"` | `"mouseover"` | `"never"`
+    - **`side`** - Minimap position
+      - **Values**: `"left"` | `"right"`
+    - **`size`** - Minimap sizing mode
+      - **Values**: `"fill"` | `"fit"` | `"proportional"`
+    - **`renderCharacters`** - Render actual characters vs colored blocks
+      - **Values**: `true` | `false`
+    - **`maxColumn`** - Maximum column width for minimap rendering
+      - **Values**: Number (e.g., `50`, `80`, `120`)
 
-- **`fontSize`**
-  - Editor font size
-  - **Values**: Number (e.g., `11`)
+### Breadcrumbs
+- **`breadcrumbs`** - Object controlling breadcrumb navigation
+  - **`enabled`** - Show/hide breadcrumb navigation at top of editor
+    - **Values**: `true` | `false`
 
-- **`breadcrumbs`**
-  - Enable/disable breadcrumbs
-  - **Values**: `true` | `false`
+### Terminal
+- **`terminal`** - Object containing terminal settings:
+  - **`integrated`** - Object for integrated terminal settings
+    - **`fontSize`** - Terminal font size in pixels
+      - **Values**: Number (e.g., `10`, `12`, `14`)
+    - **`defaultLocation`** - Default location where new terminals spawn
+      - **Values**: `"editor"` (opens in editor area) | `"panel"` (opens in panel)
 
-- **`tabBar`**
-  - Controls tab bar style
-  - **Values**: `"multiple"` | `"single"` | `"none"`
+### Menu Bar
+- **`menuBar`** - Object controlling menu bar and its buttons:
+  - **`view`** - Menu bar visibility style
+    - **Values**: `"classic"` (always visible) | `"toggle"` (hide, show on Alt) | `"hidden"` (always hidden) | `"compact"` (compact form)
+  - **`commandCenter`** - Show/hide command center
+    - **Values**: `true` | `false`
+  - **`navigationControls`** - Show/hide navigation buttons (back/forward)
+    - **Values**: `true` | `false`
+  - **`share`** - Show/hide share button
+    - **Values**: `true` | `false`
+  - **`layoutControls`** - Show/hide layout control buttons
+    - **Values**: `true` | `false`
+  - **`customizeLayout`** - Show/hide customize layout button
+    - **Values**: `true` | `false`
+  - **`togglePrimarySidebar`** - Show/hide primary sidebar toggle button
+    - **Values**: `true` | `false`
+  - **`toggleSecondarySidebar`** - Show/hide secondary sidebar toggle button
+    - **Values**: `true` | `false`
+  - **`togglePanel`** - Show/hide panel toggle button
+    - **Values**: `true` | `false`
 
-- **`editorsActionPosition`**
-  - Position of editor action buttons
-  - **Values**: `"tab"` (in tabs) | `"titleBar"` (in title bar)
+### Primary Sidebar
+- **`primarySidebar`** - Object controlling the primary sidebar:
+  - **`display`** - Show/hide primary sidebar
+    - **Values**: `true` | `false`
+  - **`position`** - Sidebar position
+    - **Values**: `"left"` | `"right"`
+  - **`view`** - Default view to show in primary sidebar
+    - **Values**: `"workbench.view.explorer"` (File Explorer) | `"workbench.view.search"` (Search) | `"workbench.view.scm"` (Source Control) | `"workbench.view.debug"` (Run and Debug) | `"workbench.view.extensions"` (Extensions)
 
-- **`wordWrap`**
-  - Enable word wrapping
-  - **Values**: `true` | `false`
+### Secondary Sidebar
+- **`secondarySidebar`** - Object controlling the secondary sidebar:
+  - **`display`** - Show/hide secondary sidebar
+    - **Values**: `true` | `false`
+  - **`view`** - View to display (typically an extension view ID)
+    - **Values**: Extension view ID string (e.g., `"skyler.ocrmnav"` for custom navigator)
 
-- **`fontFamily`**
-  - Editor font family
-  - **Values**: Font name (e.g., `"JetBrains Mono"`)
+### Panel
+- **`panel`** - Object controlling the bottom/side panel:
+  - **`display`** - Show/hide panel
+    - **Values**: `true` | `false`
+  - **`position`** - Panel position
+    - **Values**: `"bottom"` | `"right"` | `"left"`
+  - **`alignment`** - Panel alignment when docked
+    - **Values**: `"center"` | `"left"` | `"right"` | `"justify"`
+  - **`view`** - Default view to show in panel
+    - **Values**: `"workbench.panel.output"` (Output) | `"workbench.panel.terminal"` (Terminal) | `"workbench.panel.problems"` (Problems) | `"workbench.panel.debug"` (Debug Console)
+  - **`maximized`** - Open panel in maximized state
+    - **Values**: `true` | `false`
 
-- **`fontLigatures`**
-  - Enable font ligatures
-  - **Values**: `true` | `false`
+### Status Bar
+- **`statusBar`** - Object controlling status bar:
+  - **`visible`** - Show/hide status bar at bottom
+    - **Values**: `true` | `false`
 
-- **`foldingImportsByDefault`**
-  - Fold imports by default
-  - **Values**: `true` | `false`
-
-- **`accessibilitySupport`**
-  - Accessibility support level
-  - **Values**: `"off"` | `"on"` | `"auto"`
-
-- **`showFoldingControls`**
-  - When to show folding controls
-  - **Values**: `"always"` | `"mouseover"`
-
-- **`showTabs`**
-  - How tabs are shown
-  - **Values**: `"multiple"` (multiple tabs) | `"single"` (single tab) | `"none"`
-
-- **`alwaysShowEditorActions`**
-  - Always show editor action buttons
-  - **Values**: `true` | `false`
-
-- **`enablePreviewFromQuickOpen`**
-  - Enable preview from quick open
-  - **Values**: `true` | `false`
-
-- **`focusRecentEditorAfterClose`**
-  - Focus recent editor after closing current
-  - **Values**: `true` | `false`
-
-- **`pinnedTabsOnSeparateRow`**
-  - Show pinned tabs on separate row
-  - **Values**: `true` | `false`
-
-- **`wrapTabs`**
-  - Wrap tabs when they overflow
-  - **Values**: `true` | `false`
-
-- **`limit.enabled`**
-  - Enable editor limit (max width)
-  - **Values**: `true` | `false`
-
-- **`lineNumbers`**
-  - Line number display style
-  - **Values**: `"relative"` | `"on"` | `"off"` | `"interval"`
-
-- **`scrollBeyondLastLine`**
-  - Allow scrolling beyond last line
-  - **Values**: `true` | `false`
-
-- **`updateImportsOnPaste.enabled`**
-  - Update imports when pasting code
-  - **Values**: `true` | `false`
-
-- **`restoreViewState`**
-  - Restore editor view state on reopen
-  - **Values**: `true` | `false`
-
-- **`renderWhitespace`**
-  - How to render whitespace
-  - **Values**: `"none"` | `"boundary"` | `"selection"` | `"all"`
-
-- **`renderControlCharacters`**
-  - Render control characters
-  - **Values**: `true` | `false`
-
-- **`folding`**
-  - Enable code folding
-  - **Values**: `true` | `false`
-
-- **`glyphMargin`**
-  - Enable glyph margin (for breakpoints, etc.)
-  - **Values**: `true` | `false`
-
-#### Sticky Scroll
-- **`enabled`**
-  - Enable sticky scroll
-  - **Values**: `true` | `false`
-
-- **`maxLineCount`**
-  - Maximum lines in sticky scroll
-  - **Values**: Number (e.g., `5`)
-
-### Editor Grid
-- **`orientation`**
-  - Grid orientation
-  - **Values**: `0` (horizontal) | `1` (vertical)
-
-- **`groups`**
-  - Defines editor groups with sizes
-  - **Values**: Array of objects with `size` property (0-1)
-
-- **`files`**
-  - Files to open in specific groups
-  - **Values**: Array of objects with `path`, `group`, `pinned` properties
+### Modes
+- **`modes`** - Object controlling special display modes:
+  - **`fullScreen`** - Enable full screen mode
+    - **Values**: `true` | `false`
+  - **`zenMode`** - Enable Zen mode (distraction-free editing)
+    - **Values**: `true` | `false`
+  - **`centered`** - Enable centered layout mode
+    - **Values**: `true` | `false`
 
 ## Editor Grid Settings
 
-### `orientation`
-- **What it does**: Controls the orientation of editor groups (how they're split)
-- **Values**: 
-  - `0` = Horizontal split (editor groups side by side)
-  - `1` = Vertical split (editor groups stacked vertically)
-
-### `groups`
-- **What it does**: Defines the editor groups and their relative sizes
-- **Structure**: Array of objects with `size` property
-- **Values**: 
-  - Each `size` is a decimal between 0 and 1 representing percentage of available space
-  - Example: `[{"size": 0.2}, {"size": 0.45}, {"size": 0.45}]` creates three groups taking 20%, 45%, and 45% of space
-
-### `files`
-- **What it does**: Specifies which files to open in which editor groups
-- **Structure**: Array of objects with these properties:
-  - `path`: String or array of strings - file paths to open
-  - `group`: Number - which group to open files in (1-indexed: 1 = first group)
-  - `pinned`: Boolean - whether to pin the tab (prevent replacement)
-- **Values**: Custom file paths and group assignments
+- **`editorGrid`** - Object defining the editor group layout:
+  - **`orientation`** - Grid split direction
+    - **Values**: `0` (horizontal split - groups side by side) | `1` (vertical split - groups stacked)
+  
+  - **`groups`** - Array of editor group definitions
+    - Each group is an object with:
+      - **`size`** - Relative size as decimal between 0 and 1
+      - **Example**: `[{"size": 0.2}, {"size": 0.45}, {"size": 0.45}]` creates three groups at 20%, 45%, and 45% of available space
+  
+  - **`files`** - Array of file objects to open in specific groups
+    - Each file object contains:
+      - **`path`** - File path(s) to open
+        - **Values**: String (single file) or Array of strings (multiple files)
+      - **`group`** - Which editor group to open files in
+        - **Values**: Number, 1-indexed (1 = first group, 2 = second group, etc.)
+      - **`pinned`** - Whether to pin the tab(s)
+        - **Values**: `true` | `false`
 
 ## Performance Settings
 
+The `performance` object controls resource-intensive features for optimization:
+
 ### Editor Features
-- **`editor.inlineSuggest.enabled`**
-  - **What it does**: Enables inline suggestions (GitHub Copilot, etc.)
-  - **Values**: `true` | `false`
-
-- **`editor.inlayHints.enabled`**
-  - **What it does**: Shows type hints and parameter names inline in code
-  - **Values**: `"off"` | `"on"` | `"onUnlessPressed"`
-
-- **`editor.parameterHints.enabled`**
-  - **What it does**: Shows parameter hints when typing function calls
-  - **Values**: `true` | `false`
-
-- **`editor.suggestOnTriggerCharacters`**
-  - **What it does**: Shows suggestions automatically on trigger characters (like `.`, `::`)
-  - **Values**: `true` | `false`
-
-- **`editor.acceptSuggestionOnEnter`**
-  - **What it does**: Controls Enter key behavior for accepting suggestions
-  - **Values**: `"off"` | `"on"` | `"smart"`
-
-- **`editor.acceptSuggestionOnCommitCharacter`**
-  - **What it does**: Accepts suggestions when typing commit characters
-  - **Values**: `true` | `false`
-
-- **`editor.wordBasedSuggestions`**
-  - **What it does**: Enables word-based code suggestions
-  - **Values**: `"off"` | `"matchingDocuments"` | `"matchingDocumentsMore"` | `"allDocuments"`
-
-### Formatting
-- **`editor.formatOnType`**
-  - **What it does**: Automatically formats code as you type
-  - **Values**: `true` | `false`
-
-- **`editor.formatOnPaste`**
-  - **What it does**: Automatically formats pasted code
-  - **Values**: `true` | `false`
-
-- **`editor.formatOnSave`**
-  - **What it does**: Automatically formats files when saved
-  - **Values**: `true` | `false`
-
-### Highlighting & Decorations
-- **`editor.semanticHighlighting.enabled`**
-  - **What it does**: Enables semantic colorization (more accurate than syntax highlighting)
-  - **Values**: `true` | `false` | `"configuredByTheme"`
-
-- **`editor.occurrencesHighlight`**
-  - **What it does**: Highlights other occurrences of selected text
-  - **Values**: `"off"` | `"singleFile"` | `"multiFile"`
-
-- **`editor.selectionHighlight`**
-  - **What it does**: Highlights other matches of current selection
-  - **Values**: `true` | `false`
-
-- **`editor.codeLens`**
-  - **What it does**: Shows CodeLens (references, implementations count above code)
-  - **Values**: `true` | `false`
+- **`editor`** - Object containing editor performance settings:
+  - **`suggestOnTriggerCharacters`** - Auto-suggest when typing trigger characters (`.`, `::`, etc.)
+    - **Values**: `true` | `false`
+  - **`acceptSuggestionOnEnter`** - Accept suggestions with Enter key
+    - **Values**: `"on"` | `"off"` | `"smart"`
+  - **`acceptSuggestionOnCommitCharacter`** - Accept suggestions when typing commit characters
+    - **Values**: `true` | `false`
+  - **`wordBasedSuggestions`** - Enable word-based code suggestions
+    - **Values**: `"off"` | `"matchingDocuments"` | `"currentDocument"` | `"allDocuments"`
+  - **`formatOnType`** - Automatically format code as you type
+    - **Values**: `true` | `false`
+  - **`formatOnPaste`** - Automatically format pasted code
+    - **Values**: `true` | `false`
+  - **`formatOnSave`** - Automatically format files when saved
+    - **Values**: `true` | `false`
+  - **`occurrencesHighlight`** - Highlight other occurrences of selected symbol
+    - **Values**: `"off"` | `"singleFile"` | `"multiFile"`
+  - **`selectionHighlight`** - Highlight other matches of current selection
+    - **Values**: `true` | `false`
+  - **`codeLens`** - Show CodeLens (reference counts, implementations above code)
+    - **Values**: `true` | `false`
+  
+  - **`inlineSuggest`** - Object for inline suggestions (Copilot, etc.)
+    - **`enabled`** - Enable inline suggestions
+      - **Values**: `true` | `false`
+  
+  - **`inlayHints`** - Object for inlay hints (type hints, parameter names)
+    - **`enabled`** - Enable inlay hints
+      - **Values**: `"on"` | `"off"` | `"onUnlessPressed"` | `"offUnlessPressed"`
+  
+  - **`parameterHints`** - Object for parameter hints
+    - **`enabled`** - Show parameter hints when typing function calls
+      - **Values**: `true` | `false`
+  
+  - **`semanticHighlighting`** - Object for semantic syntax highlighting
+    - **`enabled`** - Enable semantic colorization (more accurate than syntax highlighting)
+      - **Values**: `true` | `false` | `"configuredByTheme"`
 
 ### Git Integration
-- **`git.decorations.enabled`**
-  - **What it does**: Enables Git decorations in editor and explorer
-  - **Values**: `true` | `false`
-
-- **`git.diffDecorations`**
-  - **What it does**: Shows Git diff decorations
-  - **Values**: `"none"` | `"gutter"` | `"overview"` | `"all"`
-
-- **`git.diffDecorationsGutterAction`**
-  - **What it does**: Action when clicking diff decorations in gutter
-  - **Values**: `"none"` | `"diff"` | `"peek"`
-
-- **`git.diffEditor.renderGutterMenu`**
-  - **What it does**: Shows menu in diff editor gutter
-  - **Values**: `true` | `false`
-
-- **`git.mergeEditor.codeLens.enabled`**
-  - **What it does**: Shows CodeLens in merge editor
-  - **Values**: `true` | `false`
+- **`git`** - Object containing Git performance settings:
+  - **`decorations.enabled`** - Enable Git decorations in editor and explorer
+    - **Values**: `true` | `false`
+  - **`diffDecorations`** - Show Git diff decorations in editor
+    - **Values**: `"all"` | `"gutter"` | `"overview"` | `"none"`
+  - **`diffDecorationsGutterAction`** - Action when clicking diff decorations in gutter
+    - **Values**: `"diff"` | `"peek"` | `"none"`
+  
+  - **`diffEditor`** - Object for diff editor settings
+    - **`renderGutterMenu`** - Show menu in diff editor gutter
+      - **Values**: `true` | `false`
+  
+  - **`mergeEditor`** - Object for merge editor settings
+    - **`codeLens`** - Object for CodeLens in merge editor
+      - **`enabled`** - Show CodeLens in merge editor
+        - **Values**: `true` | `false`
 
 ### Search
-- **`search.smartCase`**
-  - **What it does**: Enables smart case search (case-insensitive unless uppercase used)
-  - **Values**: `true` | `false`
-
-- **`search.useIgnoreFiles`**
-  - **What it does**: Respects .gitignore and other ignore files in search
-  - **Values**: `true` | `false`
-
-- **`search.exclude`**
-  - **What it does**: Patterns to exclude from search results
-  - **Values**: Object with glob patterns (e.g., `{"**/node_modules": true}`)
+- **`search`** - Object containing search performance settings:
+  - **`smartCase`** - Case-insensitive search unless uppercase letters are used
+    - **Values**: `true` | `false`
+  - **`useIgnoreFiles`** - Respect `.gitignore` and other ignore files in search
+    - **Values**: `true` | `false`
+  - **`exclude`** - Glob patterns to exclude from search results
+    - **Values**: Object with pattern keys (e.g., `{"**/node_modules": true, "**/.git": true}`)
 
 ### File Management
-- **`files.watcherExclude`**
-  - **What it does**: Files/folders to exclude from file watching
-  - **Values**: Object with glob patterns
-
-- **`files.exclude`**
-  - **What it does**: Files/folders to hide from file explorer
-  - **Values**: Object with glob patterns
-
-- **`files.maxMemoryForLargeFilesMB`**
-  - **What it does**: Maximum memory allocated for large files
-  - **Values**: Number (e.g., `4096` = 4GB)
+- **`files`** - Object containing file system performance settings:
+  - **`watcherExclude`** - Files/folders to exclude from file watching
+    - **Values**: Object with glob patterns (e.g., `{"**/node_modules/**": true}`)
+  - **`exclude`** - Files/folders to hide from file explorer
+    - **Values**: Object with glob patterns
+  - **`maxMemoryForLargeFilesMB`** - Maximum memory allocated for large files
+    - **Values**: Number in MB (e.g., `4096` = 4GB)
 
 ### Extensions
-- **`extensions.ignoreRecommendations`**
-  - **What it does**: Ignores extension recommendations
-  - **Values**: `true` | `false`
-
-- **`extensions.showRecommendationsOnlyOnDemand`**
-  - **What it does**: Only shows extension recommendations when requested
-  - **Values**: `true` | `false`
+- **`extensions`** - Object containing extension performance settings:
+  - **`ignoreRecommendations`** - Ignore extension recommendations
+    - **Values**: `true` | `false`
+  - **`showRecommendationsOnlyOnDemand`** - Only show extension recommendations when requested
+    - **Values**: `true` | `false`
 
 ### Workbench
-- **`workbench.editor.enablePreview`**
-  - **What it does**: Opens files in preview mode (single click replaces tab)
-  - **Values**: `true` | `false`
+- **`workbench`** - Object containing workbench performance settings:
+  - **`editor`** - Object for editor behavior
+    - **`enablePreview`** - Open files in preview mode (single-click replaces tab, double-click pins)
+      - **Values**: `true` | `false`
 
 ### CSS
-- **`css.validate`**
-  - **What it does**: Validates CSS syntax and shows errors
-  - **Values**: `true` | `false`
+- **`css`** - Object containing CSS performance settings:
+  - **`validate`** - Enable CSS syntax validation and error reporting
+    - **Values**: `true` | `false`
 
 ## Terminals Configuration
 
-### Terminal Objects
-- **Structure**: Array of terminal configuration objects
-- **Properties**:
-  - `name`: String - Display name for terminal
-  - `cmd`: String - Command to run in terminal
-  - `location`: String - Where terminal opens (`"editor"` or `"panel"`)
-  - `cwd`: String - Working directory for command (empty = current workspace)
-- **Values**: Custom terminal configurations for different purposes
+- **`terminals`** - Array of terminal configuration objects:
+  - Each terminal object contains:
+    - **`name`** - Display name for the terminal tab
+      - **Values**: String
+    - **`cmd`** - Command to execute in the terminal
+      - **Values**: Shell command string (e.g., `"npm run dev"`, `"tail -f dev.log"`)
+    - **`location`** - Where the terminal should spawn
+      - **Values**: `"editor"` (opens in editor area) | `"panel"` (opens in panel)
+    - **`cwd`** - Working directory for the command
+      - **Values**: Path string or empty string `""` (empty = current workspace root)
 
 ## Settings & Workspace Configuration
 
+The `settings` object contains three main sections for comprehensive workspace configuration:
+
+### Extension Settings
+Configure extension-specific settings using the extension ID as the key:
+
+```json
+"settings": {
+  "ocrmnavigator": {
+    "todo": {
+      "repo": "mynotesrepo",
+      "branch": "main"
+    }
+  }
+}
+```
+
+Each extension's settings are nested under its ID and can include any settings that extension exposes.
+
+### Editor Settings
+Direct VS Code editor settings using full setting paths:
+
+```json
+"editor": {
+  "minimap.renderCharacters": false,
+  "minimap.maxColumn": "50"
+}
+```
+
+### Window Settings
+- **`window`** - Object containing window-level settings:
+  - **`restoreWindows`** - Window restoration behavior on startup
+    - **Values**: `"all"` (restore all windows) | `"folders"` (restore folder windows) | `"one"` (restore one window) | `"none"` (don't restore)
+  - **`openFilesInNewWindow`** - How files open when VS Code is already running
+    - **Values**: `"on"` (always new window) | `"off"` (reuse window) | `"default"` (system default)
+
 ### Workspace Settings
-- **General VS Code Settings**: Controls various VS Code behaviors
-- **Extension Settings**: Configuration for installed extensions
-- **Language-specific Settings**: Settings for different file types
 
 > [!TIP]
 > Workspace
 > This is your vscode settings.json dumping ground that will change the settings found within the workspace settings.json file. Allowing you to create a profile system and change its settings based on the layout config of your choosing. I have never even heard of another extension implementing such a system, but I have to say this has been a nice touch to the layout engine. 
 
+- **`workspace`** - Object containing any VS Code workspace settings:
+  - Can include any valid VS Code setting
+  - Supports language-specific settings using `[language]` syntax:
+    ```json
+    "[markdown]": {
+      "editor.wordWrap": "on",
+      "editor.quickSuggestions": false
+    }
+    ```
+  - Common settings:
+    - **`workbench.editorAssociations`** - File type associations
+      - **Values**: Object mapping file patterns to editor IDs (e.g., `{"*.html": "default"}`)
+    - **`files.defaultLanguage`** - Default language for new files
+      - **Values**: Language ID string (e.g., `"TypeScript"`, `"JavaScript"`, `"markdown"`)
+    - **`files.associations`** - Custom file associations
+      - **Values**: Object mapping patterns to languages (e.g., `{".env*": "dotenv"}`)
+    - **`files.exclude`** - Files to hide from explorer
+      - **Values**: Object with glob patterns
+    - **`editor.defaultFormatter`** - Default formatter for all files
+      - **Values**: Extension ID (e.g., `"vscode.typescript-language-features"`)
 
 ### Theme Customizations (`workbench.colorCustomizations`)
-- **What it does**: Overrides theme colors with custom values
-- **Structure**: Object mapping VS Color Theme keys to color values
-- **Common color keys**:
-  - `background`: Main background color
-  - `foreground`: Main text color
-  - `editor.background`: Editor background
-  - `editor.foreground`: Editor text color
-  - `sideBar.background`: Sidebar background
-  - `statusBar.background`: Status bar background
-  - `terminal.ansi*`: Terminal color scheme (Black, Red, Green, Yellow, Blue, Magenta, Cyan, White)
-- **Values**: Hex color codes or CSS color names
+- **`workbench.colorCustomizations`** - Object overriding theme colors with custom values
+  - **Common color keys**:
+    - **Background colors**: `"editor.background"`, `"sideBar.background"`, `"panel.background"`, `"terminal.background"`, `"activityBar.background"`, `"statusBar.background"`, `"titleBar.activeBackground"`
+    - **Foreground colors**: `"editor.foreground"`, `"sideBar.foreground"`, `"statusBar.foreground"`, `"activityBar.foreground"`
+    - **Border colors**: `"sideBar.border"`, `"panel.border"`, `"statusBar.border"`, `"tab.border"`
+    - **UI element colors**: `"menu.background"`, `"menu.foreground"`, `"input.background"`, `"dropdown.background"`, `"button.background"`
+    - **Selection colors**: `"list.activeSelectionBackground"`, `"list.hoverBackground"`, `"editor.selectionBackground"`
+    - **Terminal colors**: `"terminal.ansiBlack"`, `"terminal.ansiRed"`, `"terminal.ansiGreen"`, `"terminal.ansiYellow"`, `"terminal.ansiBlue"`, `"terminal.ansiMagenta"`, `"terminal.ansiCyan"`, `"terminal.ansiWhite"`
+    - **Git colors**: `"gitDecoration.deletedResourceForeground"`, `"gitDecoration.modifiedResourceForeground"`, `"gitDecoration.conflictingResourceForeground"`
+  - **Values**: Hex color codes (e.g., `"#020817"`, `"#F8FAFC"`) or CSS color names
 
+> [!TIP]
+> Theme
+> To quickly create this section you can use the theme builder that can be found on the web ui.
+> Once your theme has been built just copy over the settings into the config
 
 
 ## Example Config
