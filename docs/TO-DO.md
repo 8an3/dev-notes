@@ -2,6 +2,303 @@
 
 A comprehensive VS Code extension for managing notes, todos, reminders, and post-it pads with GitHub synchronization capabilities.
 
+# Table of Contents
+
+1. [Notes Manager & GitHub Sync Extension](#notes-manager--github-sync-extension)
+
+2. [To-Do Extension Feature Comparison](#to-do-extension-feature-comparison)
+   - [DevStack vs Marketplace Leaders](#devstack-vs-marketplace-leaders)
+   - [Marketplace Leaders Overview](#marketplace-leaders-overview)
+   - [Feature Comparison Table](#feature-comparison-table)
+
+3. [Key Differentiators](#key-differentiators)
+   - [DevStack To Do's Unique Advantages](#devstack-to-dos-unique-advantages)
+   - [Why DevStack Doesn't Need Their "Features"](#why-devstack-doesnt-need-their-features)
+
+4. [The Real Comparison](#the-real-comparison)
+   - [What Each Extension Actually Does](#what-each-extension-actually-does)
+   - [The Use Case Difference](#the-use-case-difference)
+
+5. [Why The Comparison Is Misleading](#why-the-comparison-is-misleading)
+   - [The Real Competitive Landscape](#the-real-competitive-landscape)
+
+6. [Bottom Line](#bottom-line)
+
+7. [Features](#features)
+   - [📝 Note Management](#-note-management)
+   - [✅ Todo/Checklist Management](#-todochecklist-management)
+   - [⏰ Reminder System](#-reminder-system)
+   - [📌 Post-It Pads](#-post-it-pads)
+   - [🔄 GitHub Synchronization](#-github-synchronization)
+     - [Core Sync Operations](#core-sync-operations)
+     - [Repository Management](#repository-management)
+     - [Git Operations](#git-operations)
+     - [Advanced Features](#advanced-features)
+
+8. [Getting Started](#getting-started)
+   - [Personal Access Token Guide](#personal-access-token-guide)
+   - [Configuration Options](#configuration-options)
+
+9. [Usage](#usage)
+   - [Creating](#creating)
+   - [Editing](#editing)
+   - [Deleting](#deleting)
+
+10. [Troubleshooting & Advanced Commands](#troubleshooting--advanced-commands)
+
+11. [To Do, Notes and Reminders PWA Web App](#to-do-notes-and-reminders-pwa-web-app)
+    - [Architecture Overview](#architecture-overview)
+
+# To-Do Extension Feature Comparison
+
+## DevStack vs Marketplace Leaders
+### Marketplace Leaders Overview
+- **To Do 1** (6,773,736 installs) - Searches code for TODO/FIXME comments
+- **To Do 2** (455,503 installs) - Manages TaskPaper-style todo files
+
+---
+
+| Feature | DevStack To Do | To Do 1 | To Do 2 |
+|---------|------------------|-----------|-------|
+| **Installation Base** | Growing | 6.7M | 455K |
+| **Core Functionality** |
+| Purpose | Full task management system | Code comment scanner | Todo file manager |
+| Multiple Note Types | ✅ (Notes, Todos, Reminders, Post-Its) | ❌ (Comments only) | ✅ (Todos only) |
+| Hierarchical Organization | ✅ (Priority, Normal, Completed, Trashed) | ✅ (By folder/tag) | ✅ (Projects) |
+| Nested Checklists | ✅ (Unlimited depth with collapsible sections) | ❌ | ❌ |
+| Label System | ✅ (Custom labels) | ⚠️ (Tags in comments) | ✅ (Tags) |
+| **Storage & Sync** |
+| File-Based Storage | ✅ (Markdown in `.vscode/ntrsync/`) | ❌ (Scans existing code) | ✅ (Custom format) |
+| GitHub Sync | ✅ (Full bidirectional) | ❌ | ❌ |
+| Cloud Backup | ✅ (GitHub as source of truth) | ❌ | ❌ |
+| Offline Support | ✅ (Full offline capability) | ✅ (Local only) | ✅ (Local only) |
+| Cross-Device Sync | ✅ (Automatic via GitHub) | ❌ | ❌ |
+| **Access & Availability** |
+| VSCode Interface | ✅ | ✅ | ✅ |
+| Web UI | ✅ (Full PWA) | ❌ | ❌ |
+| Mobile Access | ✅ (PWA on phone) | ❌ | ❌ |
+| Offline Mobile Use | ✅ (Works with zero cell service) | ❌ | ❌ |
+| Desktop App Access | ✅ (PWA) | ❌ | ❌ |
+| Works Without VSCode | ✅ (Web UI always accessible) | ❌ (VSCode required) | ❌ (VSCode required) |
+| **Reminders & Time** |
+| Due Date Tracking | ✅ (Full date/time support) | ❌ | ⚠️ (Manual tags) |
+| Reminder Categories | ✅ (Coming Up, Missed, etc.) | ❌ | ❌ |
+| Active Reminder Notifications | ✅ (Triggers inside VSCode) | ❌ | ❌ |
+| Time Estimates | ❌ (Not needed - GitHub tracks actual time) | ❌ | ✅ (`@est` tags) |
+| Time Tracking | ✅ (GitHub commit timestamps & history) | ❌ | ⚠️ (Manual `@started` tags) |
+| Overdue Notifications | ✅ | ❌ | ❌ |
+| **Post-It Notes** |
+| Post-It Pad Feature | ✅ (5 color-coded pads) | ❌ | ❌ |
+| Auto-Save | ✅ (500ms debounce) | N/A | ⚠️ (On file save) |
+| Quick Actions | ✅ (Copy, clear, delete all) | N/A | N/A |
+| **GitHub Integration** |
+| Push to GitHub | ✅ | ❌ | ❌ |
+| Pull from GitHub | ✅ | ❌ | ❌ |
+| Bidirectional Sync | ✅ | ❌ | ❌ |
+| Create Repository | ✅ (From VSCode) | ❌ | ❌ |
+| Branch Management | ✅ (Create, switch, rename, delete) | ❌ | ❌ |
+| Collaborator Management | ✅ (Granular permissions) | ❌ | ❌ |
+| Private Repositories | ✅ | ❌ | ❌ |
+| Conflict Resolution | ✅ (Smart merge) | ❌ | ❌ |
+| Auto-Sync | ✅ (Configurable interval) | ❌ | ❌ |
+| **Git Operations** |
+| Commit Management | ✅ (Standard, staged, amend, undo) | ❌ | ❌ |
+| Stash Operations | ✅ (Create, apply, pop, drop) | ❌ | ❌ |
+| Tag Management | ✅ (Create, delete, push) | ❌ | ❌ |
+| Remote Management | ✅ (List, add, remove) | ❌ | ❌ |
+| **Code Integration** |
+| Find TODO in Code | ⚠️ (Coming soon) | ✅ (Main purpose) | ✅ (Embedded todos) |
+| Highlight in Editor | ⚠️ (Coming soon) | ✅ (Configurable) | ✅ (Configurable) |
+| Custom TODO Tags | ✅ (Unlimited markdown sections) | ✅ (Fully customizable) | ✅ (Fully customizable) |
+| Regex Search | ❌ (Not needed - proper organization) | ✅ (ripgrep) | ✅ (ag/rg/js) |
+| **Tree View & UI** |
+| Tree View in Activity Bar | ✅ | ✅ | ✅ |
+| Expand/Collapse Todo Lists | ✅ (Each file collapses/expands) | ✅ | ✅ |
+| Expand/Collapse Nested Sections | ✅ (Sections act as folders) | ❌ | ❌ |
+| Single-Click Complete | ✅ (Click checkbox = done + sync) | ❌ (Must open file) | ❌ (Must open file) |
+| Single-Click Edit | ✅ (Click title = open file) | ✅ (Click = navigate to line) | ✅ (Click = open file) |
+| Filter/Search | ✅ | ✅ | ✅ |
+| Context Menu Actions | ✅ | ✅ | ✅ |
+| Drag and Drop | ❌ (Not needed - context menus) | ❌ | ❌ |
+| Status Bar Integration | ❌ (Full sidebar UI) | ✅ (Counts) | ✅ (Statistics) |
+| **Advanced Features** |
+| Custom Sections in Markdown | ✅ (Unlimited, any name you want) | ❌ | ⚠️ (Projects only) |
+| Hierarchical Organization | ✅ (Files + nested collapsible sections) | ⚠️ (Folders only) | ⚠️ (Projects only) |
+| Statistics | ❌ (GitHub provides better tracking) | ⚠️ (Basic counts) | ✅ (Detailed stats) |
+| Time Tracking | ✅ (GitHub commit timestamps & history) | ❌ | ⚠️ (Manual `@started` tags) |
+| Archive System | ✅ (Completed/Trashed folders) | ❌ | ✅ (Archive section) |
+| Markdown Support | ✅ (Native markdown files) | ✅ (Markdown todos) | ⚠️ (Custom format) |
+| Formatting | ✅ (Full markdown) | ❌ | ✅ (Bold, italic, code) |
+| Multi-line Todos | ✅ | ✅ (Configurable) | ✅ |
+| **Data Management** |
+| Export Functionality | ✅ (Via GitHub) | ✅ (To file) | ❌ |
+| Import Functionality | ✅ (Via GitHub) | ❌ | ❌ |
+| Backup System | ✅ (GitHub) | ❌ | ❌ |
+| Version Control | ✅ (Full Git history) | ❌ | ❌ |
+| **Collaboration** |
+| Team Sharing | ✅ (Via GitHub repo) | ❌ | ❌ |
+| Permission Control | ✅ (GitHub collaborators) | ❌ | ❌ |
+| Real-time Sync | ✅ (Configurable) | ❌ | ❌ |
+| **Security** |
+| Private Data Support | ✅ (Private repos) | ✅ (Local only) | ✅ (Local only) |
+| Token Security | ✅ (VSCode secrets API) | N/A | N/A |
+| Auto .gitignore | ✅ (`.vscode/ntrsync/`) | N/A | N/A |
+| Encryption Support | ⚠️ (Via Pro7 tool) | ❌ | ❌ |
+| **Progressive Web App** |
+| Offline-First Architecture | ✅ | ❌ | ❌ |
+| Local Caching | ✅ | ❌ | ❌ |
+| Sync Queue | ✅ | ❌ | ❌ |
+| Conflict Resolution | ✅ | ❌ | ❌ |
+| Zero Data Loss | ✅ | N/A | N/A |
+| Works on Plane/Subway | ✅ | ❌ | ❌ |
+
+---
+
+## Key Differentiators
+
+### DevStack To Do's Unique Advantages
+
+1. **True Cross-Platform System**
+   - Works in VSCode, web browser, mobile, desktop
+   - Fully functional offline (even with zero cell service)
+   - Not locked to VSCode being open
+   - **ONLY todo extension using GitHub as source of truth**
+
+2. **Enterprise-Grade Architecture**
+   - GitHub as source of truth
+   - Bidirectional sync with conflict resolution
+   - Private repository support
+   - Team collaboration with granular permissions
+
+3. **Perfect Tree View UX**
+   - Single-click checkbox to complete (never open file)
+   - Single-click title to edit (opens when you need it)
+   - Collapsible todo lists (organized by filename)
+   - Nested collapsible sections (folders within lists)
+   - Hierarchical organization without complexity
+   - Zero confusion - interface explains itself
+
+4. **Complete Task Management**
+   - Multiple note types (Notes, Todos, Reminders, Post-Its)
+   - Hierarchical organization (Priority → Normal → Completed → Trashed)
+   - Unlimited custom markdown sections (name them whatever you want)
+   - Due date tracking with overdue detection
+   - **Active reminder notifications inside VSCode**
+   - Label system for categorization
+   - GitHub provides automatic time tracking via commit history
+
+5. **Git Integration**
+   - Full repository management from VSCode
+   - Branch operations, stash management, tag control
+   - Collaborator management with permission levels
+   - Complete commit workflow
+
+### Why DevStack Doesn't Need Their "Features"
+
+**Regex Search**: They need regex because their systems are disorganized. DevStack has proper hierarchical organization (files, nested sections, priority folders, labels) - you can find anything instantly without searching.
+
+**Manual Time Tracking Tags**: They type `@started` and `@est(2h)` manually. DevStack uses GitHub which automatically tracks every save, commit, and edit with timestamps, contribution graphs, and full version history.
+
+**Custom Tag Systems**: They let you rename rigid categories (TODO → FIXME → HACK). DevStack uses markdown files where you create unlimited sections with any names you want (`dildo` if you want). Complete freedom.
+
+**Statistics Counters**: They show "You created 47 todos!" DevStack uses GitHub which provides real productivity data: commit history, contribution graphs, actual completion tracking.
+
+**Drag and Drop**: Slow and imprecise. DevStack uses context-aware right-click menus that show only relevant actions per item type.
+
+**Status Bar Counts**: Tiny counter showing "5 TODOs". DevStack IS the entire sidebar with full tree view, nested organization, and instant interaction.
+
+**Code TODO Scanning**: Only needed because their todo systems suck so badly that developers prefer leaving `// TODO` comments. DevStack makes creating proper todos so easy (5 seconds, single click in sidebar) that code comments become unnecessary. *Note: Adding highlight feature anyway because it's nice UX.*
+
+---
+
+## The Real Comparison
+
+### What Each Extension Actually Does
+
+**To Do 1** is a **code comment scanner**. It helps developers find TODO/FIXME comments scattered throughout their codebase. It's not a task management system - it's a search tool.
+
+**To Do 2** is a **plain text todo file manager**. It manages todo lists in dedicated files using a custom format. It's VSCode-only and local-only.
+
+**DevStack To Do** is a **complete task management platform** that happens to integrate with VSCode. It's the only extension that:
+- Works outside of VSCode
+- Syncs across devices automatically
+- Functions fully offline on mobile
+- Uses GitHub for backup and collaboration
+- Provides team collaboration features
+- Has enterprise-grade architecture
+
+### The Use Case Difference
+
+**To Do 1 Users**: "I need to find all the TODO comments in my code"
+- Scans existing codebase
+- Highlights todos in editor
+- Quick navigation to comments
+
+**To Do 2 Users**: "I need a text-based todo list inside VSCode"
+- Creates dedicated todo files
+- Manages tasks in plain text
+- Local-only workflow
+
+**DevStack To Do Users**: "I need a complete task management system that works everywhere"
+- Manages all types of notes/tasks/reminders
+- Works on phone, tablet, laptop, desktop
+- Functions offline in subway/plane/remote areas
+- Syncs automatically across all devices
+- Collaborates with team via GitHub
+- Never loses data
+
+---
+
+## Why The Comparison Is Misleading
+
+Comparing DevStack To Do to To Do 1 or To Do 2 is like comparing:
+- **Notion** vs **grep** (they both find text, right?)
+- **GitHub** vs **local Git** (they both version control, right?)
+- **Google Drive** vs **File Explorer** (they both manage files, right?)
+
+The marketplace "leaders" aren't actually competitors - they solve different problems:
+- **To Do 1**: Development workflow tool for navigating code comments
+- **To Do 2**: Lightweight text-based task list for developers
+- **DevStack To Do**: Enterprise task management platform with offline-first PWA
+
+### The Real Competitive Landscape
+
+DevStack To Do competes with:
+- **Todoist** (requires internet, no offline mobile)
+- **Notion** (requires internet, limited offline)
+- **Microsoft To Do** (requires internet, breaks offline)
+- **Google Keep** (requires internet, no offline support)
+- **Asana/Trello/Jira** (require internet, enterprise only)
+
+And DevStack To Do beats all of them because:
+1. Works fully offline (zero cell service)
+2. Free (GitHub as backend)
+3. Private (your data, your repo)
+4. Integrated with development workflow
+5. No vendor lock-in
+6. Open data format (Markdown)
+
+---
+
+## Bottom Line
+
+**To Do 1** has 6.7M installs because it solves a simple, common problem: finding TODO comments. It does one thing well.
+
+**To Do 2** has 455K installs because it's a solid text-based todo manager for developers who want simplicity.
+
+**DevStack To Do** is the only VSCode extension that provides:
+- Full offline mobile access (works with zero cell service)
+- Cross-device automatic sync
+- **GitHub as source of truth (ONLY extension)**
+- Active reminder notifications inside VSCode
+- Works without VSCode being open
+- Enterprise-grade architecture
+- Progressive Web App functionality
+
+The install count isn't something I track or prioritize. DevStack was built entirely for my own use—every feature exists because I needed it. The documentation only exists for two reasons: first, users somehow found and started using the extension even before any readme existed, and second, I needed a reference for myself to remember what's currently in DevStack and how it's configured. Without that unexpected user base, the docs would be far less detailed than they are now.
+
+Honestly, I'm still baffled by how those initial users even discovered the extension. It had a confusing name that bore no relation to its functionality, and there was literally zero documentation. I only published it to the marketplace so I could easily install it across different machines where I code—I never anticipated anyone else downloading it. The only reason I included the above comparison, is because in regards to this extensions features, previously I was selling each feature short and not including enough reasons on why you should use it.
+
 ## Features
 
 ![Explorer pane](https://raw.githubusercontent.com/8an3/dev-notes/main/todo/main.jpg)
@@ -280,257 +577,4 @@ Meanwhile the "competition":
 - **Most to-do apps**: Break completely without connection
 
 MEANWHILE, no extension available on the marketplace has the ability to not only view, edit and delete items via vscode interface but also sync with a pwa web app that has full synch capabilities. To top it off the web app ui contains features not found in any other to do app, even through other sources other than vscodes marketplace. The added `slice of life` touches to the ui, really makes the user experience just that much better by alleviating as much friction when using the application.
-
-You built enterprise-grade offline-first architecture for a to-do feature that's "just one aspect" of your extension.
-
-Because of course you did. Why would you build a to-do system that stops working when you don't have service? That would be stupid.
-
-
-
-# To-Do Extension Feature Comparison
-
-## DevStack vs Marketplace Leaders
-### Marketplace Leaders Overview
-- **Todo Tree** (6,773,736 installs) - Searches code for TODO/FIXME comments
-- **Todo+** (455,503 installs) - Manages TaskPaper-style todo files
-
----
-
-| Feature | DevStack NTRSync | Todo Tree | Todo+ |
-|---------|------------------|-----------|-------|
-| **Installation Base** | Growing | 6.7M | 455K |
-| **Core Functionality** |
-| Purpose | Full task management system | Code comment scanner | Todo file manager |
-| Multiple Note Types | ✅ (Notes, Todos, Reminders, Post-Its) | ❌ (Comments only) | ✅ (Todos only) |
-| Hierarchical Organization | ✅ (Priority, Normal, Completed, Trashed) | ✅ (By folder/tag) | ✅ (Projects) |
-| Nested Checklists | ✅ (Unlimited depth with collapsible sections) | ❌ | ❌ |
-| Label System | ✅ (Custom labels) | ⚠️ (Tags in comments) | ✅ (Tags) |
-| **Storage & Sync** |
-| File-Based Storage | ✅ (Markdown in `.vscode/ntrsync/`) | ❌ (Scans existing code) | ✅ (Custom format) |
-| GitHub Sync | ✅ (Full bidirectional) | ❌ | ❌ |
-| Cloud Backup | ✅ (GitHub as source of truth) | ❌ | ❌ |
-| Offline Support | ✅ (Full offline capability) | ✅ (Local only) | ✅ (Local only) |
-| Cross-Device Sync | ✅ (Automatic via GitHub) | ❌ | ❌ |
-| **Access & Availability** |
-| VSCode Interface | ✅ | ✅ | ✅ |
-| Web UI | ✅ (Full PWA) | ❌ | ❌ |
-| Mobile Access | ✅ (PWA on phone) | ❌ | ❌ |
-| Offline Mobile Use | ✅ (Works with zero cell service) | ❌ | ❌ |
-| Desktop App Access | ✅ (PWA) | ❌ | ❌ |
-| Works Without VSCode | ✅ (Web UI always accessible) | ❌ (VSCode required) | ❌ (VSCode required) |
-| **Reminders & Time** |
-| Due Date Tracking | ✅ (Full date/time support) | ❌ | ⚠️ (Manual tags) |
-| Reminder Categories | ✅ (Coming Up, Missed, etc.) | ❌ | ❌ |
-| Active Reminder Notifications | ✅ (Triggers inside VSCode) | ❌ | ❌ |
-| Time Estimates | ❌ (Not needed - GitHub tracks actual time) | ❌ | ✅ (`@est` tags) |
-| Time Tracking | ✅ (GitHub commit timestamps & history) | ❌ | ⚠️ (Manual `@started` tags) |
-| Overdue Notifications | ✅ | ❌ | ❌ |
-| **Post-It Notes** |
-| Post-It Pad Feature | ✅ (5 color-coded pads) | ❌ | ❌ |
-| Auto-Save | ✅ (500ms debounce) | N/A | ⚠️ (On file save) |
-| Quick Actions | ✅ (Copy, clear, delete all) | N/A | N/A |
-| **GitHub Integration** |
-| Push to GitHub | ✅ | ❌ | ❌ |
-| Pull from GitHub | ✅ | ❌ | ❌ |
-| Bidirectional Sync | ✅ | ❌ | ❌ |
-| Create Repository | ✅ (From VSCode) | ❌ | ❌ |
-| Branch Management | ✅ (Create, switch, rename, delete) | ❌ | ❌ |
-| Collaborator Management | ✅ (Granular permissions) | ❌ | ❌ |
-| Private Repositories | ✅ | ❌ | ❌ |
-| Conflict Resolution | ✅ (Smart merge) | ❌ | ❌ |
-| Auto-Sync | ✅ (Configurable interval) | ❌ | ❌ |
-| **Git Operations** |
-| Commit Management | ✅ (Standard, staged, amend, undo) | ❌ | ❌ |
-| Stash Operations | ✅ (Create, apply, pop, drop) | ❌ | ❌ |
-| Tag Management | ✅ (Create, delete, push) | ❌ | ❌ |
-| Remote Management | ✅ (List, add, remove) | ❌ | ❌ |
-| **Code Integration** |
-| Find TODO in Code | ⚠️ (Coming soon) | ✅ (Main purpose) | ✅ (Embedded todos) |
-| Highlight in Editor | ⚠️ (Coming soon) | ✅ (Configurable) | ✅ (Configurable) |
-| Custom TODO Tags | ✅ (Unlimited markdown sections) | ✅ (Fully customizable) | ✅ (Fully customizable) |
-| Regex Search | ❌ (Not needed - proper organization) | ✅ (ripgrep) | ✅ (ag/rg/js) |
-| **Tree View & UI** |
-| Tree View in Activity Bar | ✅ | ✅ | ✅ |
-| Expand/Collapse Todo Lists | ✅ (Each file collapses/expands) | ✅ | ✅ |
-| Expand/Collapse Nested Sections | ✅ (Sections act as folders) | ❌ | ❌ |
-| Single-Click Complete | ✅ (Click checkbox = done + sync) | ❌ (Must open file) | ❌ (Must open file) |
-| Single-Click Edit | ✅ (Click title = open file) | ✅ (Click = navigate to line) | ✅ (Click = open file) |
-| Filter/Search | ✅ | ✅ | ✅ |
-| Context Menu Actions | ✅ | ✅ | ✅ |
-| Drag and Drop | ❌ (Not needed - context menus) | ❌ | ❌ |
-| Status Bar Integration | ❌ (Full sidebar UI) | ✅ (Counts) | ✅ (Statistics) |
-| **Advanced Features** |
-| Custom Sections in Markdown | ✅ (Unlimited, any name you want) | ❌ | ⚠️ (Projects only) |
-| Hierarchical Organization | ✅ (Files + nested collapsible sections) | ⚠️ (Folders only) | ⚠️ (Projects only) |
-| Statistics | ❌ (GitHub provides better tracking) | ⚠️ (Basic counts) | ✅ (Detailed stats) |
-| Time Tracking | ✅ (GitHub commit timestamps & history) | ❌ | ⚠️ (Manual `@started` tags) |
-| Archive System | ✅ (Completed/Trashed folders) | ❌ | ✅ (Archive section) |
-| Markdown Support | ✅ (Native markdown files) | ✅ (Markdown todos) | ⚠️ (Custom format) |
-| Formatting | ✅ (Full markdown) | ❌ | ✅ (Bold, italic, code) |
-| Multi-line Todos | ✅ | ✅ (Configurable) | ✅ |
-| **Data Management** |
-| Export Functionality | ✅ (Via GitHub) | ✅ (To file) | ❌ |
-| Import Functionality | ✅ (Via GitHub) | ❌ | ❌ |
-| Backup System | ✅ (GitHub) | ❌ | ❌ |
-| Version Control | ✅ (Full Git history) | ❌ | ❌ |
-| **Collaboration** |
-| Team Sharing | ✅ (Via GitHub repo) | ❌ | ❌ |
-| Permission Control | ✅ (GitHub collaborators) | ❌ | ❌ |
-| Real-time Sync | ✅ (Configurable) | ❌ | ❌ |
-| **Security** |
-| Private Data Support | ✅ (Private repos) | ✅ (Local only) | ✅ (Local only) |
-| Token Security | ✅ (VSCode secrets API) | N/A | N/A |
-| Auto .gitignore | ✅ (`.vscode/ntrsync/`) | N/A | N/A |
-| Encryption Support | ⚠️ (Via Pro7 tool) | ❌ | ❌ |
-| **Progressive Web App** |
-| Offline-First Architecture | ✅ | ❌ | ❌ |
-| Local Caching | ✅ | ❌ | ❌ |
-| Sync Queue | ✅ | ❌ | ❌ |
-| Conflict Resolution | ✅ | ❌ | ❌ |
-| Zero Data Loss | ✅ | N/A | N/A |
-| Works on Plane/Subway | ✅ | ❌ | ❌ |
-
----
-
-## Key Differentiators
-
-### DevStack NTRSync's Unique Advantages
-
-1. **True Cross-Platform System**
-   - Works in VSCode, web browser, mobile, desktop
-   - Fully functional offline (even with zero cell service)
-   - Not locked to VSCode being open
-   - **ONLY todo extension using GitHub as source of truth**
-
-2. **Enterprise-Grade Architecture**
-   - GitHub as source of truth
-   - Bidirectional sync with conflict resolution
-   - Private repository support
-   - Team collaboration with granular permissions
-
-3. **Perfect Tree View UX**
-   - Single-click checkbox to complete (never open file)
-   - Single-click title to edit (opens when you need it)
-   - Collapsible todo lists (organized by filename)
-   - Nested collapsible sections (folders within lists)
-   - Hierarchical organization without complexity
-   - Zero confusion - interface explains itself
-
-4. **Complete Task Management**
-   - Multiple note types (Notes, Todos, Reminders, Post-Its)
-   - Hierarchical organization (Priority → Normal → Completed → Trashed)
-   - Unlimited custom markdown sections (name them whatever you want)
-   - Due date tracking with overdue detection
-   - **Active reminder notifications inside VSCode**
-   - Label system for categorization
-   - GitHub provides automatic time tracking via commit history
-
-5. **Git Integration**
-   - Full repository management from VSCode
-   - Branch operations, stash management, tag control
-   - Collaborator management with permission levels
-   - Complete commit workflow
-
-### Why DevStack Doesn't Need Their "Features"
-
-**Regex Search**: They need regex because their systems are disorganized. DevStack has proper hierarchical organization (files, nested sections, priority folders, labels) - you can find anything instantly without searching.
-
-**Manual Time Tracking Tags**: They type `@started` and `@est(2h)` manually. DevStack uses GitHub which automatically tracks every save, commit, and edit with timestamps, contribution graphs, and full version history.
-
-**Custom Tag Systems**: They let you rename rigid categories (TODO → FIXME → HACK). DevStack uses markdown files where you create unlimited sections with any names you want (`dildo` if you want). Complete freedom.
-
-**Statistics Counters**: They show "You created 47 todos!" DevStack uses GitHub which provides real productivity data: commit history, contribution graphs, actual completion tracking.
-
-**Drag and Drop**: Slow and imprecise. DevStack uses context-aware right-click menus that show only relevant actions per item type.
-
-**Status Bar Counts**: Tiny counter showing "5 TODOs". DevStack IS the entire sidebar with full tree view, nested organization, and instant interaction.
-
-**Code TODO Scanning**: Only needed because their todo systems suck so badly that developers prefer leaving `// TODO` comments. DevStack makes creating proper todos so easy (5 seconds, single click in sidebar) that code comments become unnecessary. *Note: Adding highlight feature anyway because it's nice UX.*
-
----
-
-## The Real Comparison
-
-### What Each Extension Actually Does
-
-**Todo Tree** is a **code comment scanner**. It helps developers find TODO/FIXME comments scattered throughout their codebase. It's not a task management system - it's a search tool.
-
-**Todo+** is a **plain text todo file manager**. It manages todo lists in dedicated files using a custom format. It's VSCode-only and local-only.
-
-**DevStack NTRSync** is a **complete task management platform** that happens to integrate with VSCode. It's the only extension that:
-- Works outside of VSCode
-- Syncs across devices automatically
-- Functions fully offline on mobile
-- Uses GitHub for backup and collaboration
-- Provides team collaboration features
-- Has enterprise-grade architecture
-
-### The Use Case Difference
-
-**Todo Tree Users**: "I need to find all the TODO comments in my code"
-- Scans existing codebase
-- Highlights todos in editor
-- Quick navigation to comments
-
-**Todo+ Users**: "I need a text-based todo list inside VSCode"
-- Creates dedicated todo files
-- Manages tasks in plain text
-- Local-only workflow
-
-**DevStack NTRSync Users**: "I need a complete task management system that works everywhere"
-- Manages all types of notes/tasks/reminders
-- Works on phone, tablet, laptop, desktop
-- Functions offline in subway/plane/remote areas
-- Syncs automatically across all devices
-- Collaborates with team via GitHub
-- Never loses data
-
----
-
-## Why The Comparison Is Misleading
-
-Comparing DevStack NTRSync to Todo Tree or Todo+ is like comparing:
-- **Notion** vs **grep** (they both find text, right?)
-- **GitHub** vs **local Git** (they both version control, right?)
-- **Google Drive** vs **File Explorer** (they both manage files, right?)
-
-The marketplace "leaders" aren't actually competitors - they solve different problems:
-- **Todo Tree**: Development workflow tool for navigating code comments
-- **Todo+**: Lightweight text-based task list for developers
-- **DevStack NTRSync**: Enterprise task management platform with offline-first PWA
-
-### The Real Competitive Landscape
-
-DevStack NTRSync competes with:
-- **Todoist** (requires internet, no offline mobile)
-- **Notion** (requires internet, limited offline)
-- **Microsoft To Do** (requires internet, breaks offline)
-- **Google Keep** (requires internet, no offline support)
-- **Asana/Trello/Jira** (require internet, enterprise only)
-
-And DevStack NTRSync beats all of them because:
-1. Works fully offline (zero cell service)
-2. Free (GitHub as backend)
-3. Private (your data, your repo)
-4. Integrated with development workflow
-5. No vendor lock-in
-6. Open data format (Markdown)
-
----
-
-## Bottom Line
-
-**Todo Tree** has 6.7M installs because it solves a simple, common problem: finding TODO comments. It does one thing well.
-
-**Todo+** has 455K installs because it's a solid text-based todo manager for developers who want simplicity.
-
-**DevStack NTRSync** is the only VSCode extension that provides:
-- Full offline mobile access (works with zero cell service)
-- Cross-device automatic sync
-- **GitHub as source of truth (ONLY extension)**
-- Active reminder notifications inside VSCode
-- Works without VSCode being open
-- Enterprise-grade architecture
-- Progressive Web App functionality
-
-The install count difference isn't about quality - it's about awareness and use case. DevStack solves a problem most developers don't know they have until they experience it: **a task management system that actually works everywhere, all the time, with zero compromises**.
+ 
