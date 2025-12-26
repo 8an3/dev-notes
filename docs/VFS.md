@@ -255,6 +255,10 @@ Automatically generated from `package.json` when workspace initializes.
 
 ##### `snippet`
 
+- snippets are now auto generated items within the vfs explorer pane
+- You may also edit the items within this folder, as these auto generated items will not actually take up any space within the config file itself, if any labels match any label from the auto generated list, those items will not be included
+- allowing you to create you organization system for your snippet files
+- snippet files adopted the global / workspace system, making them workspace context intelligent, enabling you to organize your snippets at a workspace level so you could have a different config for each project 
 
 > [!TIP] Philosophy: Empowering Developers
 > This extension takes an unconventional approach by exposing every internal function directly to you. While this is rare in VS Code extensions, the reasoning is simple: these functions were already built for personal use, and automating their availability helps colleagues and the broader community with minimal additional effort.
