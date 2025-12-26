@@ -352,13 +352,15 @@ Automatically generated from `package.json` when workspace initializes.
 > Going forward, the extension will embrace a more modular architecture. Previously, functionality was built either entirely in config files or as monolithic standalone functions. The modular approach demonstrated above provides better reliability, maintainability, and reusability.
 
 
-[🡄 Return](../README.md)
+
+[🡄 Return](https://github.com/8an3/DevStack)
 
 
 
 
+---
 
-
+[🡄 Return](https://github.com/8an3/DevStack)
 
 
 

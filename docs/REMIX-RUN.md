@@ -27,7 +27,7 @@
 
 ### npx create-remixv2
 
-<details closed><summary style="font-size: 1.2em; color: #1447e6;">Create Remix v2 projects with 30+ popular stacks and custom stack references.</summary>
+Create Remix v2 projects with 30+ popular stacks and custom stack references
 
 **Installation:**
 
@@ -43,7 +43,6 @@ npx create-remixv2
 
 ![Create Remix](https://raw.githubusercontent.com/8an3/dev-notes/main/remix/npx-create-remix.jpg?raw=true)
 
-</details>
 
 ---
 
@@ -187,7 +186,7 @@ Implement One-Time Password authentication in Remix with complete auth routes
 
 ### Create Tests for Routes and Actions
 
-<details closed><summary style="font-size: 1.2em; color: #1447e6;">Auto-generate comprehensive test files for routes and actions.</summary>
+Auto-generate comprehensive test files for routes and actions
 
 **Access:** Right-click (editor) → Remix → Create Tests
 
@@ -199,13 +198,12 @@ Implement One-Time Password authentication in Remix with complete auth routes
 
 ![Remix Functions](https://raw.githubusercontent.com/8an3/dev-notes/main/remix/functions.jpg)
 
-</details>
 
 ---
 
 ### Remix Run Insert Code
 
-<details closed><summary style="font-size: 1.2em; color: #1447e6;">Comprehensive collection of Remix framework code snippets and utilities.</summary>
+Comprehensive collection of Remix framework code snippets and utilities
 
 **Access:** Right-click (editor) → Remix → Select function
 
@@ -219,13 +217,12 @@ Implement One-Time Password authentication in Remix with complete auth routes
 
 ![Remix Functions](https://raw.githubusercontent.com/8an3/dev-notes/main/remix/functions.jpg)
 
-</details>
 
 ---
 
 ### Create Single App - React Router
 
-<details closed><summary style="font-size: 1.2em; color: #1447e6;">Create a pre-configured React Router application reminiscent of a Remix stack.</summary>
+Create a pre-configured React Router application reminiscent of a Remix stack
 
 **Access:** Viewers → Master Apps → Select option
 
@@ -237,13 +234,12 @@ Implement One-Time Password authentication in Remix with complete auth routes
 
 ![Master Apps](https://raw.githubusercontent.com/8an3/dev-notes/main/vfs/master-apps.jpg)
 
-</details>
 
 ---
 
 ### Convert Remix-Run to Platform X
 
-<details closed><summary style="font-size: 1.2em; color: #1447e6;">Convert your Remix application to other platforms and frameworks.</summary>
+Convert your Remix application to other platforms and frameworks
 
 **Access:** Viewers → Master Apps → Select option
 
@@ -255,13 +251,12 @@ Implement One-Time Password authentication in Remix with complete auth routes
 
 ![Master Apps](https://raw.githubusercontent.com/8an3/dev-notes/main/vfs/master-apps.jpg)
 
-</details>
 
 ---
 
 ### Error Boundary
 
-<details closed><summary style="font-size: 1.2em; color: #1447e6;">Insert error boundary components at cursor position.</summary>
+Insert error boundary components at cursor position
 
 **Access:** Right-click (editor) → Remix → Select option
 
@@ -274,13 +269,11 @@ Implement One-Time Password authentication in Remix with complete auth routes
 ![Remix Functions](https://raw.githubusercontent.com/8an3/dev-notes/main/remix/functions.jpg)
 ![Error Boundary](https://raw.githubusercontent.com/8an3/dev-notes/main/remix/error.jpg)
 
-</details>
-
 ---
 
 ### Meta Function
 
-<details closed><summary style="font-size: 1.2em; color: #1447e6;">Insert meta function with proper configuration at cursor.</summary>
+Insert meta function with proper configuration at cursor
 
 **Access:** Right-click (editor) → Remix → Select option
 
@@ -293,13 +286,12 @@ Implement One-Time Password authentication in Remix with complete auth routes
 ![Remix Functions](https://raw.githubusercontent.com/8an3/dev-notes/main/remix/functions.jpg)
 ![Meta Function](https://raw.githubusercontent.com/8an3/dev-notes/main/remix/meta.jpg)
 
-</details>
 
 ---
 
 ### Links Function
 
-<details closed><summary style="font-size: 1.2em; color: #1447e6;">Insert links function for resource management at cursor.</summary>
+Insert links function for resource management at cursor
 
 **Access:** Right-click (editor) → Remix → Select option
 
@@ -312,13 +304,12 @@ Implement One-Time Password authentication in Remix with complete auth routes
 ![Remix Functions](https://raw.githubusercontent.com/8an3/dev-notes/main/remix/functions.jpg)
 ![Links Function](https://raw.githubusercontent.com/8an3/dev-notes/main/remix/links.jpg)
 
-</details>
 
 ---
 
 ### Create Monorepo
 
-<details closed><summary style="font-size: 1.2em; color: #1447e6;">Create a fully configured monorepo "stack" with automatic setup and first build.</summary>
+Create a fully configured monorepo "stack" with automatic setup and first build
 
 **Access:** Viewers → Master Apps → Select option
 
@@ -332,13 +323,12 @@ Implement One-Time Password authentication in Remix with complete auth routes
 
 ![Master Apps](https://raw.githubusercontent.com/8an3/dev-notes/main/vfs/master-apps.jpg)
 
-</details>
 
 ---
 
 ### Build & Deploy Project
 
-<details closed><summary style="font-size: 1.2em; color: #1447e6;">Customize the build process of your monorepo project with Turborepo-like functionality.</summary>
+Customize the build process of your monorepo project with Turborepo-like functionality
 
 **Access:** Viewers → Master Apps → Select option
 
@@ -350,13 +340,12 @@ Implement One-Time Password authentication in Remix with complete auth routes
 
 ![Master Apps](https://raw.githubusercontent.com/8an3/dev-notes/main/vfs/master-apps.jpg)
 
-</details>
 
 ---
 
 ### RR Folder Routing
 
-<details closed><summary style="font-size: 1.2em; color: #1447e6;">Configure React Router to use folder-based routing convention.</summary>
+Configure React Router to use folder-based routing convention
 
 **Access:** Viewers → Project → Select option
 
@@ -368,13 +357,11 @@ Implement One-Time Password authentication in Remix with complete auth routes
 
 ![Project Menu](https://raw.githubusercontent.com/8an3/dev-notes/main/vfs/project.jpg)
 
-</details>
-
 ---
 
 ### Preview Route URL
 
-<details closed><summary style="font-size: 1.2em; color: #1447e6;">Preview the current file's URL without opening the browser.</summary>
+Preview the current file's URL without opening the browser
 
 **Access:** Right-click (editor) → Remix → Select option
 
@@ -386,13 +373,12 @@ Implement One-Time Password authentication in Remix with complete auth routes
 
 ![Remix Functions](https://raw.githubusercontent.com/8an3/dev-notes/main/remix/functions.jpg)
 
-</details>
 
 ---
 
 ### Create Action Object
 
-<details closed><summary style="font-size: 1.2em; color: #1447e6;">Generate Prisma action objects for database operations.</summary>
+Generate Prisma action objects for database operations
 
 **Access:** Right-click (editor) → Remix → Select option
 
@@ -404,4 +390,8 @@ Implement One-Time Password authentication in Remix with complete auth routes
 
 ![Action Object](https://raw.githubusercontent.com/8an3/dev-notes/main/remix/action.jpg)
 
-</details>
+
+
+---
+
+[🡄 Return](https://github.com/8an3/DevStack)

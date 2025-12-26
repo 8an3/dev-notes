@@ -8,7 +8,7 @@
 
 ### Add ShadCN Components
 
-<details closed><summary style="font-size: 1.2em; color: #1447e6;">Add ShadCN UI components to your project with one click - components and libraries only.</summary>
+Add ShadCN UI components to your project with one click - components and libraries only
 
 **Access:** Viewers → Project → Install ShadCN Components Only
 
@@ -19,13 +19,12 @@
 
 ![Project Menu](https://raw.githubusercontent.com/8an3/dev-notes/main/vfs/project.jpg)
 
-</details>
 
 ---
 
 ### Install ShadCN Components w/ Configs
 
-<details closed><summary style="font-size: 1.2em; color: #1447e6;">Complete ShadCN UI installation with full configuration setup.</summary>
+Complete ShadCN UI installation with full configuration setup
 
 **Access:** Viewers → Project → Install ShadCN Components with Configs
 
@@ -38,7 +37,6 @@
 
 ![Project Menu](https://raw.githubusercontent.com/8an3/dev-notes/main/vfs/project.jpg)
 
-</details>
 
 ---
 
@@ -119,3 +117,9 @@ Add individual ShadCN UI components directly into your project at cursor positio
 
 ![ShadCN Components](https://raw.githubusercontent.com/8an3/dev-notes/main/shadcn/shadcn.jpg)
 
+
+
+
+---
+
+[🡄 Return](https://github.com/8an3/DevStack)

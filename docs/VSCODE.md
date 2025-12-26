@@ -480,3 +480,6 @@ Mapping: As you move your cursor, the extension calculates your "JSON Path" and 
 - due to it being dynamic, till its tested thoroughly I do not know how reliable or stable it will be which is why v1 will remain an option in the menu as those options are hardcoded, and has been extremely reliable obviously
 
 
+---
+
+[🡄 Return](https://github.com/8an3/DevStack)

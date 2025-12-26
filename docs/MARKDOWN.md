@@ -310,3 +310,9 @@ Convert markdown file content into JSON-safe inline strings by escaping special 
 - Safe string serialization
 
 **BE Quick Pick Access:** Select `Convert MD File To Safe Inline String` from the BE Quick Pick menu
+
+
+
+---
+
+[🡄 Return](https://github.com/8an3/DevStack)

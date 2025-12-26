@@ -88,4 +88,7 @@ Restore default VSCode window colors and remove custom window differentiation.
 
 ![Settings](https://raw.githubusercontent.com/8an3/dev-notes/main/config/settings.jpg)
 
+
 ---
+
+[🡄 Return](https://github.com/8an3/DevStack)

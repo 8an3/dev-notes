@@ -176,3 +176,8 @@ Visual reference for all available VSCode icons and their identifiers.
 **Usage:** Perfect for customizing your extension commands, status bar items, and UI elements with the right visual indicators.
 
 **Note:** Regularly updated to include new VSCode icon additions and improvements.
+
+
+---
+
+[🡄 Return](https://github.com/8an3/DevStack)

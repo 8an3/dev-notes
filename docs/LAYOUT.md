@@ -1001,3 +1001,6 @@ Direct VS Code editor settings using full setting paths:
 > Once your theme has been built just copy over the settings into the config
 
 
+---
+
+[🡄 Return](https://github.com/8an3/DevStack)

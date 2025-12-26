@@ -130,3 +130,8 @@ Create visual diagrams showing relationships between your database tables and mo
 - Interactive model exploration
 - Relation mapping
 - Export diagram capabilities
+
+
+---
+
+[🡄 Return](https://github.com/8an3/DevStack)

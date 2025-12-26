@@ -297,4 +297,5 @@ Set item type in config object or click the plus icon in the title pane.
 
 
 
-[🡄 Return](../README.md)
+---
+[🡄 Return](https://github.com/8an3/DevStack)

@@ -92,3 +92,6 @@ One-click installation of the Catalyst UI library with complete setup and config
 - No configuration files (assumes existing Tailwind setup)
 
 ![Installation](https://raw.githubusercontent.com/8an3/dev-notes/blob/main/ui/install.png?raw=true)
+
+---
+[🡄 Return](https://github.com/8an3/DevStack)

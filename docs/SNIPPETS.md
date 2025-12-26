@@ -46,3 +46,7 @@ Access and insert snippets directly from the editor context menu with integrated
 
 ![Context Snippets](https://raw.githubusercontent.com/8an3/dev-notes/main/snippets/context-snippets.jpg?raw=true)
 
+
+---
+
+[🡄 Return](https://github.com/8an3/DevStack)

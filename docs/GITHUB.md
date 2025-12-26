@@ -11,7 +11,7 @@
 
 ### Repo Management
 
-<details closed><summary style="font-size: 1.2em; color: #1447e6;">Comprehensive GitHub repository management and functionality accessible from multiple locations.</summary>
+Comprehensive GitHub repository management and functionality accessible from multiple locations
 
 **Access Options:**
 - Status bar → DevStack Quick Pick
@@ -28,11 +28,10 @@ See DevStack Quick Pick documentation for full feature outline.
 ![GitHub Functions](https://raw.githubusercontent.com/8an3/dev-notes/main/github/github-pic.jpg?raw=true)
 ![GitHub Context Menu](https://raw.githubusercontent.com/8an3/dev-notes/main/github/contextr.jpg?raw=true)
 
-</details>
 
 ### Open Repo in Browser
 
-<details closed><summary style="font-size: 1.2em; color: #1447e6;">Open your GitHub repository in browser directly from any file in your workspace.</summary>
+Open your GitHub repository in browser directly from any file in your workspace
 
 **Access:** Right-click → Open GitHub Repo
 
@@ -44,11 +43,10 @@ See DevStack Quick Pick documentation for full feature outline.
 
 [Video Demo](https://youtu.be/CQ2rYtbZKJk)
 
-</details>
 
 ### Open Repo at File
 
-<details closed><summary style="font-size: 1.2em; color: #1447e6;">Navigate directly to a specific file's location in your GitHub repository.</summary>
+Navigate directly to a specific file's location in your GitHub repository
 
 **Access:** Right-click → Open GitHub at File
 
@@ -60,11 +58,10 @@ See DevStack Quick Pick documentation for full feature outline.
 
 [Video Demo](https://youtu.be/0CLkYvWSVqI)
 
-</details>
 
 ### Pro7 Archiver
 
-<details closed><summary style="font-size: 1.2em; color: #1447e6;">Create password-encrypted archives containing sensitive files for safe inclusion in your GitHub repository.</summary>
+Create password-encrypted archives containing sensitive files for safe inclusion in your GitHub repository
 
 **Access Options:**
 - DevStack Quick Pick menu
@@ -251,7 +248,8 @@ console.log('='.repeat(60));
 pro7Archiver();
 ```
 
-</details>
 
 </details>
+---
 
+[🡄 Return](https://github.com/8an3/DevStack)

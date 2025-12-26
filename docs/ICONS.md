@@ -50,3 +50,8 @@ Icons follow a logical pattern: `[MainTheme][Container/Feature][Filled]`
 **Example:** `MessageSquareFilled`, `UserCircle`, `SettingsGear`
 
 ![Icons Quick Pick](https://raw.githubusercontent.com/8an3/dev-notes/main/icons/icon-quickpic.jpg?raw=true)
+
+
+---
+
+[🡄 Return](https://github.com/8an3/DevStack)
