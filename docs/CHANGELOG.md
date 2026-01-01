@@ -1,66 +1,27 @@
-### <img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width="25"  style="vertical-align: middle; margin-bottom: 4px;"> **ROADMAP**
+### <img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width="25"  style="vertical-align: middle; margin-bottom: 4px;"> **UPDATES**
 
-<!-- ✓ in readme -->
-<!-- ✓✓ in readme and tested -->
+<!-- #region ✓ in readme -->
 
-#### ✓ Concurrent and VFS base code
-- trying out several different terminals to execute code in
-  - one of them being a terminal hack due to vscodes use of powershell cmds through their api, this creates a temp file in the system temp folder once created the system moves onto executing the next command allowing each command to wait till the one prior has completed
-  - i hated... how the previous echos into the termnial, created and testing another version where more manual code is needed, this version if it works should wait till the command has completed before moving
-  - created another 2 version incase the previous did not work
-- the base code for the explorer pane has gone through a ground up redesign, if it works this will make this will make things extremely easy moving forward, especially in terms of creating new item types in which just setting the new type within the interface will suffice
-- to ensure each item is created perfectly, a helper function was created to push all items through as they are created
-- in doing so, performance has increased meanwhile providing a much better platform to conitinue building off of. added benefit that was not aimed for, compile times have dropped
-- new function that creates a single point of executing every item type
-
-#### ✓ File Link Jumper 
-  - nav links that can be placed within any file to navigate to any other file, if including a line number also navigates to that file at the specified line
-  - added variant where it navigates to the first mention of the referened string
-
-#### ✓ monaco editer  
-  - save editors settings to local storage, enabling edits to persist
-  - more items added to reference sections
-
-#### ✓ readme generator
-  - seem to have broken some of the functionality when swapping the sidebar out for the new version. The readme template dropdown isn't displaying any valuees to choose, but everything else works
-
-
-#### ✓ encoders
-  - added the following encoders:
-  - png to svg
-  - ico to svg
-  - jpg to svg
-
-#### To do, Notes, Reminders
-  - merged into devstack
-  - added post it notes section
-
-
-#### The "Global Search Shortcut" (savedSearch)
-- The Pain: You find yourself searching for the same things over and over: TODO:, console.log(, FIXME:, or a specific @deprecated tag. VSCode's search doesn't "save" these queries well.
-- The Fix: A searchPreset type.
-- How it works: You define a label ("Find all Logs") and a regex. Clicking it instantly triggers the workbench.extensions.search ( or global search sidebar if workbench.extensions.search does not take in a arg) with that regex pre-filled and executed. 
-- obj example - `{ "label": "console.log(", "path": "regex pattern to find console.log(", "type": "search", "icon": "search" },
-
-#### ✓ Dependency "Deep Link" (packageSearch)
-- The Pain: You need to check the documentation or the README of a specific library in your node_modules. Finding it in the VSCode file explorer is like looking for a needle in a haystack.
-- The Free Fix: A "Jump to Package" item.
-- Time Saved: No more scrolling through thousands of folders in the sidebar.
-- user interface: On imports from within the file you are importing intom, hovering will provide clickable links for package.json and readme.md and the packages entry point for its code 'entering' the project
-
-#### ✓ The "Zombie Process Killer" (portReaper)
-- The Pain: You try to start your dev server, but it says Error: EADDRINUSE: address already in use :::3000. You have to run lsof -i :3000, find the PID, and then kill -9 <PID>.
-- The Fix: A portKill type.
-- How it works: It scans the package.json file for your dev script, grabbing the port number defined. When clicked, it runs a shell script: fuser -k 3000/tcp (or the cross-platform equivalent).
-- provide a vscode command register function that takes in a port number as avaraible to allow me to create a quickpick that displays 5 of the most common dev ports and a custom option at the top allowiing the user to enter a port number tha tisnt listed
-
-#### ✓ item type `layout`: Save and restore editor states.
-- Utility: When you click "Debug Mode," it closes all tabs, opens your 3 specific controllers, splits the screen, and opens the integrated terminal.
-- or have set context layouts for each project, where it opens the most commonly used files you set whenever that workspace opens
+To save on time, and due to the crazy amount of updates this extension receives, a more relaxed format will be used in place of the industry norm. It will be more of a revolving door of updates then just a continous changelog text wall, that will only feature the most recent 10 changes. But at the bottom of the doc will host a table featuring all features checked off with the following 2 boxes, readme docs written for that feature and tested. Tested meaning, has gone through enough testing for me to no longer think or worry about whether something in that feature is currently not working. Every single feature already goes through initial testing before its even made available.
 
 
 
-#### ✓ The ".env" Context Swapper (envProfile)
+> [!IMPORTANT] 
+> LAYOUT ENGINE CONFIG HAS BEEN UPDATED!
+> If you have already started using the layout engine, you will have to update your config as most of it will not work.
+>
+> This was due to several settings being horribly unreliable. Without the access to vscodes context, theres no way to 100% garuarantee a value. Instead of guessing the value, or following the foot steps of others where in they create their own context in which if they are wrong in guessing what the current state is, that invalid state will follow for the rest of the vscode instance.
+>
+> The best path forward, that I can currently see, assumming a baseline state but not to record that state so as to allow you to use vscode ux features such as the customize layout option available on the menubar and others reasons.
+>
+> It's not all bad news, if anything the changes made have actually provided you the even more freedom in terms of the config. Each object that contains key:value pairs are placed as a whole into the settings.json file, meaning your more then free to treat the sections performance and workspace as more organizational objects and you are free to place whatever settings you desire in either object. Customize layout is now a requirement, whenever your creating or modifying your configs be sure to copy that over from the provided example in the docs.
+
+<!-- #endregion ✓✓ in readme and tested -->
+
+<!-- #region ✓ in readme -->
+
+<details closed><summary  style="font-size: 1.2em;">The ".env" Context Swapper (envProfile)</summary>
+
 - Manual .env editing is a nightmare because one typo breaks the whole app.
 - The Pain: Opening .env, commenting out 10 lines of "Prod" vars, uncommenting 10 lines of "Dev" vars, and repeating this for every microservice.
 - The Fix: Create a type that swaps entire sets of variables.
@@ -84,7 +45,12 @@
   - in a quickpick tha tis already built i will provide two buttons one `Set Local .env Var's` and `Set Remote .env Var's`
   - no matter what the current state is, it will always grab the the corresponding values of which is triggered and set them in .env so as to never error out
 
-#### ✓ VSCode commands has been rebuilt
+</details>
+
+<!-- #endregion ✓ in readme -->
+<!-- #region ✓ in readme -->
+<details closed><summary  style="font-size: 1.2em;">✓ VSCode commands has been rebuilt</summary>
+
 - with the addition of referencing EVERY SINGLE VSCODE cmd at your disposal for the item creating process, I might as well recreate this and have it perform better
 - list will now comprise of over 1550+ vscode commands, ONTOP of ALL of devstacks commands
 - as of now devstacks cmd count is at 2700+, BUT that is due to the ui migrations scripts, theyre being too restrictive and are not including every single component, ONCE I fix that it should be sitting around 4000+ cmds, with saying that there will be a large part of them that will be "sectioned" off in where they will have their own search function so as to not include them with the other available commands. This is due to the components ui library representing a large portion of the commands being created for the extension. 
@@ -101,7 +67,9 @@
   - not to mention, this is the ONLY extension that I know of that even references vscode commands in excess of 5-10 items never mind 5500+ combined cmds to use, I probably have better documentation then fucking microsoft on a bunch of these cmds... 
 
 
+</details>
 
+<!-- #endregion ✓ in readme -->
 #### Intelligent JSON Schema Support
 
 #### item type `settings`
@@ -111,131 +79,173 @@
 #### snapshot engine
 
 #### persistant bookmarks
+<!-- #region ✓ in readme -->
+<details closed><summary  style="font-size: 1.2em;">Search Editor</summary>
+It is modeled after vscodes search editor, exactly, so it will feel and operate in the same fashion. As for added features:
+- Opens a search editor with template for search params
+- Executes search showing 5 lines before/after each match
+- Full find/replace functionality (replace single or replace all)
+- there will be four inputs using codelense to create them within an text editor, exactly the way vscode created
+  - for exmaple, you search for xyz, 50 results pop up
+  - but you don't want to change all 50 results, just one
+  - instead of navigating to that file, which would be double clicking the search result, to navigate to that line OR searching in THAT file for the line you need to get to 
+  - you will be able to make the changes from the search editor itself, making changes remotely and it will edit the relevant file in question
+- Changes are tracked automatically
+- When you save (Ctrl+S), all your edits get applied back to the original files
+- Double-click navigation to jump to the actual file
+- File type filters
+- toggable fuse.js search capabilties, disaplyed as a button inside the first input along with regex, case match and amtch whole word
+- toggles based in the first input for:
+  - Regex (already there conceptually)
+  - Case sensitive
+  - Match whole word
+  - Fuzzy search
+- toggles based in the files to include input for:
+  - search in open editors only
+- toggles based in the files to exclude input for:
+  - use exclude settings and ignore files
 
-### clipboard 
-- upgrade to 100 items, add hover preview
-- global
-- hover preview now displaying markdown
+</details>
+
+<!-- #endregion ✓ in readme -->
+#### VSCode Extension Configuration Testing Suite
+<!-- #region ✓ in readme -->
+<details closed><summary  style="font-size: 1.2em;">DevStack Commands</summary>
+suprisingly I had the first collision take place just recently, due to adding notes and to do into the extension. Obviously hosting it own functions where I didn't need to worry about that, but when brought over it created an issue for the already in place github features, which prompted a change in how devstack commands will be made moving forward. The change offers enough of a benefit in warranting the change made through the extension. Not just for you, but also myself, in where each command will instantly tell us where the command originated from and allows for a far more simpler naming convention for example:
+- `ext.gitHubPushCommand` → `ext.git.push`
+
+I wish I would have thought of this earlier due to just how much better that is, because it not only makes it simpler to debug and code, but in terms of your benefit, a lot easier to guess if you know the extension has it. Adding to that, discovery of commands for users also becomes a lot easier, as the dynamic lists that produce the commands for you to view will now categorize them in a much cleaner format.
+
+ONTOP, of that change and doing the house work of starting that conversion. I have found areas in which to continue adding commands for users using the modular format, unlocking even more functions that you can program into your configs. Before this chore is done I imagine there will be a lot more prouced because of it.
+
+Just to name a few, these are some of the git commands available in which all, aside for a couple, are modular leaving you to your own devices and creating whatever executions you would like:
+
+- ocrmnavigator.git.diffCached
+- ocrmnavigator.git.openRepo
+- ocrmnavigator.git.openRepoAtFile
+- ocrmnavigator.git.upgradeExtension
+- ocrmnavigator.git.add
+- ocrmnavigator.git.commit
+- ocrmnavigator.git.diff
+- ocrmnavigator.git.patch
+- ocrmnavigator.git.pushTags
+- ocrmnavigator.git.push
+- ocrmnavigator.git.removeUnusedImports
+- ocrmnavigator.git.showQuickPick
+- ocrmnavigator.git.autoCommitPush
+- ocrmnavigator.git.autoCommitPushUpgrade
+- ocrmnavigator.git.G4PUBNPM
+- ocrmnavigator.git.dbAllLocal
+- ocrmnavigator.git.dbAllRemote
+- ocrmnavigator.git.dbReset
+- ocrmnavigator.git.databasepushtorepo
+- ocrmnavigator.git.dbSeed
+- ocrmnavigator.git.dbGen
+- ocrmnavigator.git.dbStudio
+- ocrmnavigator.project.clean
+- ocrmnavigator.project.DukeNUKEM
+- ocrmnavigator.project.i
+- ocrmnavigator.project.build
+- ocrmnavigator.vscode.REXT
+- ocrmnavigator.vscode.RTS
+- ocrmnavigator.vscode.RWINDOW
+- ocrmnavigator.vscode.DEVTOOLS
+- ocrmnavigator.git.showFullToken
+
+Only downside is, if you have already built config items consisting of commands from devstack, then you will 100% have to update them. This was a necessary change, and I would rather do this now rather than when there is another 1500 commands available. Sooner or later this would have had to be taken care of, but atleast with this new format it makes everything even more simple. I just wish I could change the first part, the only reason I am not is because it would truly break every current users... everything. Settings that they already have in place, configs, and so on. And creating the housework of recreating and reconfiguring everything that they already in have place.
+</details>
+
+<!-- #endregion ✓ in readme -->
+<!-- #region ✓ in readme -->
+<details closed><summary  style="font-size: 1.2em;">Monaco update two - catalyst editor</summary>
+
+the added updates continues to push it farther and farther away from its original idea of just a markdown editor
+- there have been... 30+ additions to the drop down menus
+- the issue with saving settings to local storage has been fixed
+- any adjustable setting that was not already added to the list to be saved locally, now is
+- due to using monaco editors in more than one place a centralized 'editor' and renderer was made replacing the code in each implementation
+- rename tabs, while it said you could do it, couldnt really. now whenever you trigger the function to rename tabs, the actual tab it self with feature an input for you to make the edit
+- there was about... I want to say 50-70+ additions to the reference table found in the right sidebar not to mention adjustments to others
+- the languages list now features its respective icon to find the language you are looking for a lot easier
 
 
-<!-- #region in readme -->
+</details>
 
-#### ✓✓ VFS
-  - [x] items and folders can now be set with custom icons
-  - [x] every available icon via vscodes `icons-in-labels`, is available to be selected via the add / edit item
-#### ✓✓ DevStack Quickpick Menu
-  - added several items and rearranged overall structure currently has the following items:
-  - gs and vsix
-  - update patch version
-  - custom vsix packager
-  - reload extensions
-  - reload ts server
-  - reload window
-  - open devtools
-  - search devstack
-  - shortcuts reference
-  - to do / notes menu
-  - github menu
-  - fold menu
-  - format and errors menu
-  - performance switch menu
-  - file system menu
-  - prisma functions menu
-#### ✓✓ Bleeding Edge Menu
-  - activate quickpick menu via setting the global or workspace settings via `"ocrmnavigator.BE_QP": true,`
-  - features that need longer testing and contains the following items currently
-  - auto create schema
-  - g4 and vsix - different feature set than the one in the devstack menu
-  - trigger autorun folder
-  - convert md file to safe inline string
-  - toggle regex review
-  - toggle regex gm
-  - open regex helper
-  - reload window
-  - open gbl settings file
-  - open ws settings file
-  - display full gh token
-#### ✓✓ performance switch
-  - completely redone as the previous version was... too agressive
-#### ✓✓ autorun folder
-  - when using any g4 function, executes any node .js script contained with in the folder
-#### ✓✓ Code snap
-  - highlight desired code section, then `alt + d`, activate function via quickpick menu option
-  - creates a terminal style window with the selected code to painlessly share code snippets in a nice looking format
-  - can predefine settings to be used, but also contains a sidebar to set them on the fly
-#### ✓✓ motions category
-  - primitive components that have animations added to each
-#### ✓✓ build package.json
-  - takes contents from package.dev.jsonc, formats the file and removes comments then overwrites package.json
-  - to use add item `"type": "command",` and `"command": "ocrmnavigator.formatPackgeJson"`
-#### ✓✓ the ability to set arguemnts for items, command, powershell and bash commands
-  - [ ] `{ "label": "Open Settings", "type": "command", "path": "workbench.action.openSettings", "args": ["editor.fontSize"] }`
-#### ✓✓ createFolderSmartIndexNamed  with named Exports
-#### ✓✓ before initializing tthe config files, they are formatted, removing comments and trailing commas
-#### ✓✓ create registry w/ named exports
-#### ✓✓ each config item can now take the value tooltipText, that will be displayed in the items tooltip
-#### ✓✓ icons reference list in devstack qp
-  - [ ] whenever an item is clicked, copies it into your clipboard and exits the menu
-#### ✓✓ devstack cmds/functions ref in devstack qp
-  - [ ] whenever an item is clicked, copies it into your clipboard and exits the menu
-#### ✓✓ terminal redesign
-  - [ ] need to go through whole extension to make sure its using the new class
-- [ ] added file back to main add button in title pane
-- [ ] added snippets back, whenever item is clicked copying into clipboard 
-- [ ] number of `modular` styled functions created
-- [ ] created new marketplace rest api request to send vsix packages
-- [ ] need to create section devoted discussing devstack commands and the amount of freedom and capapbilties users now have 
-  - [ ] discuss orders 1-6
-  - [ ] and other functions like it, and see if we cant break them down for users to use
-- [ ] need to add to do, notes, reminders to readme, if not already
-- [ ] new item types
-  - [ ] settingsToggle - current settings value will be listed in the tooltip
-  - [ ] tasks - triggers a task defined within tasks.json
-  - [ ] apiCall - define items as api calls that you can trigger whenever needed
-- so far testing has proven successs zero issues and meets expectations of what I wanted out of it
-  - the new terminal system "persists" even after instance restarts where as whenever a command is executed through devstack, it will continue using the same powershell instance that was used prior to restarting instead of creating a new termninal window each cmd execution
-  - adding to that, it acts, looks and feels like a shell should, there is no garbage text needed in order to complete some hack to achieve some functionality
-  - the shell remains open and usable to the end user as if it was all one cohesive system that was built together, and depending on the type command triggered, each command awaits for the one prior to finish before executing it self
-  - there are still a couple of terminals i need to clean up and get rid, but there were over 100 of them, so unless you use the notes portion of the extension you wont see it
-#### ✓✓ Snippets - auto generated snippets items
-- snippets are now eligible to be assigned to global vscode instance as well as individual workspaces
-- just like npm scripts and tasks, this will also now be auto generated meanwhile keeping the same funcationality as before, so vscodes functionality of inline editor snippet insertion, still works as well as the context snippets accessible via quickpick in the editors context menu 
-- the tooltips now feature a "view" of the snippets body allowing you to view the entire snippet before copying to clipboard
-- same as before whenver clicked it places the body into your clipboard
-- whatever snippets you set to workspace it will save to you active instances workspace, if using the ui to create / edit snippets
-- as like before your free to edit the config files as you see fit
-- the snippets system follows the exact steps that the file system does and stores in the same places
-- so remember don't edit the snippets.json file contained within the extensions global folder, edit the global-snippets.json and its project specific configs
-- can add folders or snippets to root level snippets folder
-  - items inherit folders global value unless placed in the root snippets folder, in which any item within that folder can have either global set to true or false
-#### ✓✓ open route in browser
-  - fixed index and splat issues
-#### ✓✓ icons
-  - created quick pick menu that inserts icon at cursor and import statement at the top of the file
+<!-- #endregion ✓ in readme -->
+<!-- #region ✓ in readme -->
+<details closed><summary  style="font-size: 1.2em;">Snippets</summary>
 
-- [x] add global settings file opener in quick pick
-- [x] need to add md pre-processor to readme
-- [x] convert node .js scripts over to extension functions allowing other workspaces the same functionality
+I really need to atleast add something to this doc whenever I do something, I just dont have the time. 
+The last two days alone, have been NOTHING but typing documentation... I guess thats what I get when creating a ridiculously stupid extension such as this. 
 
-- [ ] TO-DO
-  - [x] when logging in if the user is different then the current user in indexed reset all datqa
-  - [x] changed createNote in configureAction to return note instead of redirect
-  - [x] if (isTrashed) { return json({success: false, message: 'Note is in trash'}) }
-  - [x] merge with devstack
-  - [x] implement a queue system for rapid line item pushes. instead of cancelling subsequent operations, enqueue each push request and process them sequentially in FIFO order, with each waiting for the previous operation to complete before executing
-  - [x] need to fix context menu for notes
-- [x] create add items functions for apiCall
-- [x] create add items functions for settingsToggle
-- [x] recreate add cmdChain
-- [ ] recreate add concurrent, 
-- [ ] recreate add chain implementing a intellisense system to help with creating the new item type
-- [ ] recreate add layout
-- [x] need to create add items functions for search
-- [x] need to test BE concurrent function
-- [x] need to test BE sequential function
-- [x] add new tools to drop down and devstack quickpick
-- [x] need to create a section on how to benefit from the local / vs production database env toggle
-- [x] create new move item
-- [ ] new json/c formatter
-<!-- #endregion in readme -->
+Just added two more items to the tldr, sitting there looking at it... its rediculous. I don't get how there aren't better solutions out there, and makes me shake my head.
 
+how is it that a sales person of all professions in which the typical sales person couldn't any less tech orientated, who never even finished highschool and not receiving a single credit in one, not going to college or uni, and started coding one tool for the sole reason to help decrease the amount of time wasted during my day-to-day sales processes. 
+ 
+Blows my mind on a couple of levels, not trying to blow up my own ego because I wish I never had to create this extension and everything in it. just from the viewpoint of the workload... this is so much fucking work and while its cool to see that list there, and how it continues to grow, I wish there were just better tools available so I didn't have to do this for myself. 
+
+And if I were actually doing this for you the user instead of just me, there would be EVEN more work involved in terms of overall testing of each feature, docs, ux and ui design that list goes on. So thinking of it that way I'm happy I never decided to just focus on the user, as selfish as that may seem, but it also proves how far that is from the truth of the matter or else I wouldnt be sharing this in the first place. I'm sorry i know I'm just ranting, because I just submitted a report that would remove a feature from this extension that would benefit, and I kid you not, every single vscode user
+
+
+Anyways, snippets has almost... actually no... every piece of code referencing snippets in any form has been either deleting and recreated or updated.
+
+- in terms of the file tree you now have:
+  - auto generated items based on your snippets content
+  - contextually organize snippets on a workspace by workspace basis if you want, or leave me globally accessible
+  - the snippt item in the config, you can now view its entire body through the tool tip even before clicking it
+- due to the changes with context and others, the .snippets file has been replaced with a config, completely changing the format meanwhile still providing access to vscodes native snippet editor inline insertion
+- the editor has also changed but only in terms of backend functionality
+- its not active yet, but you will also be able to save sets of snippets as "profiles" through the web ui in the case to allow for greater organization for downloading and distributing said snippets 
+- snippets will also be remotely accessible, meaning if you would like access to your personal snippets at work, EVEN THOUGH you are using your work email in your vscode instance, you can log in  via your personal account as there will be a github oauth authentication also getting added because of this, and download your personal snippets to your work computer
+
+in short, a lot of updates because I know I'm missing a couple. Making this in terms of feature parity, greater than any enterprise and paid solutions found elsewhere. While before, it was still a better tool in terms of ux than any other, it didn't have the features to make it best in class like it does now. When you think about it, is pretty rediculous considering, this is just one small feature among the collosal list featured in the toc
+</details>
+
+<!-- #endregion ✓ in readme -->
+<!-- #region ✓ in readme -->
+ 
+
+#### 
+
+#### 
+
+
+####
+## testing and readme breakdown
+
+| Feature                        | readme writtenm        | tested |
+| ------------------------------ | ---------------------- | ------ |
+| The "Global Search Shortcut" (savedSearch)    | ✗       | ✗     |
+| Dependency "Deep Link" (packageSearch)        | ✓       | ✗     |
+| The "Zombie Process Killer" (portReaper)      | ✓       | ✗     |
+| The ".env" Context Swapper (envProfile)       | ✓       | ✗     |
+| Intelligent JSON Schema Support               | ✗       | ✗     |
+| VSCode Extension Configuration Testing Suite  | ✓ ish   | ✗     |
+| VSCode commands has been rebuilt              | ✓       | ✓     |
+| Concurrent and VFS base code   | ✓                      | ✓     |
+| File Link Jumper               | ✓                      | ✓     |
+| monaco editer updates          | ✓                      | ✗     |
+| readme generator               | ✓                      | ✗     |
+| encoders                       | ✓                      | ✗     |
+| To do, Notes, Reminders        | ✗                      | ✗     |
+| item type `settings`           | ✓                      | ✓     |
+| item type `layout`             | ✓                      | ✗     |
+| item type `label`              | ✓                      | ✓     |
+| snapshot engine                | ✓                      | ✗     |
+| persistant bookmarks           | ✗                      | ✗     |
+| Search Editor                  | ✓ ish                  | ✗     |
+| DevStack Commands              | ✗                      | ✗     |
+| Snippets                       | ✗                      | ✗     |
+
+
+<!-- #### To do, Notes, Reminders
+  - merged into devstack
+  - added post it notes section
+
+
+#### The "Global Search Shortcut" (savedSearch)
+- The Pain: You find yourself searching for the same things over and over: TODO:, console.log(, FIXME:, or a specific @deprecated tag. VSCode's search doesn't "save" these queries well.
+- The Fix: A searchPreset type.
+- How it works: You define a label ("Find all Logs") and a regex. Clicking it instantly triggers the workbench.extensions.search ( or global search sidebar if workbench.extensions.search does not take in a arg) with that regex pre-filled and executed. 
+- obj example - `{ "label": "console.log(", "path": "regex pattern to find console.log(", "type": "search", "icon": "search" },
+-->
