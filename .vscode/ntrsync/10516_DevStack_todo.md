@@ -1,29 +1,15 @@
 
 #### todo
 - [ ] finish layout engine
-- [x] the layout engine with 3 cols... when its finished, all three columns are focused at the same time. meaning you have to click each cols editors in order to drop the "focused" state in each. we need to progmatically drop focus and refocus the 2nd col
-- [x] rename batch fell through the cracks as it seems we are still running off of the other extension
 - [ ] make sure termiunal grixd is getting assigned to the correct col
 - [ ] remove format on paste in monaco editor
-- [ ] in the catalyst editor we need to make sure if you are currently in a stylized note or important or warning, that the editor automatically put `>` whenever you press enter to continue the note
 - [ ] finish off renaming functions -> `ocrmnavigator.addCategory` -> `ocrmnavigator.master.addCategory`
-- [x] finish of search editor
-- [x] needs to add some kind of notice in regard to the new funcitnos and its formatr
 - [ ] ### Need to implement function on / off switches for:
 - [ ] need to implement `ocrmnavigator.vfs.tasks`
 - [ ] need to implement `ocrmnavigator.vfs.npmScripts`
 - [ ] need to implement `ocrmnavigator.todoNotesReminders`
 - [ ] need to implement `ocrmnavigator.codesnap.backgroundPalette` and others
-- [x] focusMode: A specialized toggle.Utility: Toggles Zen Mode, hides the Sidebar, and hides the Activity Bar all in one click to help with deep work
-- [x] fix add item via web 
-- [x] to do list: code highlighting
-- [x] need to add item type to add currenty worksapces devstack setting as a file item
-- [x] need to add quickpick engine
-- [x] add editor highlighting to todo
-- [x] need to update snippet editor
 
-- [ ] ★ ━━━━ ☆ ━━━━     README.md     ━━━━ ☆ ━━━━ ★
-  - [x] terminal engine... currently if there is currently a daev serverv nothing will run... we need to check and see if the current terminal window is busy... if it is creater a new window HL:src\helpers\master.ts:330-371
 
 - [ ] ★ ━━━━ ☆ ━━━━     NEW FEATURES     ━━━━ ☆ ━━━━ ★
   - [ ] ★ ━━━━ REMOTE ACCESS / EDITING ━━━━ ★
@@ -38,9 +24,6 @@
   - [ ] ★ ━━━━ COPY WORKSPACE FOLDER ━━━━ ★ 
     - [ ] to make it even easier to configure new / existing configs
     - [ ] provid a list of folders contained within other configs once clicked pastes it into the current configs file
-
-  - [X] ★ ━━━━ MOVE ITEM ━━━━ ★
-    - [x] opens a quick pick with that folders items, when an item is clicked on it takes the item ur moving and places it ontop of the item you clicked on, same as when you go to cut an entire line in vscode and paste it, it places it ontop of the line you placed ur cursor on
 
   - [ ] ★ ━━━━ THE "LOG-TO-LENS" ( ERROR PARSER ) ━━━━ ★
     - [ ] The Pain: Your build failed or your test crashed. The terminal is a wall of 500 lines of red text. You have to scroll up, find the file path in the stack trace, copy it, Ctrl+P, and paste the path to fix the bug.
@@ -95,5 +78,24 @@
   - [ ] What it is: A home for your code, your docs, and your research. What it isn't: A host for images or video (the costs are simply too high for now).
   - [ ] This is a place where data survives. Whether you want to share your knowledge with the world or keep it private, you can finally rely on the "Save" button again.
 
-
-
+- [ ] completed
+  - [x] focusMode: A specialized toggle.Utility: Toggles Zen Mode, hides the Sidebar, and hides the Activity Bar all in one click to help with deep work
+  - [x] fix add item via web 
+  - [x] to do list: code highlighting
+  - [x] need to add item type to add currenty worksapces devstack setting as a file item
+  - [x] need to add quickpick engine
+  - [x] add editor highlighting to todo
+  - [x] need to update snippet editor
+  - [x] needs to add some kind of notice in regard to the new funcitnos and its formatr
+  - [x] finish of search editor
+  - [x] short cuts for monaco editor
+    - [x] insert region
+    - [x] insert endregion
+    - [x] wrap region
+  - [x] the layout engine with 3 cols... when its finished, all three columns are focused at the same time. meaning you have to click each cols editors in order to drop the "focused" state in each. we need to progmatically drop focus and refocus the 2nd col
+  - [x] rename batch fell through the cracks as it seems we are still running off of the other extension
+  - [x] in the catalyst editor we need to make sure if you are currently in a stylized note or important or warning, that the editor automatically put `>` whenever you press enter to continue the note
+  - [ ] ★ ━━━━ ☆ ━━━━     README.md     ━━━━ ☆ ━━━━ ★
+    - [x] terminal engine... currently if there is currently a daev serverv nothing will run... we need to check and see if the current terminal window is busy... if it is creater a new window HL:src\helpers\master.ts:330-371
+    - [X] ★ ━━━━ MOVE ITEM ━━━━ ★
+    - [x] opens a quick pick with that folders items, when an item is clicked on it takes the item ur moving and places it ontop of the item you clicked on, same as when you go to cut an entire line in vscode and paste it, it places it ontop of the line you placed ur cursor on
