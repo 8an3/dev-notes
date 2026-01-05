@@ -25,7 +25,12 @@
     - [ ] prompt-feedback-bar.tsx
   - [ ] ★ ━━━━ PRIMITIVE ━━━━ ★
     - [ ] button-group
+  - [ ] ★ ━━━━ BG ━━━━ ★
+    - [ ] gistorted glasses 
+    - [ ] texture overlay
+    - [ ] stripe-bg-guides
   - [ ] ★ ━━━━ MOTION ━━━━ ★
+    - [ ] motion-logo-carosel.tsx
     - [ ] need to update MotionButton MotionPopover1
     - [ ] Motionsgroup
     - [ ] MotionAvatar
@@ -33,6 +38,11 @@
     - [ ] ColorPicker
     - [ ] Roladex1
     - [ ] Roladex
+    - [ ] border-beam
+    - [ ] smooth draweer
+    - [ ] profile dropdwn
+    - [ ] morphic navabr
+    - [ ] morph-surface
   - [ ] ★ ━━━━ MEDIA ━━━━ ★
     - [ ] color pallete card
     - [ ] InfiniteSlider
@@ -44,6 +54,7 @@
     - [ ] fancy-area
   - [ ] ★ ━━━━ CORE ━━━━ ★
     - [ ] loadingBoundary 
+    - [ ] bento-system
     - [ ] HeroBadge
     - [ ] current timeline is now timeline2, add new timeline
     - [ ] list -> coreLists
