@@ -1,27 +1,16 @@
 # TAILWIND_NGIN
 
+<pre>
 / DEVSTACK_SYSTEM_ROOT/
 ├── 📂 TABLE_OF_CONTENTS/
-└── 📍 [TAILWIND_NGIN](https://github.com/8an3/dev-notes/blob/main/docs/TAILWIND.md)/
-    ├── 📄 [Tailwind Plugin Ngin](#tailwind-plugin-ngin)
-    ├── 📄 [Tailwind Config](#tailwind-config) ................. Creates a basic config file to start your project off, if you for some can't use the other available options
-    ├── 📄 [Tailwind Preset Ngin](#tailwind-preset-ngin) ............... Over 525+ configurations available, but ZERO added work in order to use it, it actually reduces your implementation of tailwind in comparison to what you are currently doing. Click create, fill in the 3 variables at the top of the config... that's it!
-    ├── 📄 [Tailwind CSS](#tailwind-css) ....................... Creates a pre-configured .css file to start your project off with
-    ├── 📄 [Postcss Config](#postcss-config) .................. Creating a basic postcss file, meeting tailwinds requirements
-    └── 📄 [DEVSTACK_WEB_UI](https://catalyst-software.vercel.app/Catalyst/UI) ................ For other tools that also fit in this category, the provided link will take you to view them
-
-
-# TAILWIND_NGIN
-
-/ DEVSTACK_SYSTEM_ROOT/
-├── 📂 TABLE_OF_CONTENTS/
-└── 📍 [TAILWIND_NGIN](https://github.com/8an3/dev-notes/blob/main/docs/TAILWIND.md)/
-    ├── 📄 [Tailwind Plugin Ngin](#tailwind-plugin-ngin)
-    ├── 📄 [Tailwind Config](#tailwind-config) ................. Creates a basic config file to start your project off, if you for some can't use the other available options
-    ├── 📄 [Tailwind Preset Ngin](#tailwind-preset-ngin) ............... Over 525+ configurations available, but ZERO added work in order to use it, it actually reduces your implementation of tailwind in comparison to what you are currently doing. Click create, fill in the 3 variables at the top of the config... that's it!
-    ├── 📄 [Tailwind CSS](#tailwind-css) ....................... Creates a pre-configured .css file to start your project off with
-    ├── 📄 [Postcss Config](#postcss-config) .................. Creating a basic postcss file, meeting tailwinds requirements
-    └── 📄 [DEVSTACK_WEB_UI](https://catalyst-software.vercel.app/Catalyst/UI) ................ For other tools that also fit in this category, the provided link will take you to view them
+└── 📍 TAILWIND_NGIN/
+    ├── 📄 <a href="#tailwind-preset-ngin">Tailwind Plugin Ngin</a>
+    ├── 📄 <a href="#tailwind-config">Tailwind Config</a> ................. Creates a basic config file to start your project off, if you for some can't use the other available options
+    ├── 📄 <a href="#tailwind-preset-ngin">Tailwind Preset Ngin</a> ............... Over 525+ configurations available, but ZERO added work in order to use it, it actually reduces your implementation of tailwind in comparison to what you are currently doing. Click create, fill in the 3 variables at the top of the config... that's it!
+    ├── 📄 <a href="#tailwind-css">Tailwind CSS</a>....................... Creates a pre-configured .css file to start your project off with
+    ├── 📄 <a href="#postcss-config">Postcss Config</a> .................. Creating a basic postcss file, meeting tailwinds requirements
+    └── 📄 <a href="https://github.com/8an3/DevStack">DEVSTACK_WEB_UI</a> ................ For other tools that also fit in this category, the provided link will take you to view them
+</pre>
 
 ## Overview
 
