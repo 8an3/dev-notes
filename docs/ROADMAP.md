@@ -33,47 +33,6 @@
 - [ ] set up user profile on site
 - [ ] user github email for syncing data
 
-- [ ] ### Copy workspace folder
-- [ ] to make it even easier to configure new / existing configs
-- [ ] provid a list of folders contained within other configs once clicked pastes it into the current configs file
-
-- [ ] ### move item
-- [ ] opens a quick pick with that folders items, when an item is clicked on it takes the item ur moving and places it ontop of the item you clicked on, same as when you go to cut an entire line in vscode and paste it, it places it ontop of the line you placed ur cursor on
-
-- [ ] ### The "Log-to-Lens" (errorParser)
-- [ ] The Pain: Your build failed or your test crashed. The terminal is a wall of 500 lines of red text. You have to scroll up, find the file path in the stack trace, copy it, Ctrl+P, and paste the path to fix the bug.
-- [ ] The Fix: An extractFileFromOutput type.
-- [ ] How it works: It scans the last output of the integrated terminal for file paths and line numbers. It then populates the Navigator with "Jump to Last Error" items.
-- [ ] Time Saved: 90%. You click the Navigator item instead of manually parsing the terminal's "wall of text."
-
-- [ ] #### conditionalChain: Logic-based execution. 
-- [ ] Utility: Run Command A; if it succeeds, run Command B; if it fails, run Command C. (This adds a "Scripting" layer to the NavigatorItem).
-
-- [ ] #### The "Proxy/Tunnel" Toggle (portManager)
-- [ ] The Pain: You’re working on a mobile app or an external API that needs to see your local server. You have to open a separate terminal, remember your ngrok or localtonet command, copy the new URL, and paste it into your config.
-- [ ] Value: It automates the "copy-paste" loop between the terminal and your code.
-- [ ] The Workflow: A specialized command that launches a tunnel (like ngrok http 3000), captures the generated URL, and automatically updates a specific line in your config.ts or .env with the new public URL.
-- [ ] The Fix: A tunnelLauncher type.
-
-
-#### feature request quick pick
-- [ ] query current user base via a toast on load up, once clicked opens a vscode quick pick with current feautres to pick, once they select a value they are then presented an input to supply their own feature request
-
-#### ideas that are a 'meh', need to mull these over
-
-##### The "API Secret Grabber" (vaultFetch)
-- [ ] The Pain: You need a staging/prod API key that isn't in your local .env for security reasons. You have to log into AWS Secrets Manager, 1Password, or your company Wiki, find the key, and copy it.
-- [ ] The Fix: A type that fetches a value from a CLI-based vault (like gh secret, aws secretsmanager, or a local encrypted file).
-- [ ] How it works: It executes the CLI fetch and uses your existing copyToClipboard logic to put the secret in your hand instantly.
-- [ ] Value: Huge security and speed boost. No more "hunting for the wiki page."
-
-
-#### item type ideas???
-- [ ] dependencyManager 
-- [ ] Install/uninstall/update multiple npm packages in one click with predefined sets (ie "React setup" installs react, react-dom, types in one go vs typing each npm install command)
- 
-#### focusMode: A specialized toggle.Utility: Toggles Zen Mode, hides the Sidebar, and hides the Activity Bar all in one click to help with deep work
- 
 #### fix add item via web 
 
 #### VISUALIZE SCHEMA OBJECT - start from scratch and build it on the browser side

@@ -36,7 +36,7 @@ YOU ARE NOT ALLOWED TO START PROVIDING AN ANSWER TILL AFTER YOU HAVE READ ALL TH
 ### Absolute Code Standards
 - **Command Registration**: Place a comma at the end of each register command instead of semicolon:
   ```typescript
-  vscode.commands.registerCommand("ocrmnavigator.openPrePrompt", async () => {
+  vscode.commands.registerCommand("ocrmnavigator.devstack.site.prompt", async () => {
     await vscode.env.openExternal(vscode.Uri.parse(\`\${DEVSTACK_URL}/Catalyst/Pre-Prompt/dashboard\`));
   }),
   ```

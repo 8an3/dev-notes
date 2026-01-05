@@ -2,9 +2,6 @@
 <!-- #region GETTING STARTED -->
 
 
-
-## <img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width="25"   style="vertical-align: middle; margin-bottom: 4px;"> **GETTING STARTED** <br> 
-
 ***Requirements***
 
 ***Your VSCode instance must be within a workspace for the extension to become and remain active.*** For example, if you open a single file while that instance is not within a workspace or in a new window / instance, the extension will not be available for use and will be hidden from view.

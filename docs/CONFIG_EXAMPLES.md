@@ -15,9 +15,9 @@ Complete workflow for building, packaging, and installing your extension locally
 - `RWINDOW` - type: `command`, path: `ocrmnavigator.RWINDOW`, hidden: `true`
 - `saveall` - type: `command`, path: `workbench.action.files.saveAll`, hidden: `true`
 - `buildpkg` - type: `powershellCommand`, path: `npm run clean-package`, hidden: `true`
-- `customVsixPackager` - type: `command`, path: `ocrmnavigator.customVsixPackager`, hidden: `true`
+- `customVsixPackager` - type: `command`, path: `ocrmnavigator.vsix.archive`, hidden: `true`
 - `installNow` - type: `command`, path: `ocrmnavigator.installNow`, hidden: `true`
-- `await2Secs` - type: `command`, path: `ocrmnavigator.await2Secs`, hidden: `true`
+- `await2Secs` - type: `command`, path: `ocrmnavigator.await.2`, hidden: `true`
 - `npmRunCompile` - type: `powershellCommand`, path: `npm run compile`, hidden: `true`
 
 ---

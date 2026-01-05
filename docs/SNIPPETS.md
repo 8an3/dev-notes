@@ -1,5 +1,15 @@
-## Snippets
 
+## SNIPPETS
+
+```markdown
+/ DEVSTACK_SYSTEM_ROOT/
+└── 📝 AUTHORING_SUITE /
+    └── 📂 [SNIPPETS_AND_SNAPSHOTS](https://github.com/8an3/dev-notes/blob/main/docs/SNIPPETS.md)/
+        ├── 📄 Code Snapshot .................. Snapshot selection to beautiful terminal window
+        ├── 📄 Workspace Context .............. Context-aware code snippets
+        ├── 📄 [Context Snippets](#context-snippets) ............... Editor context snippets that insert at cursor
+        └── 📄 Best-In-Class Editor ........... Create snippets/VFS items in seconds
+```
 Workspace context snippet system built with Monaco editor for creating, editing, and viewing snippets
 
 - Snippets are stored on a global and workspace level, enabling workspace context snippets
@@ -43,7 +53,7 @@ Workspace context snippet system built with Monaco editor for creating, editing,
 
 ![Snippet Editor](https://raw.githubusercontent.com/8an3/dev-notes/main/snippets/snippet-monaco.jpg?raw=true)
 
-## DevStack Snippets vs (Marketplace Leader)
+### DevStack Snippets vs (Marketplace Leader)
 
 | Feature | DevStack | (Leader) |
 |---------|----------|-------------------|
@@ -121,7 +131,7 @@ Workspace context snippet system built with Monaco editor for creating, editing,
 
 ---
 
-## Key Differentiators
+### Key Differentiators
 
 ### DevStack's Unique Advantages
 1. **Remote Access Infrastructure**: Web UI with user profiles for viewing, editing, and downloading from anywhere
@@ -133,7 +143,7 @@ Workspace context snippet system built with Monaco editor for creating, editing,
 7. **Selective Sharing**: Choose exactly what to share (config/snippets/to-dos)
 
 
-### Context Snippets
+## Context Snippets
 
 One of the fundamental problems with snippet systems is prefix recall - you create a snippet with a prefix three months ago, and when you need it, you can't remember what you called it. At that point, IntelliSense becomes useless, and you're forced to open your snippet manager, search for the snippet, find the prefix, navigate back to your editor, and then type it in. Or you just give up and write the code manually.
 DevStack solves this with Context Snippets: a searchable quick pick accessible directly from your editor's context menu.

@@ -2,38 +2,32 @@
 
 ## Table of Contents
 
-1. [VS Code](#vs-code)
-2. [Table of Contents](#table-of-contents)
-   1. [VSCode Extension Configuration Testing Suite](#vscode-extension-configuration-testing-suite)
-   2. [Performance Switch](#performance-switch)
-   3. [Custom VSIX Packager](#custom-vsix-packager)
-   4. [Region Folding](#region-folding)
-   5. [JSON File Formatting and Validation](#json-file-formatting-and-validation)
-   6. [Encoder/Decoder](#encoderdecoder)
-   7. [File Formatting Configurator](#file-formatting-configurator)
-   8. [Formatter](#formatter)
-   9. [Inline Imports](#inline-imports)
-   10. [Batch Rename](#batch-rename)
-   11. [Dependency "Deep Link" (packageSearch)](#dependency-deep-link-packagesearch)
-   12. [File Line Jumper](#file-line-jumper)
-   13. [File Search Jumper](#file-search-jumper)
-   14. [File Nesting](#file-nesting)
-   15. [Remove Trailing Commas](#remove-trailing-commas)
-   16. [Remove All Comments](#remove-all-comments)
-   17. [Remove console.log](#remove-consolelog)
-   18. [Remove Unused Imports](#remove-unused-imports)
-   19. [Zombie Process Killer (portReaper)](#zombie-process-killer-portreaper)
-   20. [Auto Zombie Process Killer](#auto-zombie-process-killer)
-   21. [Snapshot Engine](#snapshot-engine)
-   22. [The ".env" Context Swapper (envProfile)](#the-env-context-swapper-envprofile)
-   23. [Intelligent JSON Schema Support](#intelligent-json-schema-support)
-       1. [✨ Key Features](#-key-features)
-       2. [🛠 How it Works](#-how-it-works)
-       3. [Commands](#commands)
-   24. [VSCode Commands reference](#vscode-commands-reference)
-   25. [VSCode Commands reference V2 Dynamic](#vscode-commands-reference-v2-dynamic)
-   26. [Auto Fold Regions At File Open](#auto-fold-regions-at-file-open)
-   27. [Open file in specific editor group](#open-file-in-specific-editor-group)
+- [VSCode Extension Configuration Testing Suite](#vscode-extension-configuration-testing-suite)
+- [Performance Switch](#performance-switch)
+- [Custom VSIX Packager](#custom-vsix-packager)
+- [Region Folding](#region-folding)
+- [JSON File Formatting and Validation](#json-file-formatting-and-validation)
+- [Encoder/Decoder](#encoderdecoder)
+- [File Formatting Configurator](#file-formatting-configurator)
+- [Formatter](#formatter)
+- [Inline Imports](#inline-imports)
+- [Batch Rename](#batch-rename)
+- [Dependency "Deep Link" (packageSearch)](#dependency-deep-link-packagesearch)
+- [File Line Jumper](#file-line-jumper)
+- [File Search Jumper](#file-search-jumper)
+- [File Nesting](#file-nesting)
+- [Remove Trailing Commas](#remove-trailing-commas)
+- [Remove All Comments](#remove-all-comments)
+- [Remove console.log](#remove-consolelog)
+- [Remove Unused Imports](#remove-unused-imports)
+- [Zombie Process Killer (portReaper)](#zombie-process-killer-portreaper)
+- [Auto Zombie Process Killer](#auto-zombie-process-killer)
+- [Snapshot Engine](#snapshot-engine)
+- [The ".env" Context Swapper (envProfile)](#the-env-context-swapper-envprofile)
+- [Intelligent JSON Schema Support](#intelligent-json-schema-support)
+- [VSCode Commands reference](#vscode-commands-reference)
+- [VSCode Commands reference V2 Dynamic](#vscode-commands-reference-v2-dynamic)
+- [Auto Fold Regions At File Open](#auto-fold-regions-at-file-open)
 
 ### VSCode Extension Configuration Testing Suite
 
@@ -104,13 +98,13 @@ Fold by region level (1-7) instead of actual nesting level.
 - `ocrmnavigator.foldRegionLevel7` - Fold Region Level 7
 
 **Toggle Commands:**
-- `ocrmnavigator.toggleFoldRegionLevel1` - Toggle Region Level 1
-- `ocrmnavigator.toggleFoldRegionLevel2` - Toggle Region Level 2
-- `ocrmnavigator.toggleFoldRegionLevel3` - Toggle Region Level 3
-- `ocrmnavigator.toggleFoldRegionLevel4` - Toggle Region Level 4
-- `ocrmnavigator.toggleFoldRegionLevel5` - Toggle Region Level 5
-- `ocrmnavigator.toggleFoldRegionLevel6` - Toggle Region Level 6
-- `ocrmnavigator.toggleFoldRegionLevel7` - Toggle Region Level 7
+- `ocrmnavigator.vscode.region.1.toggle` - Toggle Region Level 1
+- `ocrmnavigator.vscode.region.2.toggle` - Toggle Region Level 2
+- `ocrmnavigator.vscode.region.3.toggle` - Toggle Region Level 3
+- `ocrmnavigator.vscode.region.4.toggle` - Toggle Region Level 4
+- `ocrmnavigator.vscode.region.5.toggle` - Toggle Region Level 5
+- `ocrmnavigator.vscode.region.6.toggle` - Toggle Region Level 6
+- `ocrmnavigator.vscode.region.7.toggle` - Toggle Region Level 7
 
 **Usage:** Create DevStack item with type `command` using these command IDs, or access via DevStack Quick Pick
 
@@ -130,8 +124,8 @@ Format JSON/JSONC files and toggle error checking.
 - `ocrmnavigator.formatGlobalNavigatorConfigJson` - Format Global Navigator Config JSON
 
 **Validation Toggle:**
-- `ocrmnavigator.toggleJsonValidation` - Toggle JSON error checking
-- `ocrmnavigator.toggleJsoncValidation` - Toggle JSONC error checking
+- `ocrmnavigator.performanceSwitch.json.validate.toggle` - Toggle JSON error checking
+- `ocrmnavigator.performanceSwitch.jsonc.validate.toggle` - Toggle JSONC error checking
 
 **Usage:** Create DevStack item with type `command` using these command IDs, or access via DevStack Quick Pick
 
@@ -481,7 +475,7 @@ Mapping: As you move your cursor, the extension calculates your "JSON Path" and 
 
 #### Commands
 
-- ocrmnavigator.clearSchemaCache
+- ocrmnavigator.intellisense.schema.cache.clear
   - Clears the internal schema cache. Useful if you have updated your schema file and want to see the changes immediately.
 
 
