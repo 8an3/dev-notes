@@ -118,7 +118,6 @@ const SELECTED_THEME = 'blue' // 40+ pre-built themes
 | **EDITORIAL** | Vertical rhythm, classic typesetting | Magazines, blogs, longform content | Source Serif 4, Merriweather, EB Garamond |
 | **PLAYFUL** | Thick bouncy borders, mobile-first | Gaming, education apps, kids' sites | Nunito, Poppins, Delius Swash Caps |
 
-#### Available Fonts (57):
 #### Available Themes (57):
 `marshmallow` | `art-deco` | `vs-code` | `spotify` | `summer` | `material-design` | `marvel` | `valorant` | `ghibli-studio` | `modern-minimal` | `nature` | `elegant-luxury` | `neo-brutalism` | `pastel-dreams` | `clean-slate` | `midnight-bloom` | `sunset-horizon` | `claude` | `caffeine` | `corporate` | `slack` | `perplexity` | `neutral` | `red` | `rose` | `orange` | `green` | `blue` | `yellow` | `violet` | `amber` | `lime` | `emerald` | `fuchsia` | `cyan` | `indigo` | `darkBlue`
 
@@ -152,6 +151,19 @@ const SELECTED_THEME = 'blue' // 40+ pre-built themes
 
 ---
  
+
+> [!IMPORTANT]
+> VSCode, for some reason, will display the below warning.
+>
+> Ignore this warning, as it is a false positive. You can see for yourself, that whatever font you select will infact work. 
+>
+> Obviously, its properly coded or else it would simply not work. I have tried to code it in a way where this warning does not show up, but can't find another solution. 
+>
+> Till I find a solution that still works, without this warning, we will have to live with this displaying in our terminals.
+
+
+![Z](https://raw.githubusercontent.com/8an3/dev-notes/main/vfs/tailwind-config-preset-warning.png)
+
 
 #### Sans-Serif Fonts (Modern & Professional)
 
