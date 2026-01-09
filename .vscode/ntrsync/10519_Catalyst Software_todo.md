@@ -1,11 +1,12 @@
 # Catalyst Software
 
 - [ ] ★ ━━━━ ☆ ━━━━     TO-DO     ━━━━ ☆ ━━━━ ★
-- [ ] [text](https://github.com/shadcnblocks/shadcntemplates/blob/master/content/aceternity-ui-free.md)
 - [ ] each component needs the same comment section as animated text, or anything within the x category
 - [ ] offer cdn? see bottom
 - [ ] premium only catalyst-ui focused extension
 - [ ] need to add best in class `search` to readme
+- [ ] pnpm dlx ui-thing@latest add flip-clock
+
 - [ ] need to add best in class `settings.json resource`
 - [ ] an option when creating config items, to create a file type item that will direct you to that workspaces config file. Allowing you to enter each workspace, and create an item based off of that workspaces config file
 - [ ] test new motions category
@@ -25,6 +26,7 @@
     - [ ] prompt-feedback-bar.tsx
   - [ ] ★ ━━━━ PRIMITIVE ━━━━ ★
     - [ ] button-group
+    - [ ] alert
   - [ ] ★ ━━━━ BG ━━━━ ★
     - [ ] gistorted glasses 
     - [ ] texture overlay
@@ -50,6 +52,7 @@
   - [ ] ★ ━━━━ HOOKS ━━━━ ★
     - [ ] useSlideInV1
     - [ ] useTailwindConverter
+    - [ ] use-validate-credit-card
   - [ ] ★ ━━━━ FORMS ━━━━ ★
     - [ ] fancy-area
   - [ ] ★ ━━━━ CORE ━━━━ ★
@@ -67,6 +70,8 @@
     - [ ] Animated Hero -> Minamilist
     - [ ] Min Feature -> Minamilist
     - [ ] Faq Section -> Minamilist
+    - [ ] docs layout
+    - [ ] content-shell
   - [ ] ★ ━━━━ COMBOBOX ━━━━ ★
     - [ ] emojiPicker
   - [ ] ★ ━━━━ TYPOGRAPHY ━━━━ ★

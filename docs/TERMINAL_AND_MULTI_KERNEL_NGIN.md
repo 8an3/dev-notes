@@ -1,54 +1,70 @@
 ## Terminal and Multi Kernel Ngin
 
 
-```markdown
+<pre style="max-width: 800px; white-space: pre-wrap; overflow-wrap: break-word;">
 / DEVSTACK_SYSTEM_ROOT/
 └── ⚙️ [TERMINAL_AND_MULTI_KERNEL_NGIN](https://github.com/8an3/dev-notes/blob/main/docs/VFS.md)/
     ├── 📂 VFS_CORE/
-    │   ├── 📂 Item Types 
-    │   │   ├── 📄 [file](#file) 
-    │   │   ├── 📄 [md](#md)
-    │   │   ├── 📄 [fileAtLine](#fileAtLine) 
-    │   │   ├── 📄 [folder](#folder) 
-    │   │   ├── 📄 [url](#url) 
-    │   │   ├── 📄 [command](#command) 
-    │   │   ├── 📄 [chain](#chain) 
-    │   │   ├── 📄 [concurrent](#concurrent) 
-    │   │   ├── 📄 [cmdChain](#cmdChain) 
-    │   │   ├── 📄 [conditionalChain](#conditionalChain) 
-    │   │   ├── 📄 [powershellCommand](#powershellCommand) 
-    │   │   ├── 📄 [debianCMD](#debianCMD)
-    │   │   ├── 📄 [snippet](#snippet) 
-    │   │   ├── 📄 [copyValue](#copyValue)
-    │   │   ├── 📄 [settingsToggle](#settingsToggle)
-    │   │   ├── 📄 [search](#search) 
-    │   │   ├── 📄 [apiCall](#apiCall) 
-    │   │   ├── 📄 [layout](#layout) 
-    │   │   ├── 📄 [tasks](#tasks)
-    │   │   ├── 📄 [npmScripts](#npmScripts)
-    │   │   └── 📄 [label](#label) 
-    │   ├── 📄 Virtual Filing System .......... Core VFS Engine
-    │   ├── 📄 Files & Navigation ............. File management and navigation
-    │   ├── 📄 Commands & Automation .......... Command execution and automation workflows
-    │   ├── 📄 Terminal Commands .............. Terminal command integration
-    │   ├── 📄 Utilities ...................... Utility functions and helpers
-    │   ├── 📄 Project Agnostic Setup ......... Framework-agnostic configuration
-    │   ├── 📄 Remote Resource Mgmt ........... Profiles for configs: save/download/edit
-    │   └── 📄 Auto-Generated Items ........... Automatically generated VFS items
+    │   ├── 📂 <a href="#item-types">Item Types </a>
+    │   │   ├── 📄<a href="#file">file</a>
+    │   │   ├── 📄<a href="#md">md</a>
+    │   │   ├── 📄<a href="#fileAtLine">fileAtLine</a>
+    │   │   ├── 📄<a href="#folder">folder</a>
+    │   │   ├── 📄<a href="#url">url</a>
+    │   │   ├── 📄<a href="#command">command</a>
+    │   │   ├── 📄<a href="#chain">chain</a>
+    │   │   ├── 📄<a href="#concurrent">concurrent</a>
+    │   │   ├── 📄<a href="#cmdChain">cmdChain</a>
+    │   │   ├── 📄<a href="#conditionalChain">conditionalChain</a>
+    │   │   ├── 📄<a href="#powershellCommand">powershellCommand</a>
+    │   │   ├── 📄<a href="#debianCMD">debianCMD</a>
+    │   │   ├── 📄<a href="#snippet">snippet</a>
+    │   │   ├── 📄<a href="#copyValue">copyValue</a>
+    │   │   ├── 📄<a href="#settingsToggle">settingsToggle</a>
+    │   │   ├── 📄<a href="#search">search</a>
+    │   │   ├── 📄<a href="#apiCall">apiCall</a>
+    │   │   ├── 📄<a href="#layout">layout</a>
+    │   │   ├── 📄<a href="#tasks">tasks</a>
+    │   │   ├── 📄<a href="#npmScripts">npmScripts</a>
+    │   │   └── 📄<a href="#label">label</a>
+    │   ├── 📄<a href="#virtual-filing-system">Virtual Filing System</a> .......... Core VFS Engine
+    │   ├── 📄<a href="#files-navigation">Files & Navigation</a> ............. File management and navigation
+    │   ├── 📄<a href="#commands-automation">Commands & Automation</a> .......... Command execution and automation workflows
+    │   ├── 📄<a href="#terminal-commands">Terminal Commands</a> .............. Terminal command integration
+    │   ├── 📄<a href="#utilities">Utilities</a> ...................... Utility functions and helpers
+    │   ├── 📄<a href="#project-agnostic-configuration">Project Agnostic Setup</a> ......... Framework-agnostic configuration
+    │   ├── 📄<a href="#remote-resource-mgmt">Remote Resource Mgmt</a> ........... Profiles for configs: save/download/edit
+    │   └── 📄<a href="#auto-generated-items">Auto-Generated Items</a> ........... Automatically generated VFS items
     └── 📂 CONFIGURATION_AND_EXCEPTIONS/
-        ├── 📄 Complete Example ............... Production configuration walkthrough
-        ├── 📄 Usage .......................... Usage guidelines and examples
-        ├── 📄 Getting Started w/ Chains ...... Chain automation guide
-        ├── 📄 Extension Configuration ........ Extension settings overview
-        ├── 📄 Configuration Settings ......... Detailed configuration options
-        ├── 📄 Core Settings .................. Core extension settings
-        ├── 📄 Feature Toggles ................ Feature flags and toggles
-        ├── 📄 Example Configuration .......... Configuration examples
-        ├── 📄 [Copy Path](#copy-path) ...................... Path copying utilities
-        ├── 📄 [Reveal In Explorer](#reveal-in-explorer) ............. File explorer integration
-        ├── 📄 [Search](#search) ......................... Search functionality for config items
-        └── 📄 Remote Resource Mgmt ........... Profiles for configs: save/download/edit
-```
+        ├── 📄<a href="#complete-example">Complete Example</a> ............... Production configuration walkthrough
+        ├── 📄<a href="#usage">Usage</a> .......................... Usage guidelines and examples
+        ├── 📄<a href="#getting-started-w-chains">Getting Started w/ Chains</a> ...... Chain automation guide
+        ├── 📄<a href="#extension-configuration">Extension Configuration</a> ........ Extension settings overview
+        ├── 📄<a href="#configuration-settings">Configuration Settings</a> ......... Detailed configuration options
+        ├── 📄<a href="#core-settings">Core Settings</a> .................. Core extension settings
+        ├── 📄<a href="#feature-toggles">Feature Toggles</a> ................ Feature flags and toggles
+        ├── 📄<a href="#example-configuration">Example Configuration</a> .......... Configuration examples
+        ├── 📄<a href="#copy-path">Copy Path</a> ...................... Path copying utilities
+        ├── 📄<a href="#reveal-in-explorer">Reveal In Explorer</a> ............. File explorer integration
+        ├── 📄<a href="#search">Search</a> ......................... Search functionality for config items
+        ├── 📄<a href="#remote-resource-mgmt-config">Remote Resource Mgmt</a> ........... Profiles for configs: save/download/edit
+        └── 📄<a href="#architecture-notes">Architecture Notes</a> ........... Breaking down the inner workings of the extension
+              ├── 📄<a href="#environment-variable-integration">Environment Variable Integration</a> ........... using .env vars
+              ├── 📄<a href="#modular-function-building">Modular Function Building</a> ........... 
+              ├── 📄<a href="#the-philosophy-of-automation">The Philosophy of Automation</a> ........... 
+              ├── 📄<a href="#the-autorun-system">The Autorun System</a> ........... 
+              ├── 📄<a href="#dynamic-package-manager-detection">Dynamic Package Manager Detection</a> ........... 
+              ├── 📄<a href="#intelligent-terminal-command-engine">Intelligent Terminal & Command Engine</a> ........... 
+              ├── 📄<a href="#concurrent-and-chain">Concurrent And Chain</a> ........... 
+              ├── 📄<a href="#autonomous-maintenance">Autonomous Maintenance</a> ........... 
+              ├── 📄<a href="#naming-conventions">Naming Conventions</a> ........... 
+              ├── 📄<a href="#settings-migration">Settings & Migration</a> ........... 
+              ├── 📄<a href="#pro7">pro7</a> ........... 
+              ├── 📄<a href="#local-encryption">Local Encryption</a> ........... 
+              ├── 📄<a href="#context">Context</a> ........... 
+              ├── 📄<a href="#vsix-archiver">VSIX Archiver</a> ........... 
+              └── 📄<a href="#publishing-to-marketplace">Publishing To Marketplace</a> ...........
+</pre>
 
 ## Item Types
 
@@ -1047,16 +1063,122 @@ The label portion can be stylized in any form you would like, when creating my o
 This item type can also have its icon customized as well. 
 In closing, just a quick warning when designing your label item types. Personally, I wanted to create all of my labels to be the same length. The above two examples, obviously do not share the same distance in length. In actuality, when vscode renders these two labels they end up, in fact, the same length. I do not know why vscodes file system / file tree renders it so much more differently but it is what it is. So if your looking at scratching your head as you look at your rendered design, your not alone
 
-### Project Agnostic Configuration
+IF you want to try your hand at creating your own label, in the below accordian you will find a number of special chars to use. NOTE: I didn't spend too much time on it, but I KNOW some of these will not render in vscodes file tree. Once I found the above labels worked, I stopped there. Just wanted to warn you before you started, it won't negatively impact anything in any shape or form... it just won't render and it will be an empty line item and because of that feel free to test them all out. The easiest way to test these items, is editing the config so just be sure to save a copy as a backup before you do, and use r window in devstack quickpick menu to quickly restart the instance.
+
+
+<details>
+<summary>Label List...</summary>
+
+```json
+  {
+          "label": "DIVIDERS",
+          "expanded": false,
+          "type": "folder",
+          "global": true,
+          "items": [
+            [
+              { "label": "━━━━ ● ━━━━ ● ━━━━", "type": "label", "icon": "circle-dot" },
+              { "label": "★ ━━━━ ☆ ━━━━ ━━━━ ☆ ━━━━", "type": "label", "icon": "star" },
+              { "label": "━━━━ ◆ ━━━━ ◆ ━━━━ ◆ ━━━━ ◆ ━━━━", "type": "label", "icon": "diamond" },
+              { "label": "━━━━ ☆ ━━━━━━━━━━━━━", "type": "label", "icon": "minus" },
+              { "label": "═══════════════════", "type": "label", "icon": "grip-horizontal" },
+              { "label": "▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬", "type": "label", "icon": "maximize-2" },
+              { "label": "▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓", "type": "label", "icon": "grid-3x3" },
+              { "label": "░░░░░░░░░░░░░░░░░░░░", "type": "label", "icon": "grid" },
+              { "label": "┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄", "type": "label", "icon": "more-horizontal" },
+              { "label": "┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈", "type": "label", "icon": "more-horizontal" },
+              { "label": "┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉", "type": "label", "icon": "menu" },
+              { "label": "━ ━ ━ ━ ━ ━ ━ ━ ━ ━", "type": "label", "icon": "minus" },
+              { "label": "─ ─ ─ ─ ─ ─ ─ ─ ─ ─", "type": "label", "icon": "minus" },
+              { "label": "● ● ● ● ● ● ● ● ● ●", "type": "label", "icon": "circle" },
+              { "label": "○ ○ ○ ○ ○ ○ ○ ○ ○ ○", "type": "label", "icon": "circle" },
+              { "label": "• • • • • • • • • •", "type": "label", "icon": "more-horizontal" },
+              { "label": "★ ★ ★ ★ ★ ★ ★ ★ ★ ★", "type": "label", "icon": "star" },
+              { "label": "☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆", "type": "label", "icon": "star" },
+              { "label": "◆ ◆ ◆ ◆ ◆ ◆ ◆ ◆ ◆ ◆", "type": "label", "icon": "diamond" },
+              { "label": "◇ ◇ ◇ ◇ ◇ ◇ ◇ ◇ ◇ ◇", "type": "label", "icon": "diamond" },
+              { "label": "■ ■ ■ ■ ■ ■ ■ ■ ■ ■", "type": "label", "icon": "square" },
+              { "label": "□ □ □ □ □ □ □ □ □ □", "type": "label", "icon": "square" },
+              { "label": "▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪ ▪", "type": "label", "icon": "square" },
+              { "label": "▫ ▫ ▫ ▫ ▫ ▫ ▫ ▫ ▫ ▫", "type": "label", "icon": "square" },
+              { "label": "→ → → → → → → → → →", "type": "label", "icon": "arrow-right" },
+              { "label": "⇒ ⇒ ⇒ ⇒ ⇒ ⇒ ⇒ ⇒ ⇒ ⇒", "type": "label", "icon": "chevrons-right" },
+              { "label": "➜ ➜ ➜ ➜ ➜ ➜ ➜ ➜ ➜ ➜", "type": "label", "icon": "arrow-right" },
+              { "label": "← ← ← ← ← ← ← ← ← ←", "type": "label", "icon": "arrow-left" },
+              { "label": "⬅ ⬅ ⬅ ⬅ ⬅ ⬅ ⬅ ⬅ ⬅ ⬅", "type": "label", "icon": "arrow-left" },
+              { "label": "╭──────────────────╮", "type": "label", "icon": "corner-up-right" },
+              { "label": "╰──────────────────╯", "type": "label", "icon": "corner-down-right" },
+              { "label": "╒══════════════════╕", "type": "label", "icon": "frame" },
+              { "label": "╘══════════════════╛", "type": "label", "icon": "frame" },
+              { "label": "╓──────────────────╖", "type": "label", "icon": "frame" },
+              { "label": "╙──────────────────╜", "type": "label", "icon": "frame" },
+              { "label": "▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀", "type": "label", "icon": "align-justify" },
+              { "label": "▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄", "type": "label", "icon": "align-justify" },
+              { "label": "▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌▌", "type": "label", "icon": "align-left" },
+              { "label": "▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐▐", "type": "label", "icon": "align-right" },
+              { "label": "… … … … … … … …", "type": "label", "icon": "more-horizontal" },
+              { "label": "· · · · · · · · · ·", "type": "label", "icon": "more-horizontal" },
+              { "label": "━━━ ➔ ━━━", "type": "label", "icon": "arrow-right-circle" },
+              { "label": "═══ ⇒ ═══", "type": "label", "icon": "fast-forward" },
+              { "label": "● ━━━━ ☆ ━━━━━━━━━ ●", "type": "label", "icon": "circle-dot" },
+              { "label": "★ ━━━━ ☆ ━━━━━━━━━ ★", "type": "label", "icon": "sparkles" },
+              { "label": "┊┊┊┊┊┊┊┊┊┊┊┊┊┊┊┊┊┊┊┊", "type": "label", "icon": "separator-vertical" },
+              { "label": "┋┋┋┋┋┋┋┋┋┋┋┋┋┋┋┋┋┋┋┋", "type": "label", "icon": "separator-vertical" },
+              { "label": "‖ ‖ ‖ ‖ ‖ ‖ ‖ ‖ ‖ ‖", "type": "label", "icon": "pause" },
+              { "label": " → ← ↑ ↓ ⇒ ⇐ ← → ➔ ➜ ➞ ➡ ⇒ ⟹ ⬅ ⇐ ⟸ ⬆ ⇑ ⬇ ⇓ ↓↑", "type": "label", "icon": "three-bars" },
+              { "label": "╒ ╓ ╕ ╖ ╘ ╙ ╛ ╜ ╭ ╮ ╰ ╯ ", "type": "label", "icon": "three-bars" },
+              { "label": " ┄ ┅ ┆ ┇ ┈ ┉ ┊ ┋ ", "type": "label", "icon": "three-bars" },
+              { "label": " □ ▪ ▫ ● ○ ◆ ◇ ★ ☆", "type": "label", "icon": "three-bars" },
+              { "label": "• · … ― ‖ • · … ― ‖ ", "type": "label", "icon": "three-bars" },
+              { "label": " ▀ ▄ █ ░ ▒ ▓ ▌ ▐ ■", "type": "label", "icon": "three-bars" }
+            ]
+          ]
+        },
+``` 
+
+</details>
+
+## Project Agnostic Configuration
  
-Create configurations that work across workspaces or stay project-specific
+Create configurations that work across workspaces or stay project-specific. 
+1. To take advantage of this feature you must create or set a folder to global: true at the root level
+2. any item placed inside the global folders will now be available to use in any workspace
+
+How to create global folders
+1. create a folder via the plus icon in the devstack panes title bar, and follow the steps
+2. if you are comfortable editing configs, within the devstack quickpick menu located on the status bar select `GBL DevStack Config`, opening your global config. Despite already being in your global config you still need to set the folders global value to true. Now you can also set items themselves at the root too if you wish. If you want to have zero folders and all items, you can do that too but I would highly recommend using folders from the start. 
+
+### Config Strategies
+In the beginning, you may only want a dozen or so items available in the pane so that they are readily available. As time goes on though, this list WILL increase over time I promise you that, my global config alone is 325+ items currently. 
+That does not include my workspace config, OR any of the auto generated items that get added onto the config dynamically. You can do as you wish, that's why I made the extension in a way where there is virtually no limitations put onto you in any shape or form. 
+BUT if you want to save time in the long run, seriously... use LOTS of folders, haha, or else you will end up what I did, every month or couple of weeks reorganizing it because with all the added extra items it gets too disorganized.
+
+From a strategic view point, you don't have to have all of the items that will get the most use at the top, as you can set folders to be expanded or collapsed when you open vscode. Currently my set up is as follows:
+
+1. main - set to collapsed this contains all the powershell items to quickly open projects I code in, with personal projects in a subfolder within main to divide them
+2. cmds - set to expanded as default, within this folder there are 10 or so commands folldowed by 4 folders that contain more commands that are less used...ish, i say ish because the first folder I'm always opening but is too large to keep open all the time in order to quickly access everything else, as it contains not only fold items, but also toggle folds as well, instead of unfolding all i can quickly swap back and forth from toggling just 2, or 3 and so on
+3. updaters - set to collapsed, containing all items related to github, building, etc
+4. settings - everything after this is set to collapsed
+5. files - taking advantage of relative paths, setting items like readme.me package.json, seed.ts and so on, grants you quick access to those files no matter the workspace you are in, saving you from having to create items for those files... in every workspace config
+6. prompts - i use "prompt"... a lot, as my personal project pertaining to that still cannot be published I resort to using it manually still, this allows me quick access to it due to having a script that updates these items automatically at build to to ensure no matter what edits i make to my prompts, my config is always up to date
+7. other - contains url items and other misc items that dont get much use
+ 
+everything after this is workspace related, al-in-all I have 31 folders and ever since I started using the label item, I haven't had the itch to re-organize in... a long time actually.
+
+```json
+[
+    { "label": "★ ━━━━ ☆ ━━━━ PROJECT ━━━━ ☆ ━━━━ ★", "type": "label", "icon": "chrome-minimize" },
+    { "label": "★ ━━━━ ☆ ━━━━ ★ ━━━━ ☆ ━━━━ ★ ━━━━ ☆ ━━━━ ★ ━━━━ ☆",  "type": "label", "icon": "chrome-minimize" },
+]
+```
+I've played around with a TON of different label styles, landing on this being the one I hated the least amount. I don't love it, but it works as vscode doesn't seem to like a lot of the inputs I was using. Check the label section, as I will include a ton of special chars to try.
 
 #### Key Features
 - Split configuration between global and workspace settings
 - Configure folders as globally available or workspace-specific
 - Support for hybrid configurations and per-project customization
 
-### Complete Example
+## Complete Example
 
 <details>
 <summary>Config</summary>
@@ -2912,7 +3034,7 @@ Create configurations that work across workspaces or stay project-specific
 
 </details>
 
-#### Resources
+## Resources
 - [Visual Guide](https://raw.githubusercontent.com/8an3/dev-notes/blob/main/vfs/SequentialExecution+.gif?raw=true)
 - [Video Tutorial](https://youtu.be/NtnVq8CNJ7A)
 
@@ -3424,16 +3546,8 @@ All feature toggles default to `true` unless otherwise specified and can be disa
 
 ---
 
-### Quick Configuration Tips
 
-1. **For Better Performance**: Disable features you don't use by setting their toggle to `false`
-2. **Debugging**: Set `ocrmnavigator.todoNotesReminders` to `false` for faster reload times
-3. **Custom Workflows**: Use `ocrmnavigator.vfs.chain.execute` and `ocrmnavigator.vfs.concurrent.execute` for automation
-4. **GitHub Integration**: Configure `ocrmnavigator.todo.*` settings for repository syncing
-5. **Code Snapshots**: Customize appearance with `ocrmnavigator.codesnap.*` settings
-
-
-#### Usage
+## Usage
 
 All item types share common actions:
 - **Add**: Create new items through the interface
@@ -3451,12 +3565,12 @@ Set item type in config object or click the plus icon in the title pane.
 
 
 
-### Architecture Notes
+## Architecture Notes
 This section provides a deep dive into the underlying systems of this extension. Understanding these architectural choices will help you write more effective configurations and leverage the full power of the codebase.
 
 With the recent redesign, the project has moved toward an engine-based, object-oriented approach. By utilizing dedicated classes for core logic, the codebase is more efficient, modular, and easier to extend.
 
-#### Core Architectural Priorities
+## Core Architectural Priorities
 The topics below are ranked by their impact on your development workflow. High-priority items focus on the modular systems you will interact with daily, while lower-priority items cover "under-the-hood" utilities.
 
 1. Modular Engine Structure (High Priority) Learning how our engines and classes interact is the most valuable use of your time. This modularity allows you to hook into specific functionalities and customize the extension's behavior without rewriting core logic.
@@ -3469,7 +3583,7 @@ The topics below are ranked by their impact on your development workflow. High-p
 By centralizing these notes here rather than scattering them across individual README files, provide a single source of truth for the "how" and "why" behind the code. This bird's-eye view ensures you can build your config with a clear understanding of the underlying framework.
 
 
-### Environment Variable Integration (.env)
+## Environment Variable Integration (.env)
 To handle sensitive data—like NPM authentication tokens—the extension supports the use of .env variables directly within your configuration strings. This allows you to keep secrets out of your source code while automating authenticated commands.
 
 #### Security First: Execution-Time Loading
@@ -3495,8 +3609,10 @@ Use the standard ${VARIABLE_NAME} syntax within your path or command strings:
 ```
 > [!IMPORTANT] 
 > This approach requires the .env file to be present in the root of the project where the command is being executed. While this limits global access, it ensures that sensitive tokens remain restricted to their intended environments.
+>
+> [Link to video, showcasing the above command being executed and pulling the env var.](https://youtu.be/XwsO4DnEpRg)
 
-### Modular Function Building
+## Modular Function Building
 Previously, this extension was built on a "function-per-feature" basis—each tool was isolated, with no awareness of or connection to other features. The latest architecture moves away from this rigid structure in favor of modular, exposed functions.
 
 By breaking core logic into independent, reusable methods, the extension essentially becomes a toolkit. This grants you the "absurd" level of freedom to chain functions together, effectively turning the extension into a manual CI/CD pipeline tailored to your specific workflow.
@@ -3521,15 +3637,16 @@ While traditional extensions lock you into a specific UI or sequence, this modul
 The Vision: This isn't just an extension; it's a suite of tools. What it lacks in automated triggers, it makes up for in total manual control and flexibility that you won't find in standard marketplace offerings.
 
 
-### The Philosophy of Automation (or Lack Thereof)
+## The Philosophy of Automation 
+(or Lack Thereof)
 In this extension, you will not find "passive" automation. Unless the benefit is astronomical, I will never implement a feature that runs in the background without user consent.
 
-#### Why Passive Automation is Terrible
+### Why Passive Automation is Terrible
 Most modern automation is unneeded. We have become accustomed to background processes constantly scanning, indexing, and eating CPU cycles. This is often a sign that a developer doesn't truly understand their user’s workflow. The result? Performance degradation and a tool that eventually becomes unusable.
 
 My Rule: If a process can be a Triggered Activation Event, it should be. This gives you 100% of the power with 0% of the idle resource cost.
 
-#### Examples of "Triggered" Power
+### Examples of "Triggered" Power
 To prove that triggered automation is superior to background bloat, here is how I manage my own massive devstack using this extension:
 - Icon Library Automation: With one click, the system drops an SVG into a folder, converts it for React, bumps versions, compiles, updates the NPM README, commits to GitHub, and publishes. It’s so streamlined I often forget I haven't even opened a terminal.
 - The 40,000+ Line package.json: Managing a file this size manually is impossible. I use a package.dev.jsonc with static markers. A triggered build script scans these markers and injects dynamically generated content instantly.
@@ -3537,28 +3654,28 @@ To prove that triggered automation is superior to background bloat, here is how 
 - Library Scanning: At build time, the extension scans 2,700+ components and templates, distributing that data to variables that power the Quick Picks and context menus in the editor.
 - "The One Ring" Command: I have a single devstack line item that, when triggered, builds, compiles, and publishes every single one of my personal projects simultaneously.
 
-#### The Performance Guarantee
+### The Performance Guarantee
 Because everything is triggered, there are zero processes running in the background. We have all experienced VS Code performance issues where we had to start disabling extensions just to type smoothly. This extension rejects that reality. You get the functionality of a massive CI/CD suite, but it only exists when you ask for it.
 
 
-### The Autorun System
+## The Autorun System
 The Autorun Folder is a unique architectural feature designed to let you execute custom logic at build time (or any other lifecycle stage) without polluting your codebase or your package.json scripts.
 
 Instead of hardcoding new features or adding endless NPM scripts, you simply drop a standalone Node.js file into a specific folder. The extension handles the rest.
 
-#### Key Benefits
+### Key Benefits
 - Rapid Implementation: Write a quick script, drop it in the folder, and it’s active. No need to ensure cohesion with the primary codebase.
 - Cleaner package.json: Avoid "script bloat." You can have dozens of utility scripts without adding a single line to your manifest.
 - Sequential Control: Scripts are executed alphabetically and sequentially. By naming your files (e.g., 01_setup.js, 02_process.js), you have total control over the execution order.
 
-#### How to Implement
+## How to Implement
 1. Create the Folder: By default, place a folder named autorun inside your src directory.
 2. Custom Path: If your project uses a different structure (e.g., /app), update the setting:
   - `ocrmnavigator.AUTORUN_DIR`
 3. Trigger the Scripts: To run all scripts within your autorun folder, call this command within your config:
   - `ocrmnavigator.autorun.trigger`
 
-#### The "Updaters" Alternative
+## The "Updaters" Alternative
 If you need a second, separate layer of scripts—perhaps for tasks you don't want running with your main build—you can use the Updaters folder:
 - Location: Place a folder named updaters in your workspace root.
 - Trigger: Use the command `ocrmnavigator.autorun.updaters.`
@@ -3566,7 +3683,7 @@ If you need a second, separate layer of scripts—perhaps for tasks you don't wa
 This provides a secondary, less-customized execution path for maintenance tasks, database migrations, or minor file updates that sit outside your core build logic.
 
 
-### Dynamic Package Manager Detection
+## Dynamic Package Manager Detection
 In modern development, switching between npm, pnpm, and yarn is common when jumping between projects. Most tools detect your package manager once when they load, which can lead to errors if you switch managers mid-session.
 
 This extension takes a Just-In-Time (JIT) approach. Every time you trigger a command that requires a package manager (such as an NPM script or a build process), the extension performs a real-time check of your workspace.
@@ -3583,32 +3700,32 @@ The extension natively detects and executes commands for:
 
 
 
-### Intelligent Terminal & Command Engine
+## Intelligent Terminal & Command Engine
 Most extensions spawn a new terminal instance every time you click a button, leading to a "terminal graveyard" by the end of the day. This extension uses a centralized Command Engine class to manage all terminal interactions through a single, intelligent interface.
 
-#### The Smart Queue System
+### The Smart Queue System
 When you trigger a command, the engine performs a real-time status check:
 - Idle Terminal: If the terminal is open and free, the command executes immediately.
 - Busy Terminal: If a process is already running, the engine queues your next command. It will fire automatically as soon as the current task finishes.
 - User Flow: This allows you to click multiple menu items in succession and return to your code, knowing the engine will handle the execution sequence in the background.
 
-#### Self-Managing Dev Servers
+### Self-Managing Dev Servers
 The engine treats Dev Servers (persistent processes) differently than one-off scripts:
 - Port Protection: If you trigger a dev server that is already running in an active terminal, the engine programmatically sends Ctrl+C to kill the old process before spawning the new one on the same port.
 - Multi-Server Support: If you trigger a different dev server, the engine recognizes the port conflict isn't present and opens a dedicated terminal for that specific server.
 
-#### The "Unified Switch" Architecture
+### The "Unified Switch" Architecture
 Architecturally, every item type in your config—regardless of complexity—is routed through a single execution function. This unified logic powers the extension’s most advanced features:
 - Nested Execution: Because the engine uses a recursive switch, you can nest Chains inside Concurrent items.
 - Hybrid Workflows: You can create a "Launch" command that fires three tasks concurrently, while one of those tasks is actually a sequential "Chain" of three other scripts.
 - Efficiency: This streamlined code path means less overhead, fewer bugs, and a consistent behavior across all command types.
 
-#### The Unified Execution Engine
+### The Unified Execution Engine
 Historically, every command type had its own isolated function. The new architecture routes every single interaction through a Unified Switch. This is the "brain" of the extension that makes complex nesting possible.
 
 By centralizing execution, the extension handles Chains (sequential) and Concurrent (parallel) tasks using the same core logic. This recursion is what allows for "absurd" configurations, like a concurrent block that triggers multiple independent chains.
 
-#### Logic Preview (Simplified)
+### Logic Preview (Simplified)
 Here is a high-level look at how the engine processes your config items:
 
 ```typescript
@@ -3674,7 +3791,7 @@ export class TerminalManager {
 }
 ```
 
-#### Why this is a "Game Changer"
+### Why this is a "Game Changer"
 Because the engine is recursive (executeItem can call itself), the complexity you can achieve is limited only by your imagination.
 - Sequential Chains: You can ensure that a "Test" command finishes successfully before the "Deploy" command even starts.
 - Parallel Power: You can launch your frontend, backend, and database watcher simultaneously.
@@ -3685,12 +3802,12 @@ Because the engine is recursive (executeItem can call itself), the complexity yo
 
 This level of orchestration ensures that no matter how many tasks you trigger, the extension manages the terminal state, the sequence, and the resource overhead without you ever needing to intervene.
 
-#### The Power of Nested Logic
+### The Power of Nested Logic
 If you look closely at the engine's execution flow, you’ll notice a "weird" behavior that is actually its greatest strength: Recursive Nesting.
 
 Because the engine routes every item through the same centralized logic, you can create hybrid configurations that mix sequential and parallel execution in ways standard extensions don't allow.
 
-#### A Developer’s Advantage
+### A Developer’s Advantage
 From a maintenance perspective, this "One Ring" function makes the extension incredibly lean:
 - Centralized Logic: Every new item type added to the extension only needs to be defined in one place.
 - Code Efficiency: We achieve massive functionality with a fraction of the code, leading to fewer bugs and a significantly smaller extension footprint.
@@ -3698,42 +3815,44 @@ From a maintenance perspective, this "One Ring" function makes the extension inc
 
 Bottom Line: By moving away from "one function per item" and toward a unified execution switch, the extension gains a level of "absurd" power and efficiency that makes it a true CI/CD-grade tool inside your editor.
 
-#### Concurrent & Chain
+## Concurrent And Chain
 
 
-### Autonomous Maintenance: Local Instance Scans
+## Autonomous Maintenance
+#### Local Instance Scans
 Maintaining an extension of this scale—covering the functionality of 125+ individual tools—would normally be an impossible chore. To solve this, the extension uses Autonomous Scanning to keep its data fresh without me ever having to lift a finger.
 
-#### Real-Time vs. Hardcoded
+### Real-Time vs. Hardcoded
 Rather than relying on static lists that go out of date the moment a new version of VS Code or a library is released, I have implemented dynamic scanning strategies.
 
-#### Example: VS Code Commands 
+### Example: VS Code Commands 
 While there is a manual list of core VS Code commands, the extension also features a Live Instance Scanner. It queries your specific VS Code environment to generate a command list on the fly.
 - As VS Code updates, your list updates.
 - I never have to manually add new VS Code features to the codebase.
 - Eventually, as these dynamic counters parts prove their reliability, the manual lists will be phased out entirely.
 
-#### Other Self-Sustaining Systems:
+### Other Self-Sustaining Systems:
 - Icons QuickPick: Unlike the native VS Code icon picker, which is rarely updated, this extension scans the icon library at runtime. If a new icon is added to the source, it appears in your QuickPick immediately.
 - Icons context menu
 - Catalyst-UI Components Quickpick: The 2,700+ components and templates are managed via dynamic discovery. The extension scans the library and populates the inventory and display functions automatically.
 - Catalyst-UI context menu
 - Contextual Menu Options: The extension scans your local environment to ensure that the menu options presented to you are relevant to the tools you actually have installed and active.
 
-### Naming Conventions: Functions & Settings
+## Naming Conventions
+#### Functions & Settings
 As this extension has grown to include over 1,500 commands, the risk of "naming collisions" (where two commands share the same name) has become a reality. To prevent these conflicts and make the API more intuitive, I am transitioning all internal and exposed functions to a hierarchical naming convention.
 
-#### The Shift: From Flat to Hierarchical
+### The Shift: From Flat to Hierarchical
 Previously, commands followed a standard extension.function format. Moving forward, all commands are being recategorized into a taxonomic structure:
 - Old Way: `ocrmnavigator.gitPush`
 - New Way: `ocrmnavigator.git.push`
 
-#### Benefits and reasons for the change
+### Benefits and reasons for the change
 - Instant Debugging: If an error occurs, the command name itself now tells you exactly which module (Git, Archiver, UI, etc.) is responsible, without needing to search the entire codebase.
 - API Discoverability: It is now much easier to guess or memorize functions. If you need a Git tool, you know it starts with ocrmnavigator.git.
 - Future-Proofing: This structure allows us to merge large sub-extensions (like the recent "To-Do" extension integration) without worrying about breaking existing features.
 
-#### Settings & Migration
+## Settings & Migration
 This same logic is being applied to the Extension Settings.
 - New Settings: Will follow the category.subcategory.setting format.
 - Legacy Settings: To avoid breaking your existing settings.json files, current settings will remain as-is for now.
@@ -3743,12 +3862,13 @@ This same logic is being applied to the Extension Settings.
 > I am currently in the process of converting all 1,500+ commands. If you are referencing the old naming convention in your custom configs, be aware that these may stop working as they are migrated to the new system. If a command fails, check the logs—it has likely just moved to its new hierarchical home.
 
 
-### pro7: Workspace Secrets & Encrypted Backups
+## pro7
+### Workspace Secrets & Encrypted Backups
 Managing .env files and sensitive credentials across multiple workstations can be a headache. Standard practices often involve third-party "Secret Managers," but those often come with monthly costs or complex setups.
 
 My solution—built directly into this extension—is a Password-Protected Archive workflow.
 
-#### The Logic: Local Encryption, Global Access
+## Local Encryption 
 Instead of relying on external platforms, this feature allows you to bundle your secrets into a password-protected ZIP archive before pushing your project to GitHub. This provides three major benefits:
 - Portability: Your secrets travel with your repository. No matter which workstation you sit down at, your .env files are just a decryption away.
 - Versioning: Your secrets are backed up alongside your code history.
@@ -3769,21 +3889,20 @@ The Fix: Ensure your archive is excluded from the build or listed in your .vscod
 
 
 
-### Context
+## Context
 
-### VSIX Archiver
+## VSIX Archiver
 
-### Publishing To Marketplace
+## Publishing To Marketplace
 
 ###
 
-
-#### Configuration Settings
+## Configuration Settings
 
 
 All settings are prefixed with `ocrmnavigator.` and can be configured in your VS Code settings.
 
-#### Core Settings
+## Core Settings
 
 **Tasks & NPM Scripts**
 - `tasks` (boolean, default: `true`) - Controls whether the 'Tasks' folder is displayed in DevStack explorer as a global folder. Items from tasks.json are automatically populated.
@@ -3796,7 +3915,7 @@ All settings are prefixed with `ocrmnavigator.` and can be configured in your VS
 - `F_DISABLE` (boolean, default: `false`) - File disable toggle. Do not set manually unless you need to change it back to false in settings.json.
 - `EXT_DISABLE` (boolean, default: `false`) - Extension disable toggle. Do not set manually unless you need to change it back to false in settings.json.
 
-#### Code Snapshot Settings
+## Code Snapshot Settings
 
 **Visual Appearance**
 - `backgroundPalette` (enum, default: `"pinky"`) - Background gradient palette for code snapshots. Options: magnum, pinky, passion, steel, tropic, forest, blueman, sand
@@ -3818,7 +3937,7 @@ All settings are prefixed with `ocrmnavigator.` and can be configured in your VS
 - `target` (enum, default: `"container"`) - Snapshot target. Options: container (includes background), window (just the code window)
 - `trimEmptyLines` (boolean, default: `true`) - Trim empty lines from the beginning and end of snapshot
 
-#### GitHub Integration
+## GitHub Integration
 
 **Repository Configuration**
 - `repo` (string, default: `""`) - Repository name (e.g., "DevStack")
@@ -3838,7 +3957,7 @@ All settings are prefixed with `ocrmnavigator.` and can be configured in your VS
 - `syncInterval` (string, default: `"30"`) - Sync interval in minutes
 - `checkRemindersInterval` (string, default: `"10"`) - Reminder check interval in minutes
 
-#### Build & Automation Settings
+## Build & Automation Settings
 
 **Package Management**
 - `CONCURRENT` (string, default: `"stable"`) - Determines concurrent function mode. Options: 'stable', 'bleeding-edge'
@@ -3858,7 +3977,7 @@ All settings are prefixed with `ocrmnavigator.` and can be configured in your VS
 - `UPDATE_PROMPT_OBJECTS` (boolean, default: `false`) - Updates prompt objects
 - `CONVERT_README_DEV_MD` (boolean, default: `false`) - Converts README.dev.md to README.md during build
 
-#### UI & Interface Settings
+## UI & Interface Settings
 
 **Quick Pick Menus**
 - `BE_QP` (boolean, default: `false`) - BE Quickpick menu found on the status bar
@@ -3871,7 +3990,7 @@ All settings are prefixed with `ocrmnavigator.` and can be configured in your VS
 - `configPath` (string, default: `".vscode/ocrmnavigator/search-config.json"`) - Path to the search configuration file
 - `toggleHiddenItems` (boolean, default: `true`) - Toggle visibility of chain items in UI (items with hidden: true)
 
-#### Feature Toggles
+## Feature Toggles
 
 **Development Tools**
 - `commands` (boolean, default: `true`) - Enables VS Code commands
