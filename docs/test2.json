@@ -1,0 +1,402 @@
+[
+  {
+    "key": "telemetry.firstSessionDate",
+    "value": "Thu, 20 Apr 2023 23:11:23 GMT"
+  },
+  {
+    "key": "workbench.panel.output.hidden",
+    "value": "[{\"id\":\"workbench.panel.output\",\"isHidden\":false}]"
+  },
+  {
+    "key": "workbench.view.search.state.hidden",
+    "value": "[{\"id\":\"workbench.view.search\",\"isHidden\":false}]"
+  },
+  {
+    "key": "storage.serviceMachineId",
+    "value": "6678b45b-480c-41bf-9b46-2b1109aad3b8"
+  },
+  {
+    "key": "sync.previous.store",
+    "value": "{\"url\":\"https://vscode-sync-insiders.trafficmanager.net/\",\"stableUrl\":\"https://vscode-sync.trafficmanager.net/\",\"insidersUrl\":\"https://vscode-sync-insiders.trafficmanager.net/\",\"canSwitch\":true,\"authe…"
+  },
+  {
+    "key": "sync.storeUrl",
+    "value": "https://vscode-sync-insiders.trafficmanager.net/"
+  },
+  {
+    "key": "sync.productQuality",
+    "value": "insider"
+  },
+  {
+    "key": "productIconThemeData",
+    "value": "{\"id\":\"\",\"label\":\"Default\",\"settingsId\":\"Default\",\"watch\":false,\"iconDefinitions\":[],\"iconFontDefinitions\":{}}"
+  },
+  {
+    "key": "workbench.panel.repl.hidden",
+    "value": "[{\"id\":\"workbench.panel.repl.view\",\"isHidden\":false}]"
+  },
+  {
+    "key": "workbench.telemetryOptOutShown",
+    "value": "true"
+  },
+  {
+    "key": "remote.wslFeatureInstalled",
+    "value": "true"
+  },
+  {
+    "key": "experiments.cdias.searchForAzure",
+    "value": "{\"enabled\":true,\"state\":2}"
+  },
+  {
+    "key": "experiments.saajani.searchForGithub",
+    "value": "{\"enabled\":true,\"state\":2}"
+  },
+  {
+    "key": "experiments.saajani.searchForJava",
+    "value": "{\"enabled\":true,\"state\":2}"
+  },
+  {
+    "key": "experiments.fiveisprime.searchForIoT",
+    "value": "{\"enabled\":true,\"state\":2}"
+  },
+  {
+    "key": "experiments.copeet.jsDebugNodeInsiderPrompt",
+    "value": "{\"enabled\":true,\"state\":1}"
+  },
+  {
+    "key": "experiments.copeet.jsDebugChromeInsiderPrompt",
+    "value": "{\"enabled\":true,\"state\":1}"
+  },
+  {
+    "key": "experiments.saajani.livePreviewSearch",
+    "value": "{\"enabled\":true,\"state\":2}"
+  },
+  {
+    "key": "experiments.saajani.reactnative.nps",
+    "value": "{\"enabled\":true,\"state\":1}"
+  },
+  {
+    "key": "__$__isNewStorageMarker",
+    "value": "false"
+  },
+  {
+    "key": "ces/skipSurvey",
+    "value": "1.78.0-insider"
+  },
+  {
+    "key": "terminal.integrated.showTerminalConfigPrompt",
+    "value": "false"
+  },
+  {
+    "key": "themeUpdatedNotificationShown",
+    "value": "true"
+  },
+  {
+    "key": "nps/lastSessionDate",
+    "value": "Wed May 03 2023"
+  },
+  {
+    "key": "nps/sessionCount",
+    "value": "9"
+  },
+  {
+    "key": "nps/isCandidate",
+    "value": "false"
+  },
+  {
+    "key": "nps/skipVersion",
+    "value": "1.78.0-insider"
+  },
+  {
+    "key": "terminal.hidden",
+    "value": "[{\"id\":\"terminal\",\"isHidden\":false},{\"id\":\"workbench.panel.repl.view\",\"isHidden\":false}]"
+  },
+  {
+    "key": "ritwickdey.LiveServer",
+    "value": "{\"liveServer.setup.version\":\"5.7.9\"}"
+  },
+  {
+    "key": "workbench.view.extension.references-view.state.hidden",
+    "value": "[{\"id\":\"references-view.tree\",\"isHidden\":false}]"
+  },
+  {
+    "key": "javascript.1.editedCount",
+    "value": "10"
+  },
+  {
+    "key": "javascript.1.editedDate",
+    "value": "Wed May 10 2023"
+  },
+  {
+    "key": "javascript.1.lastSessionDate",
+    "value": "Fri May 12 2023"
+  },
+  {
+    "key": "javascript.1.sessionCount",
+    "value": "14"
+  },
+  {
+    "key": "javascript.1.isCandidate",
+    "value": "false"
+  },
+  {
+    "key": "javascript.1.skipVersion",
+    "value": "1.79.0-insider"
+  },
+  {
+    "key": "workbench.welcomePage.extensionMetadata.eamodio.gitlens",
+    "value": "{\"title\":\"GitLens — Git supercharged\",\"description\":\"Supercharge Git within VS Code — Visualize code authorship at a glance via Git blame annotations and CodeLens, seamlessly navigate and explore Git …"
+  },
+  {
+    "key": "workbench.welcomePage.extensionMetadata.ms-vsliveshare.vsliveshare",
+    "value": "{\"title\":\"Live Share\",\"description\":\"Real-time collaborative development from the comfort of your favorite tools.\",\"imagePath\":\"https://ms-vsliveshare.gallerycdn.vsassets.io/extensions/ms-vsliveshare/…"
+  },
+  {
+    "key": "allExperiments",
+    "value": "[\"cdias.searchforazure\",\"saajani.searchforgithub\",\"saajani.searchforjava\",\"saajani.reactnative.nps\",\"fiveisprime.searchforiot\",\"copeet.jsdebugnodeinsiderprompt\",\"copeet.jsdebugchromeinsiderprompt\",\"sa…"
+  },
+  {
+    "key": "experiments.isidorn.searchForC#",
+    "value": "{\"enabled\":true,\"state\":2}"
+  },
+  {
+    "key": "sync.machine-session-id",
+    "value": "b2e96ecc-9887-40fd-be36-755f7c37b1ab"
+  },
+  {
+    "key": "chat.workspaceTransfer",
+    "value": "[]"
+  },
+  {
+    "key": "extensionsAssistant/fileExtensionsSuggestionIgnore",
+    "value": "[\"csv\"]"
+  },
+  {
+    "key": "languageStatus.interactCount",
+    "value": "3"
+  },
+  {
+    "key": "github.remotehub-github-repo workflow user:email read:user",
+    "value": "3cc3f3a1ecb17ae7"
+  },
+  {
+    "key": "typescript.1.editedCount",
+    "value": "10"
+  },
+  {
+    "key": "typescript.1.editedDate",
+    "value": "Sun Jul 09 2023"
+  },
+  {
+    "key": "typescript.1.lastSessionDate",
+    "value": "Mon Jul 10 2023"
+  },
+  {
+    "key": "typescript.1.sessionCount",
+    "value": "48"
+  },
+  {
+    "key": "typescript.1.isCandidate",
+    "value": "false"
+  },
+  {
+    "key": "typescript.1.skipVersion",
+    "value": "1.81.0-insider"
+  },
+  {
+    "key": "suggestWidget.size/vs.editor.ICodeEditor/false",
+    "value": "{\"width\":430,\"height\":170}"
+  },
+  {
+    "key": "~remote.forwardedPortsContainer.hidden",
+    "value": "[{\"id\":\"~remote.forwardedPorts\",\"isHidden\":false}]"
+  },
+  {
+    "key": "__$__isNewStorageMarker.wsl+Debian",
+    "value": "false"
+  },
+  {
+    "key": "__$__isNewStorageMarker.wsl+debian",
+    "value": "false"
+  },
+  {
+    "key": "ms-vscode.remote-repositories",
+    "value": "{\"version\":\"0.38.1\"}"
+  },
+  {
+    "key": "workbench.view.extension.liveshare.state.hidden",
+    "value": "[{\"id\":\"liveshare.session\",\"isHidden\":false},{\"id\":\"liveshare.help\",\"isHidden\":false},{\"id\":\"liveshare.devtools\",\"isHidden\":false}]"
+  },
+  {
+    "key": "workbench.view.extension.dockerView.state.hidden",
+    "value": "[{\"id\":\"dockerContainers\",\"isHidden\":false},{\"id\":\"dockerImages\",\"isHidden\":false},{\"id\":\"dockerRegistries\",\"isHidden\":false},{\"id\":\"dockerNetworks\",\"isHidden\":false},{\"id\":\"dockerVolumes\",\"isHidden\":…"
+  },
+  {
+    "key": "workbench.view.extension.azurePanel.state.hidden",
+    "value": "[{\"id\":\"azureActivityLog\",\"isHidden\":false}]"
+  },
+  {
+    "key": "ms-azuretools.vscode-azureappservice",
+    "value": "{\"VSCode.ABExp.FeatureData\":{\"features\":[\"account-aacf\",\"initialAAcf\",\"installRecovery\",\"invitationLink\",\"livesharecontinuousaacf\",\"mindaroBinariesVersion-1.0.20210702\",\"mindaroBinariesVersion-1.0.202…"
+  },
+  {
+    "key": "peekViewLayout",
+    "value": "{\"ratio\":0.7,\"heightInLines\":18}"
+  },
+  {
+    "key": "workbench.views.service.panel.e93f6175-55af-4598-8176-c434529362f5.state.hidden",
+    "value": "[{\"id\":\"terminal\",\"isHidden\":false},{\"id\":\"workbench.scm.repositories\",\"isHidden\":false}]"
+  },
+  {
+    "key": "workbench.view.extension.copilot-labs.state.hidden",
+    "value": "[{\"id\":\"copilotSidebar.explain\",\"isHidden\":false},{\"id\":\"copilotSidebar.translate\",\"isHidden\":false},{\"id\":\"copilotSidebar.toolbox\",\"isHidden\":false},{\"id\":\"copilotSidebar.generateTests\",\"isHidden\":fa…"
+  },
+  {
+    "key": "github.copilot-github-user:email",
+    "value": "ac715ba13a027a0e"
+  },
+  {
+    "key": "github.copilot-labs-github-read:user",
+    "value": "10dcf14b2e47f353"
+  },
+  {
+    "key": "workbench.view.extension.github-actions.state.hidden",
+    "value": "[{\"id\":\"github-actions.current-branch\",\"isHidden\":false},{\"id\":\"github-actions.workflows\",\"isHidden\":false},{\"id\":\"github-actions.settings\",\"isHidden\":false},{\"id\":\"github-actions.empty-view\",\"isHidde…"
+  },
+  {
+    "key": "github.vscode-github-actions-github-repo workflow",
+    "value": "e38233b3f5a811ad"
+  },
+  {
+    "key": "workbench.view.extension.figma.state.hidden",
+    "value": "[{\"id\":\"figma.views.login\",\"isHidden\":false},{\"id\":\"figma.views.dummyLoginNotifications\",\"isHidden\":false},{\"id\":\"figma.views.files\",\"isHidden\":false},{\"id\":\"figma.views.notifications\",\"isHidden\":fals…"
+  },
+  {
+    "key": "secret://{\"extensionId\":\"figma.figma-vscode-extension\",\"key\":\"integCookie.prod\"}",
+    "value": "{\"type\":\"Buffer\",\"data\":[118,49,48,200,97,92,89,214,87,252,5,130,93,245,31,65,65,5,7,105,94,80,14,82,150,23,138,171,55,45,46,40,219,220,241,10,205,155,158,93,106,118,102,201,79,168,14,91,169,39,110,42…"
+  },
+  {
+    "key": "secret://{\"extensionId\":\"figma.figma-vscode-extension\",\"key\":\"userId.prod\"}",
+    "value": "{\"type\":\"Buffer\",\"data\":[118,49,48,83,95,237,4,129,247,19,238,162,159,57,3,31,93,56,11,54,75,169,241,79,150,187,172,115,61,228,198,165,118,144,70,208,73,115,110,162,109,172,107,36,49,70,86,4,171,198]}"
+  },
+  {
+    "key": "figma.figma-vscode-extension",
+    "value": "{\"loggedIn.prod\":false,\"selectedOrgId.prod\":null}"
+  },
+  {
+    "key": "workbench.panel.chatSidebar.hidden",
+    "value": "[{\"id\":\"workbench.panel.chat.view.copilot\",\"isHidden\":false}]"
+  },
+  {
+    "key": "ms-azuretools.vscode-docker",
+    "value": "{\"VSCode.ABExp.FeatureData\":{\"features\":[\"account-aacf\",\"installRecovery\",\"invitationLink\",\"livesharecontinuousaacf\",\"mindaroBinariesVersion-1.0.20210702\",\"mindaroBinariesVersion-1.0.20210723\",\"portFo…"
+  },
+  {
+    "key": "workbench.welcomePage.extensionMetadata.github.copilot",
+    "value": "{\"title\":\"GitHub Copilot\",\"description\":\"Your AI pair programmer\",\"imagePath\":\"https://github.gallerycdn.vsassets.io/extensions/github/copilot/1.115.430/1695317365047/Microsoft.VisualStudio.Services.I…"
+  },
+  {
+    "key": "extensionsAssistant/importantRecommendationsIgnore",
+    "value": "[\"ms-azuretools.vscode-docker\",\"ms-vscode-remote.remote-containers\"]"
+  },
+  {
+    "key": "extensionTips/lastPromptedMediumImpExeTime",
+    "value": "1696537082328"
+  },
+  {
+    "key": "extensionTips/promptedExecutableTips",
+    "value": "{\"wsl\":[\"ms-vscode-remote.remote-wsl\"],\"docker\":[\"ms-azuretools.vscode-docker\",\"ms-vscode-remote.remote-containers\"]}"
+  },
+  {
+    "key": "workbench.accounts.experimental.showEntitlements",
+    "value": "false"
+  },
+  {
+    "key": "workbench.view.remote.state.hidden",
+    "value": "[{\"id\":\"targetsWsl\",\"isHidden\":false},{\"id\":\"~remote.helpPanel\",\"isHidden\":false},{\"id\":\"remoteHub.views.workspaceRepositories\",\"isHidden\":false},{\"id\":\"targetsContainers\",\"isHidden\":false},{\"id\":\"det…"
+  },
+  {
+    "key": "github.codespaces-github-codespace read:user repo user:email",
+    "value": "4147d4907b8bdcb6"
+  },
+  {
+    "key": "__$__isNewStorageMarker.codespaces+special-garbanzo-9j6gp596gq43p4r5",
+    "value": "false"
+  },
+  {
+    "key": "workbench.view.extension.github-pull-requests.state.hidden",
+    "value": "[{\"id\":\"github:login\",\"isHidden\":false},{\"id\":\"pr:github\",\"isHidden\":false},{\"id\":\"issues:github\",\"isHidden\":false}]"
+  },
+  {
+    "key": "GitHub.vscode-pull-request-github",
+    "value": "{\"VSCode.ABExp.FeatureData\":{\"features\":[\"account-aacf\",\"config.editor.experimental.asyncTokenization\",\"installRecovery\",\"invitationLink\",\"livesharecontinuousaacf\",\"mindaroBinariesVersion-1.0.20210702…"
+  },
+  {
+    "key": "Comments.hidden",
+    "value": "[{\"id\":\"workbench.panel.comments\",\"isHidden\":false}]"
+  },
+  {
+    "key": "workbench.view.extension.github-pull-request.state.hidden",
+    "value": "[{\"id\":\"github:createPullRequestWebview\",\"isHidden\":false},{\"id\":\"github:compareChangesFiles\",\"isHidden\":false},{\"id\":\"github:compareChangesCommits\",\"isHidden\":false},{\"id\":\"prStatus:github\",\"isHidden…"
+  },
+  {
+    "key": "remote.explorerType",
+    "value": "codespaces"
+  },
+  {
+    "key": "workbench.views.extensions.remote.installed.size",
+    "value": "2"
+  },
+  {
+    "key": "workbench.views.extensions.local.installed.size",
+    "value": "21"
+  },
+  {
+    "key": "remote.tunnels.toRestore.codespaces+special-garbanzo-9j6gp596gq43p4r5.40861909",
+    "value": "[{\"remoteHost\":\"localhost\",\"remotePort\":3000,\"localPort\":3000,\"closeable\":true,\"localAddress\":\"127.0.0.1:3000\",\"protocol\":\"http\",\"localUri\":{\"$mid\":1,\"path\":\"/\",\"scheme\":\"http\",\"authority\":\"127.0.0.1:…"
+  },
+  {
+    "key": "workbench.view.extension.dotenv.state.hidden",
+    "value": "[{\"id\":\"dotenv.view.vault\",\"isHidden\":false}]"
+  },
+  {
+    "key": "ms-vscode-remote.remote-wsl-recommender",
+    "value": "{\"VSCode.ABExp.FeatureData\":{\"features\":[\"aa_t_chat\",\"account-aacf\",\"config.editor.experimental.asyncTokenization\",\"installRecovery\",\"invitationLink\",\"livesharecontinuousaacf\",\"mindaroBinariesVersion-…"
+  },
+  {
+    "key": "secret://{\"extensionId\":\"ms-vscode.azure-account\",\"key\":\"AzureCloud\"}",
+    "value": "{\"type\":\"Buffer\",\"data\":[118,49,48,76,175,136,5,23,176,171,61,140,13,165,200,180,43,90,242,138,170,195,173,44,185,49,240,131,43,68,180,168,29,125,251,72,103,129,9,74,135,100,232,84,204,203,170,32,223,…"
+  },
+  {
+    "key": "workbench.view.extension.azure.state.hidden",
+    "value": "[{\"id\":\"azureFocusView\",\"isHidden\":false},{\"id\":\"azureResourceGroups\",\"isHidden\":false},{\"id\":\"azureWorkspace\",\"isHidden\":false},{\"id\":\"ms-azuretools.helpAndFeedback\",\"isHidden\":false}]"
+  },
+  {
+    "key": "ms-vscode.azure-account",
+    "value": "{\"lastSeenSettingsCache\":{\"values\":[\"ADAL\",\"AzureCloud\",\"\"]},\"nps/lastSessionDate\":\"Sat Nov 11 2023\",\"nps/sessionCount\":9,\"VSCode.ABExp.FeatureData\":{\"features\":[\"aa_t_chat\",\"account-aacf\",\"config.edi…"
+  },
+  {
+    "key": "tabs-list-width-vertical",
+    "value": "46"
+  },
+  {
+    "key": "ms-vscode.js-debug",
+    "value": "{\"VSCode.ABExp.FeatureData\":{\"features\":[\"account-aacf\",\"config.editor.experimental.asyncTokenization\",\"livesharecontinuousaacf\",\"mindaroBinariesVersion\",\"portForwardingServiceEnabled-development\",\"po…"
+  },
+  {
+    "key": "debug.actionswidgetposition",
+    "value": "0.13100436681222707"
+  },
+  {
+    "key": "debug.actionswidgety",
+    "value": "38"
+  },
+  {
+    "key": "inline-chat-history",
+    "value": "[\"how do i do that?\",\"/fix This comparison appears to be unintentional because the types 'FormDataEntryValue' and 'boolean' have no overlap.\",\"/fix Argument of type 'any[]' is not assignable to parame…"
+  },
+  {
+    "key": "workbench.panel.alignment",
+    "value": "center"
+  }
+]

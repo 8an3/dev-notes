@@ -1,21 +1,27 @@
 # Catalyst Software
 
 - [ ] ★ ━━━━ ☆ ━━━━     TO-DO     ━━━━ ☆ ━━━━ ★
+- [ ] change auth in catalystsoftware/ui from pssword to, grabbing the current user email instaed pinging the server to see if they subscribe and if they do offer the prem menu
 - [ ] each component needs the same comment section as animated text, or anything within the x category
 - [ ] offer cdn? see bottom
-- [ ] premium only catalyst-ui focused extension
+- [x] premium only catalyst-ui focused extension
 - [ ] need to add best in class `search` to readme
 - [ ] pnpm dlx ui-thing@latest add flip-clock
 
 - [ ] need to add best in class `settings.json resource`
 - [ ] an option when creating config items, to create a file type item that will direct you to that workspaces config file. Allowing you to enter each workspace, and create an item based off of that workspaces config file
+- [ ] need to create blog like we did changelog
 - [ ] test new motions category
+  - [ ] ★ ━━━━ X ━━━━ ★
+    - [ ] need to compare against coss i think ists called
   - [ ] ★ ━━━━ UTILS ━━━━ ★
     - [ ] auth.ts
     - [ ] auth_session.ts
     - [ ] auth_github.ts
     - [ ] auth.github.callback.tsx
     - [ ] auth.github.tsx
+    - [ ] honeypot-react
+    - [ ] check all files
   - [ ] ★ ━━━━ PROMPT ━━━━ ★
     - [ ] providers.tsx
     - [ ] snippets.tsx
@@ -27,6 +33,7 @@
   - [ ] ★ ━━━━ PRIMITIVE ━━━━ ★
     - [ ] button-group
     - [ ] alert
+    - [ ] tracker
   - [ ] ★ ━━━━ BG ━━━━ ★
     - [ ] gistorted glasses 
     - [ ] texture overlay
@@ -53,6 +60,7 @@
     - [ ] useSlideInV1
     - [ ] useTailwindConverter
     - [ ] use-validate-credit-card
+    - [ ] use-keyboard-shortcut
   - [ ] ★ ━━━━ FORMS ━━━━ ★
     - [ ] fancy-area
   - [ ] ★ ━━━━ CORE ━━━━ ★

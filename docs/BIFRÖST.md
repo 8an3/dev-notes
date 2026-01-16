@@ -1,3 +1,5 @@
+# BIFRÖST
+
 ## Terminal and Multi Kernel Ngin
 
 
@@ -65,6 +67,31 @@
               ├── 📄<a href="#vsix-archiver">VSIX Archiver</a> ........... 
               └── 📄<a href="#publishing-to-marketplace">Publishing To Marketplace</a> ...........
 </pre>
+
+Before getting into item types, I wanted to get into another topic real quick, that the features found within this extension may feel like a ton of features quickly jammed into one, which couldn't be farther from the truth. 
+
+To help with this I started giving features names of norse and greek gods in order to add a bit of separation from eachother, since Loki AI not only was a great fit for that feature but it made it stand out from the others. Nothing was rushed in terms of adding / creating features. Most of them, should be their own extension take snippets for example, which hosts a feature parity that surpasses paid and enterprise products, yet it gets lost among the other features. Which sucks, because someone wanting a great snippet editor... may never see it. Below is a list of the names used and why they were used:
+- ATLAS - Titan who holds up the celestial spheres perfect for layout/UI manipulation suggests "supporting/structure"
+- BIFRÖST (Current: Terminal & Multi-Kernel Ngin) Rainbow bridge connecting realms (different terminals/OSs) Perfect for cross-environment terminal system implies connection/communication
+- ODIN (search editor) He sacrificed for knowledge/wisdom the all-seeing/all-knowing aspect fits search functionality
+- VALHALLA - Hall of the slain (where data "lives") dramatic but fitting for data storage as Odin gathers warriors here (data points) database related features currently sqlite3 only
+- RÚNAR - Norse for "runes" - magical symbols, snippets are modern magical runes
+- THOR (Current: Tailwind Plugin Ngin) for powerful styling/UI utilities suggests "power/impact"
+- YGGDRASIL (Current: File Navigation System) World tree connecting all realms perfect for file/system navigation suggests "connecting everything"
+- VÖLUNDR (Master smith/craftsman (Wayland the Smith)) for cleanup/refactoring/automation tools suggests "craftsmanship/maintenance"
+- HUGINN & MUNINN (Remix/Prisma utilities) Odin's ravens: Thought and Memory for framework utilities
+- TYR (Current: Port & Process/Errors) God of law, justice, heroic glory for debugging/error handling suggests "order/resolution"
+- FREYR (Current: VS Code Styling/Theming) For theming/beautification tools suggests "abundance/beauty"
+- SKÁLD (Current: Catalyst Editor) Norse poets/storytellers for documentation/markdown/editing tools suggests "crafting stories/narratives"
+- MÍMIR - DevArchive
+- RATATOSKR - File Tree Builder/Visualization tool
+- LOKI - AI
+- HEPHAESTUS - UI
+- VIÐARR - Automation events
+- NEMESIS - Create Incoming Tunnel
+- HERACLES - Batch Rename
+- HERMES - API Secret Grabber
+- HEIMDALLR - Intellisense Schema Ngin
 
 ## Item Types
 
@@ -1433,7 +1460,7 @@ I've played around with a TON of different label styles, landing on this being t
         { "label": "Scan File Imports", "path": "ocrmnavigator.imports.file.scan", "type": "command", "icon": "terminal-cmd" },
         { "label": "Toggle Zen Mode", "path": "workbench.action.toggleZenMode", "type": "command", "icon": "game" },
         { "label": "SAVE ALL", "path": "workbench.action.files.saveAll", "type": "command", "icon": "save-all" },
-        { "label": "Search Editor", "path": "ocrmnavigator.searchEditor.open", "type": "command", "icon": "search" },
+        { "label": "Search Editor", "path": "ocrmnavigator.odin.open", "type": "command", "icon": "search" },
         { "label": "Search VSCode", "path": "", "type": "search", "icon": "search" },
         { "label": "Format", "path": "formatfile, saveall", "type": "chain" },
         { "label": "1 DEV", "path": "saveall, killterms, startDevServer", "type": "chain", "icon": "debug-start", "tooltipText": "SINGLE KILL Terminals && Start DEV Server" },
@@ -2107,7 +2134,7 @@ I've played around with a TON of different label styles, landing on this being t
               },
               "keybindings": {
                 "ocrmnavigator.menu.devstack": "alt+d",
-                "ocrmnavigator.searchEditor.open": "alt+s",
+                "ocrmnavigator.odin.open": "alt+s",
                 "ocrmnavigator.menu.icons": "alt+i",
                 "ocrmnavigator.menu.catalystUi": "alt+u",
                 "ocrmnavigator.menu.snippets": "alt+f",
@@ -3099,12 +3126,12 @@ DevStack provides extensive configuration options to customize your development 
 
 #### Advanced Search
 
-**`ocrmnavigator.advancedSearch.contextLinesBefore`**
+**`ocrmnavigator.odin.contextLinesBefore`**
 - **Type**: `number`
 - **Default**: `4`
 - **Description**: Number of lines to display before each search match for context.
 
-**`ocrmnavigator.advancedSearch.contextLinesAfter`**
+**`ocrmnavigator.odin.contextLinesAfter`**
 - **Type**: `number`
 - **Default**: `10`
 - **Description**: Number of lines to display after each search match for context.

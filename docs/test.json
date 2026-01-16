@@ -1,0 +1,276 @@
+[
+  {
+    "key": "workbench.panel.markers.hidden",
+    "value": "[{\"id\":\"workbench.panel.markers.view\",\"isHidden\":false,\"order\":2},{\"id\":\"terminal\",\"isHidden\":false},{\"id\":\"workbench.panel.repl.view\",\"isHidden\":false}]"
+  },
+  {
+    "key": "workbench.panel.output.hidden",
+    "value": "[{\"id\":\"workbench.panel.output\",\"isHidden\":false}]"
+  },
+  {
+    "key": "terminal.hidden",
+    "value": "[{\"id\":\"terminal\",\"isHidden\":false},{\"id\":\"workbench.panel.repl.view\",\"isHidden\":false}]"
+  },
+  {
+    "key": "workbench.explorer.views.state.hidden",
+    "value": "[{\"id\":\"outline\",\"isHidden\":true,\"order\":4},{\"id\":\"timeline\",\"isHidden\":true,\"order\":5},{\"id\":\"workbench.explorer.openEditorsView\",\"isHidden\":true,\"order\":2},{\"id\":\"workbench.explorer.emptyView\",\"isHi…"
+  },
+  {
+    "key": "workbench.scm.views.state.hidden",
+    "value": "[{\"id\":\"workbench.scm.repositories\",\"isHidden\":false},{\"id\":\"workbench.scm\",\"isHidden\":false},{\"id\":\"workbench.scm.sync\",\"isHidden\":false},{\"id\":\"workbench.scm.history\",\"isHidden\":false}]"
+  },
+  {
+    "key": "workbench.view.search.state.hidden",
+    "value": "[{\"id\":\"workbench.view.search\",\"isHidden\":false}]"
+  },
+  {
+    "key": "workbench.view.debug.state.hidden",
+    "value": "[{\"id\":\"workbench.debug.welcome\",\"isHidden\":false},{\"id\":\"workbench.debug.variablesView\",\"isHidden\":false},{\"id\":\"workbench.debug.watchExpressionsView\",\"isHidden\":false},{\"id\":\"workbench.debug.callSta…"
+  },
+  {
+    "key": "workbench.panel.repl.hidden",
+    "value": "[{\"id\":\"workbench.panel.repl.view\",\"isHidden\":false}]"
+  },
+  {
+    "key": "workbench.panel.pinnedPanels",
+    "value": "[{\"id\":\"workbench.panel.markers\",\"pinned\":false,\"visible\":true,\"order\":0},{\"id\":\"workbench.panel.output\",\"pinned\":false,\"visible\":true,\"order\":1},{\"id\":\"workbench.panel.repl\",\"pinned\":true,\"visible\":f…"
+  },
+  { "key": "nps/lastSessionDate", "value": "Wed May 03 2023" },
+  { "key": "nps/sessionCount", "value": "9" },
+  { "key": "cpp.1.lastSessionDate", "value": "Tue Dec 31 2024" },
+  { "key": "cpp.1.sessionCount", "value": "426" },
+  { "key": "java.2.lastSessionDate", "value": "Tue Dec 31 2024" },
+  { "key": "java.2.sessionCount", "value": "426" },
+  { "key": "javascript.1.lastSessionDate", "value": "Fri May 12 2023" },
+  { "key": "javascript.1.sessionCount", "value": "14" },
+  { "key": "typescript.1.lastSessionDate", "value": "Mon Jul 10 2023" },
+  { "key": "typescript.1.sessionCount", "value": "48" },
+  { "key": "csharp.1.lastSessionDate", "value": "Tue Dec 31 2024" },
+  { "key": "csharp.1.sessionCount", "value": "426" },
+  { "key": "workbench.telemetryOptOutShown", "value": "true" },
+  {
+    "key": "workbench.statusbar.hidden",
+    "value": "[\"status.workspaceTrust.1682032283885\",\"status.workspaceTrust.ba971d67e5c413165a91a5728298c1e3\",\"status.workspaceTrust.1682454481968\",\"status.workspaceTrust.1682454688834\",\"status.workspaceTrust.16824…"
+  },
+  {
+    "key": "extensionTips/promptedExecutableTips",
+    "value": "{\"wsl\":[\"ms-vscode-remote.remote-wsl\"],\"docker\":[\"ms-azuretools.vscode-docker\",\"ms-vscode-remote.remote-containers\"]}"
+  },
+  {
+    "key": "workbench.view.remote.state.hidden",
+    "value": "[{\"id\":\"targetsWsl\",\"isHidden\":false},{\"id\":\"~remote.helpPanel\",\"isHidden\":false},{\"id\":\"remoteHub.views.workspaceRepositories\",\"isHidden\":false},{\"id\":\"targetsContainers\",\"isHidden\":false},{\"id\":\"det…"
+  },
+  {
+    "key": "workbench.welcomePage.walkthroughMetadata",
+    "value": "[[\"ms-vscode-remote.remote-wsl#wslWalkthrough\",{\"firstSeen\":1682032328174,\"stepIDs\":[\"explore.commands\",\"open.wslwindow\",\"create.project\",\"open.project\",\"linux.environment\",\"install.tools\",\"run.debug\"…"
+  },
+  {
+    "key": "memento/gettingStartedService",
+    "value": "{\"installGit\":{\"done\":true},\"pickAFolderTask-Other\":{\"done\":true},\"settings\":{\"done\":true},\"commandPaletteTask\":{\"done\":true},\"commandPaletteTaskWeb\":{\"done\":true},\"ms-vscode-remote.remote-wsl#wslWalk…"
+  },
+  { "key": "workbench.panel.alignment", "value": "right" },
+  { "key": "ces/skipSurvey", "value": "1.78.0-insider" },
+  { "key": "javascript.1.editedCount", "value": "10" },
+  { "key": "javascript.1.editedDate", "value": "Wed May 10 2023" },
+  { "key": "terminal.integrated.showTerminalConfigPrompt", "value": "false" },
+  {
+    "key": "workbench.welcomePage.hiddenCategories",
+    "value": "[\"ms-vscode-remote.remote-wsl#wslWalkthrough\",\"Setup\",\"Beginner\"]"
+  },
+  {
+    "key": "snippets.usageTimestamps",
+    "value": "[[\"snippets/css.json/border\",1683270474349],[\"snippets/snippets.json/testBlock\",1683385967460],[\"snippets/snippets.json/reactFunctionalComponent\",1683390248598],[\"snippets/snippets.json/reactArrowFunc…"
+  },
+  { "key": "themeUpdatedNotificationShown", "value": "true" },
+  { "key": "remote.explorerType", "value": "codespaces" },
+  { "key": "typescript.1.editedCount", "value": "10" },
+  { "key": "typescript.1.editedDate", "value": "Sun Jul 09 2023" },
+  { "key": "nps/isCandidate", "value": "false" },
+  { "key": "nps/skipVersion", "value": "1.78.0-insider" },
+  {
+    "key": "views.customizations",
+    "value": "{\"viewContainerLocations\":{\"workbench.views.service.panel.e93f6175-55af-4598-8176-c434529362f5\":1,\"workbench.views.service.sidebar.d705666c-a06a-43ae-b07e-7dd29acdd6ee\":0},\"viewLocations\":{\"workbench.…"
+  },
+  {
+    "key": "workbench.view.extension.references-view.state.hidden",
+    "value": "[{\"id\":\"references-view.tree\",\"isHidden\":false}]"
+  },
+  { "key": "tabs-list-width-horizontal", "value": "46" },
+  { "key": "javascript.1.isCandidate", "value": "false" },
+  { "key": "javascript.1.skipVersion", "value": "1.79.0-insider" },
+  {
+    "key": "commandPalette.mru.cache",
+    "value": "{\"usesLRU\":true,\"entries\":[{\"key\":\"editor.action.duplicateSelection\",\"value\":123},{\"key\":\"duplicatedCode.openFile\",\"value\":125},{\"key\":\"duplicatedCode.focus\",\"value\":126},{\"key\":\"highlight-duplicates.…"
+  },
+  { "key": "commandPalette.mru.counter", "value": "733" },
+  {
+    "key": "extensionsAssistant/fileExtensionsSuggestionIgnore",
+    "value": "[\"csv\"]"
+  },
+  {
+    "key": "github-8an3",
+    "value": "[{\"id\":\"github.remotehub\",\"name\":\"GitHub Repositories\",\"allowed\":true},{\"id\":\"github.copilot\",\"name\":\"GitHub Copilot\",\"allowed\":true},{\"id\":\"github.copilot-labs\",\"name\":\"GitHub Copilot Labs\",\"allowed\"…"
+  },
+  { "key": "typescript.1.isCandidate", "value": "false" },
+  { "key": "typescript.1.skipVersion", "value": "1.81.0-insider" },
+  { "key": "expandSuggestionDocs", "value": "false" },
+  {
+    "key": "workbench.views.service.panel.e93f6175-55af-4598-8176-c434529362f5.state.hidden",
+    "value": "[{\"id\":\"terminal\",\"isHidden\":false},{\"id\":\"workbench.scm.repositories\",\"isHidden\":false}]"
+  },
+  {
+    "key": "~remote.forwardedPortsContainer.hidden",
+    "value": "[{\"id\":\"~remote.forwardedPorts\",\"isHidden\":false}]"
+  },
+  {
+    "key": "workbench.view.extension.liveshare.state.hidden",
+    "value": "[{\"id\":\"liveshare.session\",\"isHidden\":false},{\"id\":\"liveshare.help\",\"isHidden\":false},{\"id\":\"liveshare.devtools\",\"isHidden\":false}]"
+  },
+  {
+    "key": "memento/workbench.editor.keybindings",
+    "value": "{\"searchHistory\":[\"add cur\",\"add cursor\",\"\\\"ctrl+g enter\\\"\",\"\\\"backspace\\\"\",\"\\\"backspace ctrl+g\\\"\",\"\\\"ctrl+g\\\"\",\"@command:dotenv.toggleAutocloaking\",\"@command:editor.foldAll\",\"@command:editor.foldLeve…"
+  },
+  { "key": "tabs-list-width-vertical", "value": "46" },
+  {
+    "key": "fileBasedRecommendations/promptedRecommendations",
+    "value": "{\"dockerfile\":[\"ms-azuretools.vscode-docker\"],\"powershell\":[\"ms-vscode.powershell\"]}"
+  },
+  {
+    "key": "workbench.view.extension.dockerView.state.hidden",
+    "value": "[{\"id\":\"dockerContainers\",\"isHidden\":false},{\"id\":\"dockerImages\",\"isHidden\":false},{\"id\":\"dockerRegistries\",\"isHidden\":false},{\"id\":\"dockerNetworks\",\"isHidden\":false},{\"id\":\"dockerVolumes\",\"isHidden\":…"
+  },
+  {
+    "key": "workbench.view.extension.azure.state.hidden",
+    "value": "[{\"id\":\"azureFocusView\",\"isHidden\":false},{\"id\":\"azureResourceGroups\",\"isHidden\":false},{\"id\":\"azureWorkspace\",\"isHidden\":false},{\"id\":\"ms-azuretools.helpAndFeedback\",\"isHidden\":false}]"
+  },
+  {
+    "key": "workbench.view.extension.azurePanel.state.hidden",
+    "value": "[{\"id\":\"azureActivityLog\",\"isHidden\":false}]"
+  },
+  {
+    "key": "workbench.view.extension.copilot-labs.state.hidden",
+    "value": "[{\"id\":\"copilotSidebar.explain\",\"isHidden\":false},{\"id\":\"copilotSidebar.translate\",\"isHidden\":false},{\"id\":\"copilotSidebar.toolbox\",\"isHidden\":false},{\"id\":\"copilotSidebar.generateTests\",\"isHidden\":fa…"
+  },
+  {
+    "key": "workbench.view.extension.github-actions.state.hidden",
+    "value": "[{\"id\":\"github-actions.current-branch\",\"isHidden\":false},{\"id\":\"github-actions.workflows\",\"isHidden\":false},{\"id\":\"github-actions.settings\",\"isHidden\":false},{\"id\":\"github-actions.empty-view\",\"isHidde…"
+  },
+  {
+    "key": "workbench.view.extension.figma.state.hidden",
+    "value": "[{\"id\":\"figma.views.login\",\"isHidden\":false},{\"id\":\"figma.views.dummyLoginNotifications\",\"isHidden\":false},{\"id\":\"figma.views.files\",\"isHidden\":false},{\"id\":\"figma.views.notifications\",\"isHidden\":fals…"
+  },
+  {
+    "key": "workbench.panel.chatSidebar.hidden",
+    "value": "[{\"id\":\"workbench.panel.chat.view.copilot\",\"isHidden\":false}]"
+  },
+  {
+    "key": "extensionsAssistant/importantRecommendationsIgnore",
+    "value": "[\"ms-azuretools.vscode-docker\",\"ms-vscode-remote.remote-containers\"]"
+  },
+  {
+    "key": "workbench.view.extension.github-pull-requests.state.hidden",
+    "value": "[{\"id\":\"github:login\",\"isHidden\":false},{\"id\":\"pr:github\",\"isHidden\":false},{\"id\":\"issues:github\",\"isHidden\":false}]"
+  },
+  {
+    "key": "Comments.hidden",
+    "value": "[{\"id\":\"workbench.panel.comments\",\"isHidden\":false}]"
+  },
+  {
+    "key": "workbench.view.extension.github-pull-request.state.hidden",
+    "value": "[{\"id\":\"github:createPullRequestWebview\",\"isHidden\":false},{\"id\":\"github:compareChangesFiles\",\"isHidden\":false},{\"id\":\"github:compareChangesCommits\",\"isHidden\":false},{\"id\":\"prStatus:github\",\"isHidden…"
+  },
+  {
+    "key": "remote.tunnels.toRestore.codespaces+special-garbanzo-9j6gp596gq43p4r5.40861909",
+    "value": "[{\"remoteHost\":\"localhost\",\"remotePort\":3000,\"localPort\":3000,\"closeable\":true,\"localAddress\":\"127.0.0.1:3000\",\"protocol\":\"http\",\"localUri\":{\"$mid\":1,\"path\":\"/\",\"scheme\":\"http\",\"authority\":\"127.0.0.1:…"
+  },
+  {
+    "key": "workbench.view.extensions.state.hidden",
+    "value": "[{\"id\":\"workbench.views.extensions.installed\",\"isHidden\":false},{\"id\":\"workbench.views.extensions.searchOutdated\",\"isHidden\":false},{\"id\":\"workbench.views.extensions.workspaceRecommendations\",\"isHidde…"
+  },
+  {
+    "key": "workbench.view.extension.dotenv.state.hidden",
+    "value": "[{\"id\":\"dotenv.view.vault\",\"isHidden\":false}]"
+  },
+  { "key": "workbench.activityBar.location", "value": "top" },
+  {
+    "key": "inline-chat-history",
+    "value": "[\"how do i do that?\",\"/fix This comparison appears to be unintentional because the types 'FormDataEntryValue' and 'boolean' have no overlap.\",\"/fix Argument of type 'any[]' is not assignable to parame…"
+  },
+  {
+    "key": "workbench.view.extension.snippView.state.hidden",
+    "value": "[{\"id\":\"allSnipps\",\"isHidden\":false},{\"id\":\"terminalSnipps\",\"isHidden\":false}]"
+  },
+  {
+    "key": "workbench.view.extension.pieces-explorer-activity-bar.state.hidden",
+    "value": "[{\"id\":\"snippetTree\",\"isHidden\":false},{\"id\":\"connect\",\"isHidden\":false},{\"id\":\"suggestedSnippetsTree\",\"isHidden\":false},{\"id\":\"explainedSnippetsTree\",\"isHidden\":false},{\"id\":\"relatedSnippetsTree\",\"is…"
+  },
+  {
+    "key": "workbench.view.extension.pieces-copilot.state.hidden",
+    "value": "[{\"id\":\"piecesCopilot\",\"isHidden\":false}]"
+  },
+  {
+    "key": "workbench.view.extension.package-explorer.state.hidden",
+    "value": "[{\"id\":\"duplicatedCode\",\"isHidden\":false}]"
+  },
+  {
+    "key": "microsoft-skylerzanth@outlook.com",
+    "value": "[{\"id\":\"ms-azuretools.vscode-azureresourcegroups\",\"name\":\"Azure Resources\",\"allowed\":true}]"
+  },
+  {
+    "key": "languageStatus.dedicated",
+    "value": "[\"vscode.typescript-language-features/typescript.projectStatus\"]"
+  },
+  {
+    "key": "workbench.auxiliarybar.pinnedPanels",
+    "value": "[{\"id\":\"workbench.panel.chatEditing\",\"pinned\":true,\"visible\":false,\"order\":101},{\"id\":\"workbench.panel.chat\",\"pinned\":true,\"visible\":false,\"order\":100}]"
+  },
+  { "key": "workbench.chat.hideMovedChatWelcomeView", "value": "true" },
+  {
+    "key": "workbench.views.service.sidebar.d705666c-a06a-43ae-b07e-7dd29acdd6ee.state.hidden",
+    "value": "[{\"id\":\"workbench.scm\",\"isHidden\":false}]"
+  },
+  {
+    "key": "workbench.view.extension.snippets-viewer.state.hidden",
+    "value": "[{\"id\":\"snippets.view\",\"isHidden\":false}]"
+  },
+  {
+    "key": "workbench.view.extension.snippets-explorer.state.hidden",
+    "value": "[{\"id\":\"snippetsExplorer\",\"isHidden\":false},{\"id\":\"wsSnippetsExplorer\",\"isHidden\":false}]"
+  },
+  {
+    "key": "workbench.view.extension.snippetsmanager-snippetsView.state.hidden",
+    "value": "[{\"id\":\"snippetsmanager-snippetsView-WorkspaceSnippetsExplorerView\",\"isHidden\":false},{\"id\":\"snippetsmanager-snippetsView-UserSnippetsExplorerView\",\"isHidden\":false},{\"id\":\"snippetsmanager-snippetsVie…"
+  },
+  {
+    "key": "workbench.view.extension.snippets-manager-explorer.state.hidden",
+    "value": "[{\"id\":\"SnippetsManager\",\"isHidden\":false}]"
+  },
+  {
+    "key": "workbench.view.extension.snippets-manager-sleek-snippetsView.state.hidden",
+    "value": "[{\"id\":\"snippets-manager-sleek-snippetsView-WorkspaceSnippetsExplorerView\",\"isHidden\":true},{\"id\":\"snippets-manager-sleek-snippetsView-UserSnippetsExplorerView\",\"isHidden\":false},{\"id\":\"snippets-manag…"
+  },
+  {
+    "key": "workbench.view.extension.markdown-todo.state.hidden",
+    "value": "[{\"id\":\"to-do-view-container\",\"isHidden\":false}]"
+  },
+  { "key": "settingsEditor2.splitViewWidth", "value": "266" },
+  {
+    "key": "menu.hiddenCommands",
+    "value": "{\"ViewTitle\":[\"markdown-todo.toggleTicked\"]}"
+  },
+  {
+    "key": "extensionsIdentifiers/disabled",
+    "value": "[{\"id\":\"github.github-vscode-theme\",\"uuid\":\"7328a705-91fc-49e6-8293-da6f112e482d\"},{\"id\":\"codeforge.remix-forge\",\"uuid\":\"fa723f80-297b-42c3-b82b-667a91bedc02\"},{\"id\":\"ms-vscode-remote.remote-wsl\",\"uui…"
+  },
+  { "key": "chat.extensionInstalled", "value": "false" },
+  {
+    "key": "productIconThemeData",
+    "value": "{\"id\":\"\",\"label\":\"Default\",\"settingsId\":\"Default\",\"watch\":false,\"iconDefinitions\":[],\"iconFontDefinitions\":{}}"
+  },
+  { "key": "workbench.grid.size", "value": "{\"height\":1080,\"width\":2703}" },
+  { "key": "workbench.auxiliaryBar.size", "value": "300" },
+  { "key": "workbench.panel.size", "value": "360" },
+  { "key": "workbench.panel.lastNonMaximizedHeight", "value": "300" },
+  { "key": "workbench.panel.lastNonMaximizedWidth", "value": "300" },
+  { "key": "antfu.file-nesting", "value": "{\"init\":true,\"lastUpdate\":1735714645318}" }
+]

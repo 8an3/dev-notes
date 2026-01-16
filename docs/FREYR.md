@@ -1,3 +1,5 @@
+# FREYR
+
 ## VSCODE & TAILWIND STYLING
 
 ## Table of Contents
