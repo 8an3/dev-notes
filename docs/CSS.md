@@ -1,13 +1,148 @@
-# CSS++
+# THOR 
 
-> [!WARNING] Currently in testing
+## tailwind.config.js
+
+Creates a basic tailwind.config.js file pre configured with animations, etc.
+### postcss.config.js, taiwlind.css
+These files are created the same as the above mentioned files. While nothing can really be done for the postcss.config.js file, tailwind.css does host a number of modifications such as a themed scroll bar.
+
+## tailwind.config preset ngin
+Creates a config file that features optoins to customize font, theme and preset and controlling it with only 3 variables. Granting access to over 18,000 configurations all from one file.
+The top of the file is where you will find the variables to set:
+
+```javascript
+// =====================================================================================================================================================
+// ====================================================== SELECT A PRESET, FONT & THEME ================================================================ 
+// PRESET - Change this to switch between design systems:
+// 1. MODERN     - "MODERN SAAS" Refined & Professional, tight, clean, high-performance feel. (15% smaller spacing, tight layouts)  - Best paired font: Geist, Inter, Plus Jakarta Sans  
+// 2. CREATIVE   - "CREATIVE STUDIO" Lots of breathing room and very round shapes. (Soft & Elegant)                                 - Best paired font: Outfit, Playfair Display, Montserrat
+// 3. TECHNICAL  - Square corners, consistent spacing, "IDE" feel. (Precision & Focus)                                              - Best paired font: JetBrains Mono, Fira Code, Geist Mono
+// 4. FINTECH    - "FINTECH DENSE" Maximum information density for dashboards. (Data Heavy)                                         - Best paired font: IBM Plex Mono (numbers), Roboto, Source Code Pro
+// 5. LUXURY     - Characterized by extreme letter spacing, thin borders, and huge breathing room. (High-end & Sophisticated)       - Best paired font: Playfair Display, Lora, Montserrat (for subheaders)
+// 6. BRUTALIST  - Thick borders, no rounding, and high-contrast sizing. (Bold, Raw, & Experimental)                                - Best paired font: Space Grotesk, IBM Plex Mono, Roboto Mono
+// 7. EDITORIAL  - Focuses on vertical rhythm and classic typesetting. (The New Yorker / Magazine Style)                            - Best paired font: Source Serif 4, Merriweather, Libre Baskerville
+// 8. PLAYFUL    - Thick "bouncy" borders and very round shapes. (Mobile-First / Duolingo Style)                                    - Best paired font: Nunito, Delius Swash Caps, Poppins     
+const SELECTED_PRESET = 'MODERN'
+
+// =================================================================== FONTS ============================================================================ 
+// Sans-serif: Inter | Roboto | Geist | Poppins | Montserrat | Outfit | Plus Jakarta Sans | DM Sans | Nunito | Lato | Barlow | Gabriela | Delius Swash Caps | Barlow | Public Sans | Work Sans | Manrope | Urbanist | Figtree | Archivo
+// Serif: Merriweather | Playfair Display | Lora | Source Serif 4 | Libre Baskerville | Space Grotesk | PT Serif | Fraunces | Cormorant Garamond | Crimson Pro | EB Garamond | Newsreader | DM Serif Display | Prata | Bodoni Moda | Young Serif
+// Mono: JetBrains Mono | Fira Code | Geist Mono | IBM Plex Mono | Roboto Mono | Space Mono | Source Code Pro | Ubuntu Mono | Red Hat Mono | Nanum Gothic Coding | Cutive Mono
+// Sand-Serif ( display & experimental ): Sora | Bricolage Grotesque | Clash Display | Syne | Unbounded | Cabinet Grotesk | Righteous | Lexend | Kanit
+const SELECTED_FONT = 'Fira Code'
+
+// ==================================================================== THEME =========================================================================== 
+// Themes: marshmallow | art-deco | vs-code | spotify | summer | material-design | marvel | valorant | ghibli-studio | modern-minimal | nature | elegant-luxury | neo-brutalism | pastel-dreams | clean-slate | midnight-bloom | sunset-horizon | claude | caffeine | corporate | slack | perplexity | neutral | red | rose | orange | green | blue | yellow | violet | amber | lime | emerald | fuchsia | cyan | indigo | lime | darkBlue
+
+// or if you would just like to include your own set the value to 'css' and you may set your own theme in the .css file
+const SELECTED_THEME = 'blue'
+```
+
+## Plugins
+
+Selecting any one of the plugins mentioned in the list will create a file with the desired plugin. Once created, you just need to install it in your tailwind.config.js file like so:
+
+```javascript
+export default {
+	darkMode: ["class"],
+	content: ["./app/**/*.{js,jsx,ts,tsx}"],
+	theme: {
+        ...options,
+    },
+	plugins: [
+	    v3ToV4Plugin, // plugin
+		require("tailwindcss-animate"),
+		require("@tailwindcss/typography")
+	]
+} satisfies Config;
+```
+
+Current available plugins include: 
+- Animation Library ........... One comprehensive solution
+- AI/ML UI Patterns............ Modern UI patterns for AI interfaces 
+- Framer Motion Helpers........ Tailwind utilities optimized for Framer Motion animations
+- Radix UI Integration......... Pre-styled utilities for Radix UI primitives 
+- Tailwind PlugIn for V3 Users . Complete v4 feature set in v3 - container queries, scroll animations, modern CSS, logical properties, its available for download, but I haven't had time to test yet, but will soon because tbh, I'm tired of switching things over from v4 to work in v3. docs but not tested 
+- Scrollbar Styles ............ Customizable scrollbar utilities
+- Bento Grid Plugin ........... Apple-style bento layouts
+- Animated Gradient Borders ... Moving gradient borders (very trendy)
+- Neumorphism Plugin .......... Soft UI / Neumorphism styles
+- Spotlight Effect Plugin ..... Mouse-following spotlight (like on product pages)
+- Glassmorphism ............... Frosted glass effect utilities
+- Text Gradients .............. Gradient text utilities
+- Custom Animations ........... Additional animation utilities
+- Custom Shadows .............. Beautiful shadow utilities
+- Background Gradient ......... Beautiful gradient backgrounds
+- Aspect Ratios ............... Common aspect ratio utilities
+- Glass & Surface Effects ..... Advanced backdrop blurs and reflective surface styles
+- Modern Motion & Animation ... High-end animation utilities
+- UI Comp Animations Plugin ... accordions, modals, dropdowns
+- Attention Grabbers Plugin ... pulse, glow, bounce effects
+- Loading States Plugin ....... shimmer, spin, progress
+- Interaction Feedback Plugin . click, hover, drag
+- Decorative Effects Plugin ... float, wiggle, sway
+- Animations Plugin ........... gradients, particles
+- Text Effects Plugin ......... typing, reveal, glitch
+- Entrance/Exit Ani. Plugin ... accordions, modals, dropdowns
+- Matrix/Rain Effect Plugin ... Welcome, Neo...
+- Flip Card Plugin ............ Card tricks
+- Heartbeat Plugin ............ Heartbeat utilities
+- Marquee/Scroll Plugin ....... Marquee utilities
+- Ken Burns Plugin ............ Ken Burns utilities zoom and pan
+- Entrance Animations Plugin .. Entrance utilities
+- Custom Shadows .............. Beautiful shadow utilities
+- Background Gradients ........ Beautiful gradient backgrounds
+- Aspect Ratios ............... Common aspect ratio utilities
+- Border Utilities ............ Advanced border styles
+- Scrollbar Plugin ............ Custom Styled scrollbar
+- Theme Colors Plugin ......... Extended color palette
+- Typography Styles Plugin .... Custom typography styles
+- Typography Pro .............. Text balance and fluid headers
+- Accordion Animations Plugin . Radix UI Accordion animations
+- Caret Blink Plugin .......... Blinking cursor animation
+- Glow Animations Plugin ...... Smooth floating animation
+- Float Animation Plugin ...... Pulsing glow effects
+- Shimmer & Shine Ani. Plugin . Loading shimmer effects
+- Spin Animations Plugin ...... Rotation speed animations
+- Fade Animations Plugin ...... Fade in/out animations
+- Click Animation Plugin ...... Button press feedback
+- Movement Animations Plugin .. Horizontal movement animations
+- Gradient Flow Plugin ........ Animated gradient background
+- Custom Easings Plugin ....... Additional easing functions curves
+- Comprehensive Ani. Col. ..... Complete collefction of animations found within the library
+- Custom Scrollbar ............ Themed scrollbar
+- Skeleton/Placeholder Plugin . Pre-built skeleton components
+- Micro-Interactions Plugin ... Subtle micro-interactions
+- Spacing & Layout Helpers .... Modern spacing utilities
+- Dark Mode Transitions ....... Smooth dark mode transitions plugin
+- CSS Grid Helpers ............ Modern grid layouts
+- Scroll Animations Plugin .... Scroll-triggered animations
+- Focus States Plugin ......... Modern focus styles
+- Clamp Utilities Plugin ...... Fluid responsive sizing
+- Blend Mode Utilities ........ Modern blend modes
+- Noise/Grain Texture Plugin .. Subtle texture overlays
+- Container Queries Plugin .... Container query utilities
+- 3D Transform Utilities ...... 3D perspective and transforms
+- Backdrop Utilities .......... Extended backdrop filters
+- CSS Shapes Plugin ........... Pre-made shapes
+- Print Utilities ............. Print-specific styles
+- Debug Utilities ............. Development helpers
+- Architectural Layouts ....... Background patterns
+- Masking & Cutouts Plugin .... Advanced CSS masking
+- Mobile Safe Area Utilities .. Mobile-specific spacing
+- Semantic Surface Depth ...... Inner glows and layered shadows
+- Interaction Magnetism ....... Spring-loaded hover states
+- Border Utilities ............ Advanced border styles
+
+## CSS
+
+> [!WARNING]
+> Currently in testing
 > Despite currently still in the testing phase, you are more than welcome to try it out.
 > Initial and secondary tests were successful in remix-run and react-router platforms
 > As this isn't platform dependant, any platform you currently use tailwind in should be able to use this without issue
 
->I don't know why I did this, I was just installing tailwind v4 and was having a small issue and asked myself, "I wonder if I could make this...". Then my dumb ass did, and here we are. Since I went through the trouble of making this, took it a couple steps further making it a virtually 0 config setup in order to run. Only thing needed is to have a css file with, "@css++;" at the top of the file and import it into the app in whatever fashion your app calls for, along with one post css requirement that I could not get rid of.
-
-## Features
+### Features
 
 ✨ **JIT Compilation** - Only generates CSS for classes you actually use  
 🎨 **Arbitrary Values** - Use any value with bracket notation: `w-[123px]`, `bg-[#ff0000]`, `text-[hsl(120_100%_50%)]`, `border-[rgb(0_0_255)]`  
@@ -16,7 +151,7 @@
 🎯 **Config-Based** - Customize everything via `css.config.js`  **Not required**
 🔥 **Zero Dependencies** - Minimal footprint  
 
-## Installation
+### Installation
 
 ```bash
 npm install @catalystsoftware/css-plus-plus --save-dev
@@ -113,9 +248,9 @@ To apply your own theme:
 - csspp.config.mjs
 - csspp.config.cjs
 
-# Quick Start - < 60 Seconds
+### Quick Start - < 60 Seconds
 
-## For Remix Projects
+#### For Remix Projects
 
 ```bash
 # 1. Import CSS (app/root.tsx)
@@ -136,7 +271,7 @@ npm run dev
 
 ---
 
-## For Next.js Projects
+#### For Next.js Projects
 
 ```bash
 # 1. Import in layout (app/layout.tsx)
@@ -148,7 +283,7 @@ npm run dev
 
 ---
 
-## For Vite Projects
+#### For Vite Projects
 
 ```bash
 # 1. Import in main (src/main.js)
@@ -160,7 +295,7 @@ npm run dev
 
 ---
 
-## For Any Project (Manual)
+#### For Any Project (Manual)
 
 ```bash
 # 1. Add script (package.json)
@@ -185,7 +320,7 @@ npm run dev
 
 ---
 
-## Zero Config Mode
+#### Zero Config Mode
 
 **No config file needed!** CSS++ uses smart defaults:
 
@@ -385,7 +520,7 @@ const defaultConfig = {
 
 ---
 
-## Usage Examples
+#### Usage Examples
 
 ```jsx
 // Sizes
@@ -412,7 +547,7 @@ const defaultConfig = {
 
 ---
 
-## With CSS Variables
+#### With CSS Variables
 
 ```css
 /* global.css */
@@ -428,7 +563,7 @@ const defaultConfig = {
 
 ---
 
-## Custom Animations
+#### Custom Animations
 
 **css.config.js**:
 ```javascript
@@ -456,7 +591,7 @@ export default {
 
 ---
 
-## FAQ
+#### FAQ
 
 **Q: Do I need a config file?**  
 A: No! Works out of the box.

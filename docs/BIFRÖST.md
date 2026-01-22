@@ -152,13 +152,16 @@ To help with this I started giving features names of norse and greek gods in ord
 - ᛗ MÍMIR - DevArchive
 - ᚱ RATATOSKR - File Tree Builder/Visualization tool
 - ᛚ LOKI - AI
-- 𐌇 HEPHAESTUS - UI
+- ᛁ ÍVALDI (The Master Forger) The Sons of Ívaldi were the dwarves who crafted the greatest treasures of the gods (Odin’s spear, Sif’s golden hair, Freyr’s ship). A UI library is essentially a collection of "master-crafted treasures" that other developers use to build their world. The Vibe: Industrial, precise, and foundational. 
 - ᚹ VIÐARR - Automation events
 - 𐌍 NEMESIS - Create Incoming Tunnel
 - 𐌇 HERACLES - Batch Rename
 - ☿ HERMES - API Secret Grabber
 - ᚺ HEIMDALLR - Intellisense Schema Ngin
 - ᛊ SAGA - Goddess who sits beside Odin and tells him stories Associated with history and remembering Perfect for notes that tell the "story" of your work Simple, memorable name
+- ᚷ GINNUNGAGAP- The primordial void where all potential exists Perfect: modules exist here before being "born" into projects - Rune: Gebo ᚷ gift/exchange
+- ᚢ URÐR for Snapshot Engine "That which has become" (one of the three Norns) She represents the PAST Norns control fate/destiny - snapshots control your project's fate Rollback = returning to the past Urðr governs
+- ᚹ VEÐRFÖLNIR for VSCInfo - Eagle atop Yggdrasil, sees EVERYTHING  oversight/monitoring from above viewing system continuously
 
 
 ## Item Types

@@ -1,0 +1,287 @@
+Here is an unordered list of all the line item titles followed by `:` and their descriptions:
+
+- `BIFRÖST:` Terminal and Multi Kernel Ngin
+  - `Item Types:` VFS item types
+    - `file:` Providing shortcuts to any file in any location
+    - `md:` Same as above, but for md
+    - `fileAtLine:` Instead opens the file at a specific line number
+    - `folder:` To house virtual file items within for organization
+    - `url:` When executed, opens that url in your default browser
+    - `command:` Executes vscode command
+    - `chain:` Executes any item type in a sequential firing order
+    - `concurrent:` Executes all commands, at once
+    - `cmmdChain:` A chain of commands consisting of only vscode commands
+    - `conditionalChain:` Depending on your checks, can execute or not in any form
+    - `powershellCommand:` Executes powershell commands
+    - `debianCMD:` Executes baash commands in WSL's Debian enviroment
+    - `snippet:` Copy snippet body to clipboard
+    - `copyValue:` Copy value to clipboard
+    - `settingsToggle:` Toggle workspace or global settings.json key:value pair
+    - `search:` Searches, executed whenever you need with a click
+    - `apiCall:` Trigger Pre-made HTTP API requests at any time
+    - `tasks:` Auto generates within the explorer for easy access
+    - `npmScripts:` Same as above but with your packages scripts
+    - `label:` Visual divider used to break up an area
+    - `menu:` There are docs but right this second, its untested
+    - `Dependency Manager:` Install/uninstall/update multiple npm packages in one click with predefined sets
+    - `layout:` Taking complete control, of vscode and its interface
+    - `ATLAS:` WS Layout Ngin, Total environment restoration in one click. Instantly reset theme, UI visibility, terminals, tabs, view focus and more
+    - `ATLAS V2:` Global, Profile and Workspace context intelligent
+  - `Virtual Filing System:` Core VFS Engine
+    - `Files & Navigation:` File management and navigation
+    - `Commands & Automation:` Command execution and automation workflows
+    - `Terminal Commands:` Terminal command integration
+    - `Utilities:` Utility functions and helpers
+    - `Project Agnostic Setup:` Framework-agnostic configuration
+    - `Move VFS Item:` Move items with ease with the VSCode ui
+    - `Copy workspace folder:` Provides a list of folders contained within other configs, once clicked pastes it into the current configs file
+    - `Auto-Generated Items:` Automatically generated VFS items
+    - `Complete Example:` Production configuration walkthrough
+    - `Usage & Previews:` Examples and previews
+    - `Extended Usage Preview:` Recorded coding session proving zerp performance losses despite having 100+ extensions worth of functions
+    - `Getting Started w/ Chains:` Chain automation guide
+    - `Config Items Examples:` Production configuration walkthrough
+    - `Extension Configuration:` Extension settings overview
+    - `Configuration Settings:` Core extension settings
+    - `Core Settings:` Core extension settings
+    - `Code Snapshot Settings:` Core extension settings
+    - `GitHub Integration:` Single click multi function operations
+    - `Build & Automation Settings:` The lack of non-automation
+    - `UI & Interface Settings:` Core extension settings
+    - `Feature Toggles:` Feature flags and toggles
+    - `Copy Path:` Path copying utilities
+    - `Reveal In Explorer:` File explorer integration
+    - `Search:` Search functionality for config items
+    - `JSON Config Editor:` Edit .json configs directly
+    - `Share Config:` Bulk sharing
+    - `Import / Export Config:` Allows backups, and more
+    - `View Config Example:` Configuration examples
+    - `Default Apps:` App configurations
+    - `ESLint & Prettier Configs:` App configurations
+    - `Remote Resource Mgmt:` Profiles for configs: save/download/edit
+    - `Architecture Notes:` Breaking down the inner workings of the extension
+    - `Env Var Integration:` using .env vars
+    - `Modular Func. Building:` Exposing more functions to use
+    - `Automation Principles:` How it came to be 150+ extensions
+    - `The Autorun System:` Help with build processes
+    - `Dynamic Package Manager:` Scan for your package mgr at execution time
+    - `Terminal & Command Ngin:` The breakdown
+    - `Concurrent And Chain:` What can be acheived
+    - `Autonomous Maintenance:` Removing the dev from the equation
+    - `Naming Conventions:` So as to not have to include docs, for every single thing
+    - `Settings & Migration:`
+    - `pro7:` Password protected that can be pushed
+    - `Local Encryption:`
+    - `Context:`
+    - `VSIX Archiver:` Custom less restrictive archiving tool
+    - `CUSTOM_FUNCTION_BREAKDOWNS:` Step by step breakdown on executing order
+  - `STATUS_BAR_DASHBOARDS:` What you have access to
+    - `Clipboard History Pro:` Simply, the windows version vscode
+    - `Bookmarks:` Bookmark anything, anywhere
+    - `Icons:` React icons, inserts at cursor / copies to clipboard
+    - `Snapshot Ngin:` Instant snapshot
+    - `UI:` Copies to clipboard one of 2500+ components
+    - `BE:` Bleeding edge features
+    - `DevStack:` Main quickpick encompassing a great many of topics
+    - `EXPLORER_CONTEXT_MENU:` Accessing features bound to file type
+    - `EDITOR_CONTEXT_MENU:` A treasure trove of functions
+- `LOKI:` Artificial Intelligence
+  - `Deterministic AI Ngin Compiler:` Removing 99% of problems you face as a dev when working with prompts
+  - `LOKI Prompt:` `A Deterministic AI Engine Compiler` prompt and creating a DX that cannot be found anywhere else
+  - `LOKI Limitless:` Creating outside of the data set
+- `THOR:` CSS and Tailwind
+  - `CSS:` Put as simply as I can, recreating tailwind but thinking of the user first
+  - `tailwind.config.js:` Creates a basic config file
+  - `tailwind.config Preset Ngin:` 525+ configurations available
+  - `tailwind.css:` Pre-configured CSS file
+  - `postcss.config.js:` Basic postcss file
+  - `PLUGINS:` Tailwind Plugin Ngin
+    - `Animation Library:` One comprehensive solution
+    - `AI/ML UI Patterns:` Modern UI patterns for AI interfaces
+    - `Framer Motion Helpers:` Tailwind utilities optimized for Framer Motion animations
+    - `Radix UI Integration:` Pre-styled utilities for Radix UI primitives
+    - `Tailwind PlugIn for V3 Users:` Complete v4 feature set in v3 - container queries, scroll animations, modern CSS, logical properties, its available for download, but I haven't had time to test yet, but will soon because tbh, I'm tired of switching things over from v4 to work in v3. docs but not tested
+    - ... 60 more plugins
+- `ICONS:` React icon library
+  - `Icons NPM Package:` Package integration
+  - `Icons Quick Pick:` Icon selection tool
+  - `Icons:` Rendered icons provided via library
+- `HEPHAESTUS:` React UI components library
+ - `HEPHAESTUS UI:` Component library core
+   - `Editor Context Insert:` Context menu component insertion
+   - `Quick Pick Insert:` Quick pick component insertion
+   - `Automated Installation:` Install library through extension
+   - `NPM Listing:` Docs outlining the library
+   - `In Editor Comp Autocomplete:` Type '<' followed by the start of the components name `Bu...` → suggests Button with full docs
+   - `Smart Prop Autocomplete:` Shows props with type-aware snippets
+   - `Signature Help:` Live tooltip showing all props as you type inside a component's props - providing you with the available parameters/props for each component as you type
+   - `Hover Documentation:` Hover over component for full docs and examples
+   - `Auto import:` Quick fix to add missing imports
+   - `Go To Definition:` Jump to component source
+   - `Missing import warnings:` Diagnostic warnings for imported components
+- `TOOL_SUITE:` All the tools we use, just in one place
+  - `VSCode Cmd Reference:` Built-in command library
+  - `Markdown Cheat Sheet:` Web-based reference
+  - `IRIS: Color Converter:` Multi-format conversion
+  - `IRIS: Color Wheel:` Visual color picker
+  - `React/Tailwind Sandbox:` Development playground
+  - `Theme Builder:` settings.json & tailwind.css generator
+  - `Typography Tester:` Font testing suite
+  - `Layout Generator:` UI layout tools
+  - `X Tester:` Cross-testing utilities
+  - `Components Reel:` Component showcase
+  - `Tailwind Converter:` v3 <-> v4, oklch, hsl,
+  - `Animation Builder:` Visual editor
+  - `Responsive Design Helper:` Breakpoint visualizer
+  - `Code Carousel:` Code display tool
+  - `Sandbox:` Live react playground hosting libraries comps
+  - `Icons:` Searchable, Rendered icons
+  - `RÚNAR Editor:` Formally catalyst-editor
+  - `Regex Tester:` Build and test regex string, cheatsheet included
+  - `JSON Formatter & Validator:` Sanity check for json files
+  - `API Response Mocker:` Mock REST endpoints with custom JSON responses
+  - `Lorem Ipsum Generator:` Pick any length and copy to clipboard
+  - `Cron Expression Builder:` Visual builder for scheduling cron jobs
+  - `UUID Hash Generator:` Generate random hashes in a flash
+  - `Code Diff Viewer:` Differences become illuminated
+  - `Flexbox Sandbox:` Live preview sandbox featuring flexbox
+  - `Grid Sandbox:` Live preview sandbox feature grid
+  - `QR Code Generator:` Images, text, urls
+  - `Responsive Preview:` Test layouts across platforms and breakpoints
+  - `Accessibility Checker:` Scan for WCAG compliance and contrast issues
+  - `Animation Builder:` Live preview animation builder
+  - `Chart Playground:` Build charts, outputing react code to paste
+  - `MD Badge Builder:` Quickly build md badges, that render in real time
+  - `Spinner Generator:` Build as large of a spinner as you need
+  - `Terminal Menu Generator:` Best in class, no limitations terminal menu builder
+  - `ENCODER_DECODER_LAB:` Various file conversion utilities
+- `SKÁLD:` Monaco-level editor
+  - `Feature Set:` 150-200+ click-to-clipboard MD features
+  - `Special Chars:` HTML and MD style format character list
+  - `PRE_MADE_ASSETS:` Pre-built markdown assets
+  - `File Trees:` Automated folder visualization
+  - `Progress Bars:` Markdown progress indicators
+  - `ASCII Tables:` Pre-formatted tables
+  - `Spinners:` 17+ different loading spinners
+  - `Terminal Dashboards:` Terminal-style UI layouts
+  - `Code Block Previews:` Code styling previews
+  - `Terminal Menus:` Visual terminal menu blocks
+  - `Terminal Logs:` Logs with hierarchy visualization
+  - `Git Branch Viz:` Branch style visualization
+  - `Status Indicators:` Terminal status boxes
+  - `Notification Boxes:` Terminal notification styling
+  - `Output Separators:` Command output dividers
+  - `Nested Data:` Nested data structure visualization
+  - `Activity Timeline:` Sequential activity logs
+  - `Terminal Dashboards:` Pre-made dashboards
+  - `Box Drawing:` Character-based box drawing
+  - `Various Spinners:` 17 different spinners
+  - `Badges and Logos:` Pre-made badges and icons
+  - `Readme Generator:` Feature-rich readme builder
+  - `Remote Access:` Connect remotely to workspace MD files
+  - `Local Settings:` Locally saved editor settings
+- `SAGA:` To dos, notes, reminders and post it notes
+- `HEIMDALLR:` Intellisense Schema Ngin
+- `Export Index Creator:` Export index creator
+- `Named Export Index Creator:` Named export index creator
+- `Left Off Note:` Session note tracking
+- `Snapshot Engine:` Code snapshot system
+- `HERACLES:` Batch Rename - Bulk renaming
+- `File Nesting:` Nesting configuration
+- `.env Context Swapper:` (envProfile) Switch environment profiles
+- `VSIX Archiver:` Custom extension packaging
+- `Custom .vsix publisher:` Accompanying the above archiver
+- `>Pro7 Archiver:` Password protected archive for secrets
+- `Region Folding:` Fold/toggle region folding
+- `RATATOSKR:` File tree builder & virtualizer
+- `Webview Creation Ngin:` Pre-built componets, with their on-clicks, class scafolding code, pre-built commonly used functions and more. Allowing for quicker build times / prototyping
+- `Custom Editor Creation Ngin:` Same as above virtually aside a few obvious details
+- `MARKDOWN:` Markdown utilities
+  - `MD Viewer/Renderer:` Standard Markdown viewing
+  - `MD Viewer In VS Code:` Native VS Code integration
+  - `Convert MD to Safe String:` Markdown to safe inline string
+  - `Markdown Cheat Sheet:` Markdown reference
+  - `Markdown Pre-Processor:` Converting variables, table structures, toc's
+- `RÚNAR:` Snippets Suite
+  - `Code Snapshot:` Snapshot to terminal window
+  - `Workspace Context:` Context-aware code snippets
+  - `Snippets Studio:` Create / edit snippets.
+  - `Visit documentation:`
+  - `Link to Snippets Editor:`
+  - `Snippet Profiles:`
+  - `Native Feature Set:`
+  - `Remote Access:`
+- `HUGINN:` remix-run utilities
+  - `PROJECT_UTILS:` Project utilities for Remix
+  - `npx create-remixv2:` Scaffolding engine
+  - `V1 -> V2 Conversion:` Routing migration
+  - `Monorepo Conversion:` Single app to monorepo
+  - `Create Single App:` React Router setup
+  - `Platform Conversion:` Convert to Platform X
+  - `Create Monorepo:` Monorepo scaffolding
+  - `Build & Deploy:` Automation workflow
+  - `RR Folder Routing:` React Router routing logic
+  - `AUTH_UTILITIES:` Authentication utilities
+  - `Install Auth:` Authentication setup
+  - `Install OTP:` One-time password setup
+  - `ROUTE_UTILITIES:` Route utilities
+  - `Automatic Action:` Remix action generator
+  - `Context Utils:` Components/Functions
+  - `Browser Integration:` Open route file in browser
+  - `Route File Creator:` Create route files
+  - `Test Generator:` Tests for routes/actions
+  - `Code Insertion:` Remix Run insert code
+  - `Error Boundary:` Error boundary generator
+  - `Meta Function:` Meta function utility
+  - `Links Function:` Links function utility
+  - `Preview Route:` Preview route URL
+  - `Action Object:` Create action object
+- `MUNINN:` Prisma utilities
+  - `Best Practice Guide:` Prisma best practices
+  - `Include Object:` Create include object
+  - `Schema Navigation:` Click to schema object
+  - `CRUD Resolver Gen:` Resolvers / REST endpoints
+  - `Auto Create Schema:` Automatic schema generation
+  - `Visualizer:` Schema relations visualization
+- `SHADCN_UI:` Shadcn UI utilities
+  - `Add Components:` Component addition
+  - `Install w/ Config:` Component install with configuration
+  - `Insert Components:` Component insertion
+- `VÖLUNDR:` cleanup / refactoring / automation
+  - `Trailing Commas:` Remove trailing commas
+  - `BRAGI - Comment Killer:` Remove all comments
+  - `Console.log Killer:` Remove all console.log
+  - `Unused Imports:` Remove unused imports
+  - `Inline Imports:` Inline imports utility
+  - `JSON Validator:` Formatting and validation
+- `ODIN:` Search & Discovery
+  - `Search Editor:` Power custom search ngin, expanding on vscodes capabilities
+  - `Remote Editing:` Make file changes without navigating to the file
+  - `Configurable Searches:` Create file tree items that trigger preconfigured searchs at will
+  - `Regex History & Helper:`
+  - `Fuzzy Search:`
+  - `File Search Jumper:` Ultra-fast file hopping
+  - `File Line Jumper:` Jump to specific coordinates
+  - `Dependency "Deep Link":` (packageSearch) Jump into node_modules/source
+- `SHORTCUT_QUICK_LOOKUP:` Keyboard shortcuts reference
+- `FREYR:` VSCode styling
+  - `Blacked Out:` Pre-made black theme
+  - `Blued Out:` Pre-made blue dark mode theme
+  - `Window Differentiator:` Styling differentiation
+  - `Theme Reset:` Reset window styling
+- `VIÐARR:` Automation events
+  - `Auto Fold Regions:` Settings-based folding
+  - `Forced Editor Groups:` Specific group opening
+- `REGEX:` Regex utilities
+  - `Regex Utilities:` Advanced Regex Lab & tools
+  - `Regex Cheatsheet:` Reference guide
+- `TÝR:` Port, process and error utilties
+  - `portReaper:` Zombie process killer
+  - `Auto Reaper:` Automatic cleanup
+  - `Log to Lens:` (errorParser) Scans the last output of the integrated terminal for file paths and line numbers
+- `HERMES:` API secret management
+  - `API Secret Grabber:` (vaultFetch) A type that fetches a value from a CLI-based vault
+- `NEMESIS:` Tunnel management
+  - `Create Incoming Tunnel:` A specialized command that launches a tunnel, captures the generated URL, and automatically updates a specific line in your config.ts or .env with the new public URL
+- `VALHALLA:` Database & Storage
+  - `Sqlite3:` Opens editor / viewer in your vscode editor group with various features for SQLite databases

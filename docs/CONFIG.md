@@ -1,23 +1,11 @@
-## CONFIG
+## BIFRÖST: CONFIG
 
 > [!TIP]
 > Configuration files are automatically formatted at load time, removing trailing commas and comments. While comments are stripped during loading, it's recommended not to store comments in config files since formatted versions are used when the save function triggers.
 
-## Table of Contents
+ 
 
-- [Share Config With Friends / Export All Configs](#share-config-with-friends--export-all-configs)
-- [View Config Example](#view-config-example)
-- [Add Missing Imports w/ Global Config](#add-missing-imports-w-global-config)
-- [Default Apps Configuration](#default-apps-configuration)
-- [Create Export Index && Create Named Export Index](#create-export-index--create-named-export-index)
-- [Edit .json Config](#edit-json-config)
-- [Export Config](#export-config)
-- [Import Config](#import-config)
-- [Add ESLint & Prettier Configs](#add-eslint--prettier-configs)
-- [To Do Notes Reminders and Post Its](#to-do-notes-reminders-and-post-its)
-- [Markdown Pre-Processor](#markdown-pre-processor)
-
-### Share Config With Friends / Export All Configs
+### Share Config
 
 Export your complete DevStack configuration to share with team members or backup your setup.
 

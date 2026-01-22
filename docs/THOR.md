@@ -2,28 +2,7 @@
 
 ## TAILWIND_NGIN
 
-<pre style="max-width: 800px; white-space: pre-wrap; overflow-wrap: break-word;">
-/ DEVSTACK_SYSTEM_ROOT/
-├── 📂 TABLE_OF_CONTENTS/
-└── 📍 TAILWIND_NGIN/
-   ├── 📂 <a href="https://github.com/8an3/dev-notes/blob/main/docs/TAILWIND.md#L251">Tailwind Plugin Ngin</a>
-    ├── 📄 <a href="https://github.com/8an3/dev-notes/blob/main/docs/TAILWIND.md#L73">Tailwind Config</a> ................. Creates a basic config file to start your project off, if you 
-    │   └── for some can't use the other available options
-    ├── 📄 <a href="https://github.com/8an3/dev-notes/blob/main/docs/TAILWIND.md#L88">Tailwind Preset Ngin</a> ............... Over 525+ configurations available, but ZERO added work 
-    │   ├── in order to use it, it actually reduces your implementation of tailwind in comparison to what you  
-    │   └── are currently doing. Click create, fill in the 3 variables at the top of the config... that's it!
-    ├── 📄 <a href="https://github.com/8an3/dev-notes/blob/main/docs/TAILWIND.md#L23">Tailwind CSS</a>....................... Creates a pre-configured .css file to start your project off with
-    ├── 📄 <a href="https://github.com/8an3/dev-notes/blob/main/docs/TAILWIND.md#L242">Postcss Config</a> .................. Creating a basic postcss file, meeting tailwinds requirements
-    └── 📄 <a href="https://github.com/8an3/DevStack">DEVSTACK_WEB_UI</a> ................ For other tools that also fit in this category, the provided link will take you to view them
-</pre>
-
-## Overview
-
-Access all features via the **DevStack** status bar menu → **Tailwind** option.
-
----
-
-### Tailwind CSS
+## Tailwind CSS
 **Command:** `ocrmnavigator.tailwind.file.css.create`
 
 Creates a complete `tailwind.css` file at `app/routes/styles/tailwind.css` with:
@@ -73,7 +52,7 @@ The generated `tailwind.css` includes:
 
 ---
 
-### Tailwind Config 
+## Tailwind Config 
 **Command:** `ocrmnavigator.tailwind.file.config.base.create`
 
 Generates a minimal `tailwind.config.js` with essential configurations:
@@ -88,7 +67,7 @@ Generates a minimal `tailwind.config.js` with essential configurations:
 
 ---
 
-### Tailwind Preset Ngin
+## Tailwind Config Preset Ngin
 **Command:** `ocrmnavigator.tailwind.file.config.create`
 
 Creates the **ultimate Tailwind configuration** with 525+ pre-configured settings and **zero additional implementation work**. Simply set 3 variables at the top:
@@ -277,7 +256,7 @@ Add powerful utility classes through custom plugins. All plugins can be added as
 
 #### Available Plugins:
 
-##### Tailwind V4 Plug-in
+## Tailwind V4 Plug-in
 It's just plug and play, and drop a v4 configured component into your project.
 
 Key Features This Plugin Adds:
@@ -352,7 +331,7 @@ element.addEventListener('mousemove', (e) => {
 
 ---
 
-### Tailwind Plugin Library (Ngin) - Documentation
+## Tailwind Plugin Library (Ngin) - Documentation
 
 #### Overview
 
@@ -959,16 +938,3 @@ project/
 
 **Total: 60+ production-ready plugins**
 
----
-
-#### 🔄 Updates & Maintenance
-
-All plugins are:
-- ✅ TypeScript-ready
-- ✅ Dark mode compatible
-- ✅ Purge-safe (no unused CSS)
-- ✅ Modern browser compatible
-- ✅ Accessibility-friendly
-
----
- 

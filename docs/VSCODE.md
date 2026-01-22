@@ -203,58 +203,7 @@ Usage:
 > That alone contributes the most when it comes to feature parity when comparing a feature found here to another extension in its entirety. Snippets being an area for a good example, while there are 15+ extensions devoted to snippets, with the majority of them being terrible, all of them atleast have one good idea that they implemented.
 
 
-### Dependency "Deep Link" (packageSearch)
 
-Quick access to library documentation and entry points directly from imports.
-
-**Access:** Hover over imports in your code
-
-**Features:**
-- Clickable links for package.json
-- Clickable links for README.md
-- Direct access to package entry point
-- No more scrolling through node_modules in sidebar
-- Instant documentation access
-
-**Usage:** Hover over any import statement to reveal clickable links to package documentation and code.
-
-### File Line Jumper
-
-Create clickable file links with specific line numbers.
-
-**Access:** Use `// @dev path:line` syntax in comments
-
-**Syntax:** `// @dev path/to/file.tsx:lineNumber`
-
-**Example:** `// @dev app/components/catalyst-ui/primitives/table.tsx:6`
-
-**Features:**
-- Creates clickable links in any file
-- Opens files at specific line numbers
-- Works before and after return statements
-- Quick navigation to exact code locations
-
-[Video Demo](https://youtu.be/xR1osGkuNCA)
-![File Line Jumper](https://raw.githubusercontent.com/8an3/dev-notes/main/ui/vfs/file-linking.jpg?raw=true)
-
-### File Search Jumper
-
-Create search-based file links that navigate to the first instance of a search term.
-
-**Access:** Use `// @devsearch path:term` syntax in comments
-
-**Syntax:** `// @devsearch path/to/file.tsx:SearchTerm`
-
-**Example:** `// @devsearch app/components/catalyst-ui/data/table-data.tsx:Table`
-
-**Features:**
-- Creates links that search for specific terms
-- Navigates to first instance of search term
-- Useful for finding component definitions
-- Quick code exploration
-
-[Video Demo](https://youtu.be/Otd3jWfSf4M)
-![File Search Jumper](https://raw.githubusercontent.com/8an3/dev-notes/main/ui/vfs/file-searching.jpg?raw=true)
 
 ### File Nesting
 

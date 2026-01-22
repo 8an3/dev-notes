@@ -1,4 +1,6 @@
-# Notes Manager & GitHub Sync Extension
+# SAGA
+
+## Notes Manager & GitHub Sync Extension
 
 A comprehensive VS Code extension for managing notes, todos, reminders, and post-it pads with GitHub synchronization capabilities.
 

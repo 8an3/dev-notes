@@ -2393,7 +2393,7 @@ const generateVSCodeTheme = (twCss, gitDecorations = true, scmDiffDecorations = 
 > 
 
 
-## Notes for future features... and looking like another overhaul, fuck me eh?
+## Notes for future features... 
 
 > [!NOTE] 
 > In this section I will be leaving myself notes that I do not want to forget because I think I stumbled on exactly what I wanted... from the begining. If you aren't into reverse engineering things and diving into something that has zero documentation, or just don't get enjoy getting to the level NERDNESS, that this is going to get into. I would suggest skipping this part entirely as you will probably find 100% of this boring among other things. 
@@ -2452,7 +2452,7 @@ const generateVSCodeTheme = (twCss, gitDecorations = true, scmDiffDecorations = 
 > - vscode.git  "git.repositoryCache": 
 > - vscode.github-github vscode username
 >
-> alright its been an hour and half just staring at data and these sqlite extensions are pissing me off to the point im done looking at this and deciding to actually AGAIN going to start this over AT THE SAME TIME guess whats gonna be added to devstack... a fucking sqlite viewer/editor... downloaded and used, and then got pissed off with it enough to immediatly uninstall and look for another because of it just sucking that hard at life... I think i went though 7 or 8... like cmon people... thats not even including the massive amount i looked at and just went, NOPE and i def did not need another big feature to add and work on
+> 
 - workbench.panel.markers.hidden
 ```json
 [
