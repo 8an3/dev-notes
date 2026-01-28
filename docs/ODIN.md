@@ -120,6 +120,23 @@ This one will be unintuitive at first but it will make sense once you use it.
 
 The layout in terms of inputs... has been completely reversed. This is due to the fact that whenever you use more than just the search field, the search input is typically used last. Now when you start at the include field, pressing enter will move the cursor into the next input field, exlude, once done or if you would like to leave it empty, pressing enter again puts you into the search field. As the replace field is primarily used once you have already found what you need, this is still placed in the accordian styled input row.
 
+### Include and Exclude files and folders
+
+Exclude:
+There are a couple of ways to use exclude files / folders.
+1. While exclude settings is set to true (via the toggle exclude pattern button, on the left) and use exclude settings is set to false (on the right), AND the exclude input is empty, the default exclude pattern will be active.
+2. You may pre define a common pattern in the extensions settings so as to use the common pattern without having to type it in more than once, becoming active when both buttons are set to true.
+3. Once both buttons are set to true you may also type in a custom pattern as well.
+
+Include:
+Same as exclude minus the first option.
+
+> [!NOTE]
+> It's taken me a while since I wanted everything to be perfect but everything seems to have gotten to that point now.
+>
+> After opimizing and chasing performance along with a couple of ux goals, I've currently only ran into one problem and hasn't done it since. Where it seems that it was performing TOO well and searching TOO fast, because after it froze I ran the test again and was successful, despite just closing the editor and opening a new one with the exact same search parameters. If I see that happen again, I'll put a limit on it but currently its running fine, whether it's longer searchs with no include and exclude parameters set or fast ones when narrowing the search down. It seems to be faster than the native vscode search... don't quote me on that yet, whenever I have the time I'll be doing some bench marks to see how they stack up against eachother... I'll have to figure out how to do that in vscode... probably the easiest, less painful way to do this, would be to screen capture both searchs and using video editing software to obtain the length of time down to the frame...
+>
+> Also the remote editing is working... perfectly again. Originally it was built with a horrible ux design, changed the context area and result to a text area... but that didn't bode well for the remote editing aspect. Finally, changing it over to single line divs with some custom controls to make it feel like a text area still, meanwhile the actual results line is highlighted so as to make it easier to find the result. The highlighted line is dynamic so no matter what you use for the before and after context lines, the highlighted line will always be placed on the line of the result. Each div is assigned an id so that whenever a line has been edited it replaces the entire line in the file with what you have in the editor. Works phenomenally, and saving 10+ edits saves in the same amount of time as saving 10 files at once. So happy with that stroke of genius because I love this feature. 
 
 ## GitHub Tag Navigator
 

@@ -20,7 +20,7 @@
 
 - [ ] ### Need to implement function on / off switches for:
 - [ ] need to implement `ocrmnavigator.vfs.tasks`
-- [ ] need to implement `ocrmnavigator.vfs.npmScripts`
+- [ ] need to implement `ocrmnavigator.devstack.npmScripts`
 - [ ] need to implement `ocrmnavigator.todoNotesReminders`
 - [ ] need to implement `ocrmnavigator.codesnap.backgroundPalette` and others
 

@@ -4,8 +4,8 @@
 - The Pain: Opening .env, commenting out 10 lines of "Prod" vars, uncommenting 10 lines of "Dev" vars, and repeating this for every microservice.
 - The Fix: Create a type that swaps entire sets of variables.
 - How it works: 
-  - two .env files one labeled `.env` and the other `.dev.env` 
-  - two values each in the `.dev.env` file to differiantiate the two they will be in the following format
+  - two .env files one labeled `.env` and the other `.hermes` 
+  - two values each in the `.hermes` file to differiantiate the two they will be in the following format
     - `LOCAL_enviroment='development'`
     - `REMOTE_enviroment='production'`
     - `LOCAL_DATABASE_URL="postgres://postgres:owner@localhost:5432/server"`
@@ -16,7 +16,7 @@
     - `REMOTE_PADDLE_CLIENT_TOKEN="api-token"`
     - `LOCAL_PADDLE_SERVER_TOKEN="api-token"`
     - `REMOTE_PADDLE_SERVER_TOKEN="api-token"`
-  - if either value is missing in the `.dev.env.` file still invlude it in `.env`but the variable is set to empty ie:
+  - if either value is missing in the `.hermes.` file still invlude it in `.env`but the variable is set to empty ie:
     - `DATABASE_URL=""`
   - in a quickpick tha tis already built i will provide two buttons one `Set Local .env Var's` and `Set Remote .env Var's`
   - no matter what the current state is, it will always grab the the corresponding values of which is triggered and set them in .env so as to never error out

@@ -87,7 +87,7 @@ DEVSTACK_MENU_SYSTEM/
 │   └── 📄 R Window ............................ Reload VSCode window
 │
 ├── 📂 ENVIRONMENT/
-│   ├── 📄 Open .dev.env ....................... Access development environment vars
+│   ├── 📄 Open .hermes ....................... Access development environment vars
 │   ├── 📄 Set Local .env Var's ................ Configure local environment
 │   └── 📄 Set Remote .env Var's ............... Configure remote environment
 │

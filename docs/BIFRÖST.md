@@ -157,12 +157,14 @@ To help with this I started giving features names of norse and greek gods in ord
 - 𐌍 NEMESIS - Create Incoming Tunnel
 - 𐌇 HERACLES - Batch Rename
 - ☿ HERMES - API Secret Grabber
-- ᚺ HEIMDALLR - Intellisense Schema Ngin
+- ᚺ HEIMDALLR - The Gatekeeper who controls who enters the bridge and when.
+- ᚺ HÖFUÐ	Intellisense Schema Ngin	Heimdallr's sword; represents the sharp, precise "edge" of your code intelligence.
 - ᛊ SAGA - Goddess who sits beside Odin and tells him stories Associated with history and remembering Perfect for notes that tell the "story" of your work Simple, memorable name
 - ᚷ GINNUNGAGAP- The primordial void where all potential exists Perfect: modules exist here before being "born" into projects - Rune: Gebo ᚷ gift/exchange
 - ᚢ URÐR for Snapshot Engine "That which has become" (one of the three Norns) She represents the PAST Norns control fate/destiny - snapshots control your project's fate Rollback = returning to the past Urðr governs
 - ᚹ VEÐRFÖLNIR for VSCInfo - Eagle atop Yggdrasil, sees EVERYTHING  oversight/monitoring from above viewing system continuously
-
+- HEPHAESTUS Catalyst UI
+- ᛒ BALDR - icons
 
 ## Item Types
 
@@ -2043,7 +2045,7 @@ I've played around with a TON of different label styles, landing on this being t
         { "label": "OPEN_PUB_DASH", "path": "ocrmnavigator.OPEN_PUB_DASH", "type": "settingsToggle", "icon": "settings" },
         { "label": "RELOAD_INSTANCE", "path": "ocrmnavigator.RELOAD_INSTANCE", "type": "settingsToggle", "icon": "settings" },
         { "label": "AUTO_FOLD_PKG", "path": "ocrmnavigator.AUTO_FOLD_PKG", "type": "settingsToggle", "icon": "settings" },
-        { "label": "BE_QP", "path": "ocrmnavigator.BE_QP", "type": "settingsToggle", "icon": "settings" }
+        { "label": "BE_QP", "path": "ocrmnavigator.devstack.be", "type": "settingsToggle", "icon": "settings" }
       ]
     },
     {
@@ -2618,7 +2620,7 @@ I've played around with a TON of different label styles, landing on this being t
                 "ocrmnavigator.vfs.npmScripts": true,
                 "ocrmnavigator.vfs.snippets": true,
                 "ocrmnavigator.AUTO_FOLD_PKG": true,
-                "ocrmnavigator.BE_QP": true,
+                "ocrmnavigator.devstack.be": true,
                 "ocrmnavigator.vscodeVersion": "Code - Insiders",
                 "ocrmnavigator.AUTORUN_DIR": "src",
                 "ocrmnavigator.UPDATE_PROMPT_OBJECTS": false,
@@ -3155,7 +3157,7 @@ I've played around with a TON of different label styles, landing on this being t
                 "ocrmnavigator.vfs.npmScripts": true,
                 "ocrmnavigator.vfs.snippets": true,
                 "ocrmnavigator.AUTO_FOLD_PKG": true,
-                "ocrmnavigator.BE_QP": true,
+                "ocrmnavigator.devstack.be": true,
                 "ocrmnavigator.vscodeVersion": "Code - Insiders",
                 "ocrmnavigator.AUTORUN_DIR": "src",
                 "ocrmnavigator.UPDATE_PROMPT_OBJECTS": false,
@@ -3693,7 +3695,7 @@ DevStack provides extensive configuration options to customize your development 
 - **Default**: `false`
 - **Description**: Automatically reload VS Code after installing new archive.
 
-**`ocrmnavigator.BE_QP`**
+**`ocrmnavigator.devstack.be`**
 - **Type**: `boolean`
 - **Default**: `false`
 - **Description**: Enable BQ Quick Pick menu on status bar.

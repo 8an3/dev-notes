@@ -354,7 +354,7 @@ Automated environment switching with a single click. No manual editing, no comme
 
 **File Structure:**
 - `.env` - Active configuration file (auto-generated, never edit manually)
-- `.dev.env` - Source file containing all environment variable pairs
+- `.hermes` - Source file containing all environment variable pairs
 
 **Variable Format:**
 Each environment variable has two versions prefixed with `LOCAL_` or `REMOTE_`:
@@ -380,7 +380,7 @@ REMOTE_PADDLE_SERVER_TOKEN="pdl_live_apikey_01k4v3y240x0t4v8t39ytj7swr_yAAtEFKtV
 ```
 
 **Missing Values:**
-If either `LOCAL_` or `REMOTE_` value is missing in `.dev.env`, the variable is still included in `.env` but set to empty:
+If either `LOCAL_` or `REMOTE_` value is missing in `.hermes`, the variable is still included in `.env` but set to empty:
 
 ```env
 DATABASE_URL=""
@@ -392,7 +392,7 @@ Built-in quickpick with two options:
 - `Set Remote .env Var's` - Switches to production configuration
 
 **Safety Guarantee:**
-The system always reads from `.dev.env` and writes a complete `.env` file, regardless of current state. This idempotent approach ensures the configuration never enters an invalid state.
+The system always reads from `.hermes` and writes a complete `.env` file, regardless of current state. This idempotent approach ensures the configuration never enters an invalid state.
 
 
 ### Intelligent JSON Schema Support
