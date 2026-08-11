@@ -1,0 +1,1 @@
+The pause is because there were some features I really wanted to showcase, but called upon the wrong function to trigger the menu in order to showcase the features. Went back, fixed them and they should now work. The fun from doing this without testing :P
